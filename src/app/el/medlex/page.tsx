@@ -1,63 +1,49 @@
 import Link from 'next/link'
 import {
-  Heart,
-  Shield,
+  Scale,
+  Building2,
   FileCheck,
-  Users,
+  Shield,
   ChevronRight,
   Phone,
   ArrowRight,
-  Stethoscope,
-  Scale,
-  BadgeCheck,
+  Gavel,
+  Home,
+  Users,
 } from 'lucide-react'
 import ContactForm from '@/components/ContactForm'
+import SectionHeading from '@/components/SectionHeading'
 
-const caseTypes = [
-  'Χειρουργικά λάθη',
-  'Λάθος διάγνωση',
-  'Καθυστερημένη διάγνωση',
-  'Λάθη σε φαρμακευτική αγωγή',
-  'Αναισθησιολογικά λάθη',
-  'Λάθη κατά τον τοκετό',
-  'Νοσοκομειακές λοιμώξεις',
-  'Λάθη σε οδοντιατρικές πράξεις',
-  'Αισθητική χειρουργική',
-  'Αμέλεια νοσηλευτικού προσωπικού',
-  'Λάθη σε ακτινοθεραπεία',
-  'Ψυχιατρική αμέλεια',
-]
-
-const recoveryProcess = [
+const services = [
   {
-    step: '01',
-    title: 'Αρχική Αξιολόγηση',
-    description:
-      'Αξιολογούμε την υπόθεσή σας εμπιστευτικά, εξετάζοντας τα ιατρικά αρχεία και τις συνθήκες του περιστατικού.',
+    title: 'Εταιρικά Θέματα',
+    description: 'Σύσταση, διακυβέρνηση, εταιρικές συμβάσεις και αναδιαρθρώσεις.',
+    icon: Building2,
   },
   {
-    step: '02',
-    title: 'Ιατρική Πραγματογνωμοσύνη',
-    description:
-      'Συνεργαζόμαστε με ανεξάρτητους ιατρικούς εμπειρογνώμονες για να αξιολογήσουμε την τυχόν αμέλεια.',
+    title: 'Συμβάσεις',
+    description: 'Εμπορικές συμβάσεις, διαπραγματεύσεις και επίλυση συμβατικών διαφορών.',
+    icon: FileCheck,
   },
   {
-    step: '03',
-    title: 'Νομική Στρατηγική',
-    description:
-      'Αναπτύσσουμε μια εξατομικευμένη στρατηγική για να μεγιστοποιήσουμε τις πιθανότητες επιτυχίας.',
+    title: 'Ρυθμιστική Συμμόρφωση',
+    description: 'Κανονιστικό πλαίσιο, αδειοδοτήσεις και συμμόρφωση με τη νομοθεσία.',
+    icon: Scale,
   },
   {
-    step: '04',
-    title: 'Διεκδίκηση Αξίωσης',
-    description:
-      'Διεκδικούμε την αξίωσή σας μέσω διαπραγματεύσεων ή δικαστικής οδού όπου απαιτείται.',
+    title: 'Εργασιακά',
+    description: 'Συμβάσεις εργασίας, πολιτικές προσωπικού και εργατικές διαφορές.',
+    icon: Users,
   },
   {
-    step: '05',
-    title: 'Αποζημίωση',
-    description:
-      'Με επιτυχή έκβαση, διασφαλίζουμε ότι λαμβάνετε την αποζημίωση που δικαιούστε.',
+    title: 'Ακίνητα',
+    description: 'Αγοραπωλησίες, μισθώσεις, ανάπτυξη και επενδύσεις σε ακίνητα.',
+    icon: Home,
+  },
+  {
+    title: 'Επίλυση Διαφορών',
+    description: 'Δικαστική εκπροσώπηση, διαμεσολάβηση και εναλλακτική επίλυση διαφορών.',
+    icon: Gavel,
   },
 ]
 
@@ -70,8 +56,7 @@ export default function MedlexPage() {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage:
-                'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+              backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
               backgroundSize: '40px 40px',
             }}
           />
@@ -79,27 +64,28 @@ export default function MedlexPage() {
         <div className="container-custom relative">
           <div className="max-w-3xl">
             <div className="inline-block bg-white/10 px-4 py-2 mb-6">
-              <span className="text-white font-semibold tracking-wider">
-                MEDLEX | ΙΑΤΡΙΚΗ ΑΜΕΛΕΙΑ
-              </span>
+              <span className="text-white font-semibold tracking-wider">MEDLEX</span>
             </div>
             <h1 className="heading-1 text-white mb-6">
-              Δικαιοσύνη για Θύματα Ιατρικής Αμέλειας
+              Νομικές Υπηρεσίες<br />
+              Ελληνικού Δικαίου
             </h1>
-            <p className="text-xl text-primary-200 mb-8 leading-relaxed">
-              Στη MONAD, είμαστε αφοσιωμένοι στην υπεράσπιση ατόμων που έχουν
-              υποφέρει λόγω ιατρικής αμέλειας. Η έμπειρη ομάδα μας ερευνά
-              σχολαστικά κάθε υπόθεση για να εξασφαλίσει την αποζημίωση που
-              δικαιούστε.
+            <p className="text-xl text-primary-200 mb-6 leading-relaxed">
+              Το MEDLEX είναι ο στοχευμένος κόμβος της MONAD για νομικές υπηρεσίες ελληνικού
+              δικαίου, με έμφαση στην πρακτική εφαρμογή και την ασφάλεια δικαίου.
+            </p>
+            <p className="text-lg text-primary-300 mb-8 leading-relaxed">
+              Απευθύνεται σε επιχειρήσεις και ιδιώτες που δραστηριοποιούνται ή επενδύουν
+              στην Ελλάδα και χρειάζονται καθαρή στρατηγική, σωστή τεκμηρίωση και συνεπή υλοποίηση.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="#contact-form" className="btn-primary flex items-center">
-                Δωρεάν Αξιολόγηση
+                Επικοινωνία
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <a href="tel:+302101234567" className="btn-outline-light flex items-center">
                 <Phone className="mr-2 w-5 h-5" />
-                Καλέστε μας Τώρα
+                Καλέστε μας
               </a>
             </div>
           </div>
@@ -109,53 +95,91 @@ export default function MedlexPage() {
       {/* Introduction */}
       <section className="section-padding bg-white">
         <div className="container-custom">
+          <div className="max-w-4xl">
+            <SectionHeading
+              title="Τι Καλύπτει το MEDLEX"
+              subtitle="Μεθοδική προσέγγιση σε κάθε υπόθεση"
+            />
+            <p className="text-body text-lg leading-relaxed mb-6">
+              Το MEDLEX καλύπτει, μεταξύ άλλων, εταιρικά θέματα, συμβάσεις, ρυθμιστική
+              συμμόρφωση, εργασιακά, ακίνητα, αδειοδοτήσεις και επίλυση διαφορών.
+            </p>
+            <p className="text-body leading-relaxed">
+              Η προσέγγιση είναι μεθοδική: ορίζεται ο στόχος, αξιολογούνται οι κρίσιμοι
+              κίνδυνοι, οργανώνεται η τεκμηρίωση και παράγεται λύση που μπορεί να εφαρμοστεί
+              χωρίς περιττές τριβές.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="section-padding bg-primary-50">
+        <div className="container-custom">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service) => (
+              <div key={service.title} className="bg-white p-8 border border-primary-100">
+                <div className="w-12 h-12 bg-primary-100 flex items-center justify-center mb-4">
+                  <service.icon className="w-6 h-6 text-primary-900" />
+                </div>
+                <h3 className="text-xl font-serif font-semibold mb-3">{service.title}</h3>
+                <p className="text-primary-600 leading-relaxed">{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Approach */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="heading-2 mb-6">
-                Έχετε Υποστεί Βλάβη από Ιατρικό Σφάλμα;
-              </h2>
-              <p className="text-body mb-6">
-                Η ιατρική αμέλεια μπορεί να έχει καταστροφικές συνέπειες - σωματικές,
-                συναισθηματικές και οικονομικές. Αν εσείς ή κάποιο αγαπημένο σας
-                πρόσωπο έχει υποστεί βλάβη λόγω ιατρικής αμέλειας, έχετε δικαίωμα
-                αποζημίωσης.
-              </p>
-              <p className="text-body mb-6">
-                Η ομάδα MEDLEX συνεργάζεται με κορυφαίους ιατρικούς εμπειρογνώμονες
-                για να εκτιμήσει τις υποθέσεις και να θέσει τους υπεύθυνους προ των
-                ευθυνών τους.
-              </p>
-              <p className="text-body font-semibold">
-                Αφήστε μας να είμαστε η φωνή σας στην αναζήτηση δικαιοσύνης και
-                στην αποκατάσταση της ψυχικής σας γαλήνης.
-              </p>
+              <h2 className="heading-2 mb-6">Η Προσέγγισή μας</h2>
+              <div className="space-y-6">
+                <div className="border-l-4 border-primary-900 pl-6">
+                  <h4 className="font-semibold text-primary-900 mb-2">Σαφήνεια</h4>
+                  <p className="text-primary-600">
+                    Καθαρή στρατηγική και σαφής επικοινωνία σε κάθε στάδιο της υπόθεσης.
+                  </p>
+                </div>
+                <div className="border-l-4 border-primary-900 pl-6">
+                  <h4 className="font-semibold text-primary-900 mb-2">Ταχύτητα</h4>
+                  <p className="text-primary-600">
+                    Αποτελεσματική διαχείριση χρονοδιαγραμμάτων και άμεση ανταπόκριση.
+                  </p>
+                </div>
+                <div className="border-l-4 border-primary-900 pl-6">
+                  <h4 className="font-semibold text-primary-900 mb-2">Διακριτικότητα</h4>
+                  <p className="text-primary-600">
+                    Χειρισμός κάθε υπόθεσης με επαγγελματισμό και απόλυτη εμπιστευτικότητα.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="bg-primary-50 p-8">
-              <Stethoscope className="w-16 h-16 text-primary-900 mb-6" />
-              <h3 className="text-2xl font-serif font-semibold mb-4">
-                Τι Είναι η Ιατρική Αμέλεια;
-              </h3>
-              <p className="text-primary-600 mb-6">
-                Η ιατρική αμέλεια συμβαίνει όταν ένας επαγγελματίας υγείας αποτυγχάνει
-                να παρέχει το αναμενόμενο επίπεδο φροντίδας, με αποτέλεσμα βλάβη στον
-                ασθενή.
+            <div className="bg-primary-900 text-white p-10">
+              <h3 className="text-2xl font-serif font-semibold mb-6">Στόχος του MEDLEX</h3>
+              <p className="text-primary-200 leading-relaxed mb-6">
+                Στόχος του MEDLEX είναι να προσφέρει ένα σταθερό σημείο αναφοράς για όσους
+                χρειάζονται σύγχρονη νομική υποστήριξη στην Ελλάδα, με σαφήνεια, ταχύτητα
+                και διακριτικότητα.
               </p>
-              <ul className="space-y-2 text-primary-700">
+              <ul className="space-y-3">
                 <li className="flex items-start">
                   <ChevronRight className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
-                  Λάθος ή καθυστερημένη διάγνωση
+                  <span className="text-primary-200">Πρακτική εφαρμογή</span>
                 </li>
                 <li className="flex items-start">
                   <ChevronRight className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
-                  Χειρουργικά σφάλματα
+                  <span className="text-primary-200">Ασφάλεια δικαίου</span>
                 </li>
                 <li className="flex items-start">
                   <ChevronRight className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
-                  Λανθασμένη φαρμακευτική αγωγή
+                  <span className="text-primary-200">Αξιόπιστη τεκμηρίωση</span>
                 </li>
                 <li className="flex items-start">
                   <ChevronRight className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
-                  Παράλειψη έγκαιρης θεραπείας
+                  <span className="text-primary-200">Συνεπής υλοποίηση</span>
                 </li>
               </ul>
             </div>
@@ -163,149 +187,49 @@ export default function MedlexPage() {
         </div>
       </section>
 
-      {/* Case Types */}
-      <section className="section-padding bg-primary-50">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="heading-2 mb-4">Υποθέσεις που Χειριζόμαστε</h2>
-            <p className="text-body max-w-2xl mx-auto">
-              Η ομάδα μας έχει εμπειρία σε ένα ευρύ φάσμα υποθέσεων ιατρικής αμέλειας.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {caseTypes.map((type) => (
-              <div
-                key={type}
-                className="bg-white p-4 text-center border border-primary-100 hover:border-primary-900 transition-colors"
-              >
-                <span className="text-primary-900 font-medium">{type}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="heading-2 mb-4">Η Διαδικασία μας</h2>
-            <p className="text-body max-w-2xl mx-auto">
-              Ακολουθούμε μια δομημένη προσέγγιση για να μεγιστοποιήσουμε τις
-              πιθανότητες επιτυχούς αποζημίωσης.
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            {recoveryProcess.map((item, index) => (
-              <div
-                key={item.step}
-                className={`flex gap-8 ${
-                  index < recoveryProcess.length - 1 ? 'mb-12' : ''
-                }`}
-              >
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-primary-900 text-white flex items-center justify-center text-xl font-bold">
-                    {item.step}
-                  </div>
-                  {index < recoveryProcess.length - 1 && (
-                    <div className="w-0.5 h-12 bg-primary-200 mx-auto mt-4" />
-                  )}
-                </div>
-                <div className="pt-3">
-                  <h3 className="text-xl font-serif font-semibold mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-primary-600">{item.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
+      {/* CTA */}
       <section className="py-20 bg-primary-900 text-white">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="heading-2 mb-4">Γιατί να Επιλέξετε τη MEDLEX;</h2>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="heading-2 mb-6">Σύγχρονη Νομική Υποστήριξη στην Ελλάδα</h2>
+            <p className="text-primary-200 text-lg leading-relaxed mb-8">
+              Το MEDLEX είναι σχεδιασμένο για επιχειρήσεις και ιδιώτες που χρειάζονται
+              νομική υποστήριξη με πρακτική διάσταση. Ο στόχος δεν είναι η παραγωγή
+              εγγράφων, αλλά η δημιουργία λύσεων που μπορούν να εφαρμοστούν και να υπερασπιστούν.
+            </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8">
-              <Users className="w-12 h-12 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Ειδική Ομάδα</h3>
-              <p className="text-primary-200">
-                Δικηγόροι με εξειδίκευση στο ιατρικό δίκαιο και εμπειρία σε σύνθετες
-                υποθέσεις αμέλειας.
-              </p>
-            </div>
-            <div className="text-center p-8">
-              <Stethoscope className="w-12 h-12 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Ιατρικοί Εμπειρογνώμονες</h3>
-              <p className="text-primary-200">
-                Συνεργαζόμαστε με κορυφαίους ιατρούς για την τεκμηρίωση της αμέλειας.
-              </p>
-            </div>
-            <div className="text-center p-8">
-              <Heart className="w-12 h-12 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Ανθρωποκεντρική Προσέγγιση</h3>
-              <p className="text-primary-200">
-                Κατανοούμε τη δυσκολία της κατάστασής σας και παρέχουμε υποστήριξη
-                σε κάθε βήμα.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* External Link */}
-      <section className="py-16 bg-primary-50">
-        <div className="container-custom text-center">
-          <h3 className="heading-3 mb-4">Περισσότερες Πληροφορίες</h3>
-          <p className="text-body max-w-2xl mx-auto mb-6">
-            Για περισσότερες πληροφορίες σχετικά με τις υπηρεσίες ιατρικής αμέλειας,
-            επισκεφθείτε τον ιστότοπό μας:
-          </p>
-          <a
-            href="https://medlex.gr/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary inline-flex items-center"
-          >
-            Επισκεφθείτε το medlex.gr
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </a>
         </div>
       </section>
 
       {/* Contact Form */}
-      <section id="contact-form" className="section-padding bg-white">
+      <section id="contact-form" className="section-padding bg-primary-50">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="heading-2 mb-6">Ξεκινήστε Σήμερα</h2>
+              <h2 className="heading-2 mb-6">Επικοινωνία με το MEDLEX</h2>
               <p className="text-body mb-6">
-                Αν πιστεύετε ότι εσείς ή κάποιο αγαπημένο σας πρόσωπο έχει υποστεί
-                βλάβη λόγω ιατρικής αμέλειας, επικοινωνήστε με την ομάδα MEDLEX
-                για μια εμπιστευτική αξιολόγηση.
+                Χρησιμοποιήστε τη φόρμα για να περιγράψετε το αίτημά σας. Ένα μέλος της
+                ομάδας MEDLEX θα απαντήσει εντός μίας εργάσιμης ημέρας. Όπου το θέμα είναι
+                χρονικά επείγον, η αναφορά του επείγοντος βοηθά στην κατάλληλη ιεράρχηση.
               </p>
-              <div className="bg-primary-50 p-6 mb-6">
-                <h4 className="font-semibold mb-3">Δωρεάν Αρχική Αξιολόγηση</h4>
+              <div className="bg-white p-6 mb-6">
+                <h4 className="font-semibold mb-3">Αρχική Αξιολόγηση</h4>
                 <p className="text-primary-600 text-sm mb-4">
-                  Αξιολογούμε την υπόθεσή σας χωρίς χρέωση και σας ενημερώνουμε
-                  για τις επιλογές σας.
+                  Μια αρχική συνομιλία βοηθά να εντοπιστεί η σωστή προσέγγιση και η
+                  κατάλληλη σύνθεση της ομάδας.
                 </p>
                 <ul className="space-y-2 text-sm text-primary-700">
                   <li className="flex items-center">
-                    <BadgeCheck className="w-4 h-4 mr-2 text-green-600" />
-                    Εμπιστευτική αξιολόγηση
+                    <Shield className="w-4 h-4 mr-2 text-primary-900" />
+                    Δομημένη αξιολόγηση της κατάστασης
                   </li>
                   <li className="flex items-center">
-                    <BadgeCheck className="w-4 h-4 mr-2 text-green-600" />
-                    Σαφής εξήγηση των επιλογών σας
+                    <Shield className="w-4 h-4 mr-2 text-primary-900" />
+                    Σαφής εξήγηση επιλογών
                   </li>
                   <li className="flex items-center">
-                    <BadgeCheck className="w-4 h-4 mr-2 text-green-600" />
-                    Χωρίς υποχρέωση συνέχισης
+                    <Shield className="w-4 h-4 mr-2 text-primary-900" />
+                    Πρακτικά επόμενα βήματα
                   </li>
                 </ul>
               </div>
@@ -313,10 +237,7 @@ export default function MedlexPage() {
                 <Phone className="w-6 h-6 text-primary-900 mr-3" />
                 <div>
                   <p className="text-sm text-primary-500">Καλέστε μας:</p>
-                  <a
-                    href="tel:+302101234567"
-                    className="text-xl font-semibold text-primary-900"
-                  >
+                  <a href="tel:+302101234567" className="text-xl font-semibold text-primary-900">
                     +30 210 123 4567
                   </a>
                 </div>
