@@ -247,7 +247,7 @@ export default function Home() {
             <div className="bg-white/5 border border-white/10 overflow-hidden">
               <div className="relative h-48">
                 <Image
-                  src="/images/Tax Wealth and Asset Management.jpg"
+                  src="/images/tax-wealth-management.jpg"
                   alt="FINLEX - Cross Border Structuring"
                   fill
                   className="object-cover"

@@ -10,7 +10,7 @@ export default function AboutPage() {
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/Regulatory.jpg"
+            src="/images/regulatory.jpg"
             alt="About MONAD"
             fill
             className="object-cover"

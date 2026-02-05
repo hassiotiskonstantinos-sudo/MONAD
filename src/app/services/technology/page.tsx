@@ -122,7 +122,7 @@ export default function TechnologyServicesPage() {
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/Digital Assets and Blockchain.jpg"
+            src="/images/digital-assets-blockchain.jpg"
             alt="Technology and Innovation"
             fill
             className="object-cover"

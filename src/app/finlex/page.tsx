@@ -38,7 +38,7 @@ export default function FinlexPage() {
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/Startups.jpg"
+            src="/images/startups.jpg"
             alt="FINLEX - Cross Border Structuring"
             fill
             className="object-cover"
