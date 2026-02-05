@@ -9,6 +9,8 @@ import {
   Users,
   Gavel,
   ChevronRight,
+  ArrowRight,
+  Briefcase,
 } from 'lucide-react'
 import SectionHeading from '@/components/SectionHeading'
 import ContactForm from '@/components/ContactForm'
@@ -19,12 +21,13 @@ const services = [
     icon: Building2,
     title: 'Corporate Formation',
     description:
-      'Launch your venture with confidence, knowing that all legal foundations are in place. We guide you through entity selection, registration, and compliance requirements.',
+      'MONAD advises companies on formation, restructuring and cross border presence. The firm assists with entity selection, shareholder agreements, governance frameworks and regulatory registrations. Work includes domestic incorporations, holding structures, branch registrations and joint venture formation.',
     features: [
-      'Company registration and setup',
-      'Entity structure optimization',
-      'Shareholder agreements',
-      'Corporate governance framework',
+      'Domestic and international incorporations',
+      'Holding and subsidiary structures',
+      'Shareholder and joint venture agreements',
+      'Corporate governance frameworks',
+      'Branch and representative office registrations',
     ],
   },
   {
@@ -32,12 +35,13 @@ const services = [
     icon: TrendingUp,
     title: 'International Tax Planning',
     description:
-      'Navigate complex international tax landscapes with strategies designed to optimize your tax position while ensuring full compliance.',
+      'MONAD advises on the legal architecture of tax efficient structures. The firm works closely with tax advisors to ensure that corporate arrangements are legally robust, commercially coherent and properly documented. This includes holding structures, transfer pricing documentation, treaty analysis and restructuring for changed circumstances.',
     features: [
-      'Cross-border tax planning',
-      'Transfer pricing',
-      'Tax treaty optimization',
-      'Tax-efficient structures',
+      'Holding and financing structures',
+      'Transfer pricing documentation',
+      'Tax treaty analysis and optimization',
+      'Restructuring and exit planning',
+      'Coordination with local tax advisors',
     ],
   },
   {
@@ -45,25 +49,27 @@ const services = [
     icon: Globe,
     title: 'Business Immigration',
     description:
-      'Smooth transitions for international translocations, navigating complex visa issues and policies for executives and employees.',
+      'MONAD advises companies on immigration strategies for executives, employees and their families. The firm handles work permits, intra-company transfers, corporate sponsorships and relocations. Business immigration is integrated with tax planning and corporate structuring where needed.',
     features: [
-      'Work permits and visas',
+      'Work permits and employment visas',
       'Intra-company transfers',
-      'Executive relocation',
-      'Immigration compliance',
+      'Executive and key personnel relocations',
+      'Corporate immigration compliance',
+      'Family coordination and dependent permits',
     ],
   },
   {
     id: 'private-equity',
-    icon: TrendingUp,
+    icon: Briefcase,
     title: 'Private Equity',
     description:
-      'Comprehensive support for private equity transactions, from fund formation to portfolio company matters.',
+      'MONAD advises sponsors and management teams on private equity transactions, from deal structuring to exit. Work includes fund formation, co-investment arrangements, portfolio company acquisitions, management participation schemes and secondary transactions.',
     features: [
-      'Fund structuring',
-      'Investment documentation',
-      'Portfolio acquisitions',
-      'Exit strategies',
+      'Fund formation and structuring',
+      'Acquisition and investment documentation',
+      'Management incentive arrangements',
+      'Portfolio company governance',
+      'Exit planning and execution',
     ],
   },
   {
@@ -71,12 +77,13 @@ const services = [
     icon: FileCheck,
     title: 'Mergers & Acquisitions',
     description:
-      'From financing to mergers, we guide you through every transaction with precision and expertise.',
+      'MONAD advises buyers, sellers and management on M&A transactions across borders. The firm handles due diligence coordination, transaction structuring, negotiation and documentation, regulatory filings and post-completion matters. Deals range from founder exits to cross border carve-outs.',
     features: [
-      'Deal structuring',
-      'Due diligence',
-      'Transaction documentation',
-      'Post-merger integration',
+      'Buy-side and sell-side representation',
+      'Due diligence coordination',
+      'Transaction structuring and documentation',
+      'Regulatory filings and approvals',
+      'Post-merger integration support',
     ],
   },
   {
@@ -84,25 +91,27 @@ const services = [
     icon: Scale,
     title: 'Company Law & Commercial Contracts',
     description:
-      'Expert counsel on all aspects of company law and commercial agreements to protect your business interests.',
+      'MONAD advises on corporate governance, ongoing compliance and commercial contracting. The firm prepares and negotiates a wide range of commercial agreements, from distribution and licensing to supply chain and outsourcing. The focus is on documentation that works in practice.',
     features: [
-      'Commercial contracts',
-      'Joint ventures',
-      'Licensing agreements',
-      'Distribution agreements',
+      'Corporate governance advisory',
+      'Commercial contracts and negotiations',
+      'Distribution and agency agreements',
+      'Licensing and IP commercialization',
+      'Supply chain and outsourcing arrangements',
     ],
   },
   {
     id: 'regulatory-compliance',
-    icon: FileCheck,
-    title: 'Regulatory & Compliance - Corporate Governance',
+    icon: Shield,
+    title: 'Regulatory & Compliance',
     description:
-      'Ensure your business meets all regulatory requirements with our comprehensive compliance services.',
+      'MONAD advises on regulatory frameworks that affect corporate operations, including sector specific licensing, competition law, anti-corruption compliance and sanctions. The firm helps clients build compliance systems that are practical and proportionate.',
     features: [
-      'Regulatory compliance audits',
-      'Corporate governance',
-      'Board advisory',
-      'Compliance programs',
+      'Sector regulatory compliance',
+      'Competition and antitrust advisory',
+      'Anti-corruption and sanctions compliance',
+      'Board and committee governance',
+      'Internal policies and training',
     ],
   },
   {
@@ -110,12 +119,13 @@ const services = [
     icon: Shield,
     title: 'Fraud, Financial Crime & Asset Recovery',
     description:
-      'Protect your assets and reputation with our proactive approach to fraud prevention and asset recovery.',
+      'MONAD advises victims of fraud and financial crime on investigation, asset tracing and recovery. The firm handles urgent injunctions, freezing orders, disclosure applications and enforcement actions across jurisdictions. Work is often coordinated with forensic accountants and investigators.',
     features: [
-      'Fraud investigations',
-      'Asset tracing',
-      'Recovery litigation',
-      'Anti-money laundering',
+      'Fraud investigation coordination',
+      'Asset tracing and freezing orders',
+      'Urgent injunctive relief',
+      'Cross-border enforcement',
+      'Coordination with forensic specialists',
     ],
   },
   {
@@ -123,12 +133,13 @@ const services = [
     icon: Users,
     title: 'Employment',
     description:
-      'Handling workplace matters with expertise, from employment contracts to dispute resolution.',
+      'MONAD advises on the employment aspects of corporate transactions and ongoing operations. This includes executive service agreements, employment policies, workforce restructuring, employee disputes and cross border employment arrangements.',
     features: [
-      'Employment contracts',
-      'HR policies',
-      'Workplace disputes',
-      'Redundancy and restructuring',
+      'Executive contracts and incentives',
+      'Employment policies and handbooks',
+      'Workforce restructuring',
+      'Employee disputes and terminations',
+      'Cross-border employment coordination',
     ],
   },
   {
@@ -136,12 +147,13 @@ const services = [
     icon: Gavel,
     title: 'International Dispute Resolution',
     description:
-      'Cross-border conflicts handled with discretion and expertise through arbitration and mediation.',
+      'MONAD represents clients in international arbitration and cross border litigation. The firm handles ICC, LCIA, ICSID and ad hoc arbitrations, as well as court proceedings involving foreign parties, enforcement of foreign judgments and interim measures across jurisdictions.',
     features: [
-      'International arbitration',
-      'Mediation',
-      'Commercial litigation',
-      'Enforcement of judgments',
+      'International commercial arbitration',
+      'Investment treaty arbitration',
+      'Cross-border litigation',
+      'Enforcement of foreign judgments and awards',
+      'Emergency and interim measures',
     ],
   },
 ]
@@ -150,62 +162,94 @@ export default function CompaniesServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-primary-900">
-        <div className="container-custom">
+      <section className="relative pt-32 pb-24 bg-primary-900 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+              backgroundSize: '40px 40px',
+            }}
+          />
+        </div>
+        <div className="container-custom relative">
           <div className="max-w-3xl">
-            <p className="text-primary-400 uppercase tracking-wider mb-4">
+            <p className="text-primary-400 uppercase tracking-wider text-sm font-medium mb-4">
               What We Do
             </p>
             <h1 className="heading-1 text-white mb-6">Services for Companies</h1>
-            <p className="text-xl text-primary-200">
-              In today's fast-paced corporate environment, businesses need a legal
-              partner that understands both the complexities of the law and the
-              realities of the market. We offer a full suite of legal services for
-              companies.
+            <p className="text-xl text-primary-200 mb-6 leading-relaxed">
+              MONAD advises companies, founders and investors on corporate, commercial and
+              regulatory matters. The firm handles transactions, governance, compliance and
+              disputes, with a particular focus on cross border work.
+            </p>
+            <p className="text-lg text-primary-300 leading-relaxed">
+              The approach is direct: understand the commercial objective, identify the legal
+              risks that matter, produce documentation that works, and move efficiently.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Introduction */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="max-w-4xl">
+            <SectionHeading
+              title="Corporate Legal Services"
+              subtitle="Practical solutions for complex business matters"
+            />
+            <p className="text-body text-lg leading-relaxed mb-6">
+              Corporate clients come to MONAD with transactions, governance challenges, cross
+              border structuring, regulatory exposure and disputes. In each case, the goal is
+              the same: produce a defensible solution that can be implemented.
+            </p>
+            <p className="text-body leading-relaxed">
+              MONAD combines senior-led advice with practical delivery. Matters are handled
+              with discretion, responsiveness and a commitment to clarity. The aim is to help
+              clients make confident decisions, reduce exposure, and secure outcomes.
             </p>
           </div>
         </div>
       </section>
 
       {/* Services List */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-primary-50">
         <div className="container-custom">
-          <div className="space-y-16">
+          <div className="space-y-12">
             {services.map((service, index) => (
               <div
                 key={service.id}
                 id={service.id}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-                }`}
+                className="bg-white p-8 lg:p-10 border border-primary-100"
               >
-                <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-primary-100 flex items-center justify-center mr-4">
-                      <service.icon className="w-6 h-6 text-primary-900" />
+                <div className="grid lg:grid-cols-3 gap-8">
+                  <div className="lg:col-span-2">
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 bg-primary-100 flex items-center justify-center mr-4">
+                        <service.icon className="w-6 h-6 text-primary-900" />
+                      </div>
+                      <h2 className="heading-3">{service.title}</h2>
                     </div>
-                    <h2 className="heading-3">{service.title}</h2>
+                    <p className="text-body leading-relaxed mb-6">{service.description}</p>
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center text-primary-900 font-medium hover:text-primary-600 transition-colors"
+                    >
+                      Discuss Your Needs
+                      <ChevronRight className="ml-1 w-4 h-4" />
+                    </Link>
                   </div>
-                  <p className="text-body mb-6">{service.description}</p>
-                  <ul className="space-y-3 mb-6">
-                    {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center">
-                        <ChevronRight className="w-5 h-5 text-primary-900 mr-2" />
-                        <span className="text-primary-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center text-primary-900 font-medium hover:text-primary-600 transition-colors"
-                  >
-                    Discuss Your Needs
-                    <ChevronRight className="ml-1 w-4 h-4" />
-                  </Link>
-                </div>
-                <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                  <div className="bg-primary-50 h-64 flex items-center justify-center">
-                    <service.icon className="w-24 h-24 text-primary-200" />
+                  <div className="bg-primary-50 p-6">
+                    <h4 className="font-semibold text-primary-900 mb-4">Key Areas</h4>
+                    <ul className="space-y-2">
+                      {service.features.map((feature) => (
+                        <li key={feature} className="flex items-start text-sm">
+                          <ChevronRight className="w-4 h-4 text-primary-900 mr-2 mt-0.5 flex-shrink-0" />
+                          <span className="text-primary-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -215,28 +259,45 @@ export default function CompaniesServicesPage() {
       </section>
 
       {/* FINLEX Highlight */}
-      <section className="section-padding bg-primary-900 text-white">
+      <section className="py-20 bg-primary-900 text-white">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="heading-2 mb-6">FINLEX - Financial Recovery</h2>
-              <p className="text-primary-200 mb-6 leading-relaxed">
-                At MONAD we understand the impact of financial losses. Our FINLEX
-                Financial Recovery team is dedicated to helping clients regain
-                control by pursuing compensation for investments that were mis-sold.
+              <h2 className="heading-2 mb-6">FINLEX - Cross Border Structuring</h2>
+              <p className="text-primary-200 mb-4 leading-relaxed">
+                FINLEX is MONAD's focused hub for clients dealing with cross border structuring,
+                investor driven transactions and finance adjacent legal needs. Built for founders,
+                investors, family offices and internationally mobile clients who need legal
+                clarity across jurisdictions.
               </p>
-              <Link href="/finlex" className="btn-outline-light inline-flex">
+              <p className="text-primary-200 mb-6 leading-relaxed">
+                FINLEX exists to turn complexity into usable decisions. Clients receive clear
+                options, clear trade offs and clear next steps.
+              </p>
+              <Link href="/finlex" className="btn-outline-light inline-flex items-center">
                 Learn More About FINLEX
+                <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
-            <div className="bg-white/10 p-8">
-              <h3 className="text-xl font-semibold mb-4">We Handle:</h3>
-              <ul className="space-y-2 text-primary-200">
-                <li>• Unit Trusts and ISAs</li>
-                <li>• CFDs and Hedge Funds</li>
-                <li>• Cryptocurrency Investments</li>
-                <li>• Alternative Assets (Art, Wine)</li>
-                <li>• Mis-sold Financial Products</li>
+            <div className="bg-white/10 p-8 border border-white/20">
+              <h3 className="text-xl font-semibold mb-4">FINLEX Handles:</h3>
+              <ul className="space-y-3 text-primary-200">
+                <li className="flex items-start">
+                  <ChevronRight className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
+                  Cross border corporate structuring
+                </li>
+                <li className="flex items-start">
+                  <ChevronRight className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
+                  Investor transactions and documentation
+                </li>
+                <li className="flex items-start">
+                  <ChevronRight className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
+                  Residence and tax planning coordination
+                </li>
+                <li className="flex items-start">
+                  <ChevronRight className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
+                  Risk management and dispute prevention
+                </li>
               </ul>
             </div>
           </div>
@@ -249,17 +310,23 @@ export default function CompaniesServicesPage() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <SectionHeading
-                title="Ready to Get Started?"
-                subtitle="Contact us to discuss how we can help your business navigate legal challenges and seize opportunities."
+                title="Discuss Your Matter"
+                subtitle="Use the form to describe the request. A response will follow within one business day."
               />
-              <p className="text-body">
-                Our corporate team is ready to assist you with any legal matters.
-                Whether you are starting a new venture, expanding internationally,
-                or dealing with complex transactions, we have the expertise to guide
-                you.
+              <p className="text-body mb-6">
+                Where the matter is time sensitive, marking it as urgent helps the team
+                triage appropriately. MONAD reviews messages to understand the request
+                and determine whether the firm is able to assist.
               </p>
+              <div className="bg-white p-6">
+                <p className="text-sm text-primary-600">
+                  <strong>Note:</strong> Sending a message does not create a lawyer client
+                  relationship. Formal engagement begins only after a conflict check and
+                  written confirmation of scope.
+                </p>
+              </div>
             </div>
-            <ContactForm compact />
+            <ContactForm title="Contact Corporate Team" />
           </div>
         </div>
       </section>
