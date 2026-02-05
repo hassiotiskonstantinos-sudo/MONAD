@@ -7,17 +7,28 @@ import { ArrowRight } from 'lucide-react'
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen overflow-hidden">
-      {/* Image Background */}
+      {/* Video Background */}
       <div className="absolute inset-0">
+        {/* Video - works in Safari, Chrome might need mp4 */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          poster="/images/shutterstock_2644707669.jpg"
+        >
+          <source src="/videos/shutterstock_3662626007.mov" type="video/quicktime" />
+          <source src="/videos/shutterstock_3662626007.mov" type="video/mp4" />
+        </video>
+        {/* Fallback Image for browsers that don't support video */}
         <Image
           src="/images/shutterstock_2644707669.jpg"
           alt="MONAD Law Firm"
           fill
-          className="object-cover"
+          className="object-cover -z-10"
           priority
         />
-        {/* Fallback gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 -z-10" />
       </div>
 
       {/* Dark Overlay */}

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react'
 
 const Footer = () => {
@@ -8,7 +9,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* About */}
           <div>
-            <h3 className="text-2xl font-serif font-bold mb-6">MONAD</h3>
+            <Image
+              src="/images/logo-monad.png"
+              alt="MONAD"
+              width={150}
+              height={50}
+              className="h-10 w-auto brightness-0 invert mb-6"
+            />
             <p className="text-primary-300 leading-relaxed mb-6">
               Premium legal solutions for businesses and individuals. Expert counsel
               delivering results with integrity and precision.

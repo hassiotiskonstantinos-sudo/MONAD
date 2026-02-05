@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X, ChevronDown, Globe } from 'lucide-react'
 
 const services = [
@@ -35,13 +36,14 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span
-              className={`text-2xl md:text-3xl font-serif font-bold tracking-wider ${
-                isScrolled ? 'text-primary-900' : 'text-white'
-              }`}
-            >
-              MONAD
-            </span>
+            <Image
+              src="/images/logo-monad.png"
+              alt="MONAD"
+              width={150}
+              height={50}
+              className={`h-10 w-auto ${isScrolled ? '' : 'brightness-0 invert'}`}
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
