@@ -1,23 +1,21 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen overflow-hidden">
-      {/* Video Background */}
+      {/* Image Background */}
       <div className="absolute inset-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          poster="/images/shutterstock_2644707669.jpg"
-        >
-          <source src="/videos/shutterstock_3662626007.mov" type="video/quicktime" />
-        </video>
+        <Image
+          src="/images/shutterstock_2644707669.jpg"
+          alt="MONAD Law Firm"
+          fill
+          className="object-cover"
+          priority
+        />
         {/* Fallback gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 -z-10" />
       </div>
