@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Target, Eye, ArrowRight } from 'lucide-react'
 import SectionHeading from '@/components/SectionHeading'
 import Link from 'next/link'
@@ -6,8 +7,18 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-primary-900">
-        <div className="container-custom">
+      <section className="relative pt-32 pb-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/Regulatory.jpg"
+            alt="About MONAD"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-primary-900/80" />
+        </div>
+        <div className="container-custom relative">
           <div className="max-w-3xl">
             <h1 className="heading-1 text-white mb-6">Who MONAD Is</h1>
             <p className="text-xl text-primary-200 leading-relaxed">

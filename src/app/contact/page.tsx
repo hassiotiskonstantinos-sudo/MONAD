@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { MapPin, Mail, Clock, ChevronRight } from 'lucide-react'
 import ContactForm from '@/components/ContactForm'
 import Link from 'next/link'
@@ -6,15 +7,16 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-24 bg-primary-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-              backgroundSize: '40px 40px',
-            }}
+      <section className="relative pt-32 pb-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/shutterstock_2644707669.jpg"
+            alt="Contact MONAD"
+            fill
+            className="object-cover"
+            priority
           />
+          <div className="absolute inset-0 bg-primary-900/80" />
         </div>
         <div className="container-custom relative">
           <div className="max-w-3xl">

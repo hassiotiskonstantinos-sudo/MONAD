@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import {
   Lightbulb,
   Palette,
@@ -118,15 +119,16 @@ export default function TechnologyServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-24 bg-primary-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-              backgroundSize: '40px 40px',
-            }}
+      <section className="relative pt-32 pb-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/Digital Assets and Blockchain.jpg"
+            alt="Technology and Innovation"
+            fill
+            className="object-cover"
+            priority
           />
+          <div className="absolute inset-0 bg-primary-900/80" />
         </div>
         <div className="container-custom relative">
           <div className="max-w-3xl">

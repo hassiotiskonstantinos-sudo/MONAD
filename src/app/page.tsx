@@ -15,6 +15,7 @@ import {
   ArrowRight,
 } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import ContactForm from '@/components/ContactForm'
 import SectionHeading from '@/components/SectionHeading'
 import HeroSection from '@/components/HeroSection'
@@ -187,6 +188,14 @@ export default function Home() {
                   </p>
                 </div>
               </div>
+              <div className="mt-8 relative h-64 w-full">
+                <Image
+                  src="/images/shutterstock_2249889569.jpg"
+                  alt="MONAD Law Firm"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
             <div className="bg-primary-900 text-white p-10">
               <h3 className="text-2xl font-serif font-semibold mb-6">
@@ -235,44 +244,58 @@ export default function Home() {
       <section className="py-20 bg-primary-900 text-white">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-8">
-            <div className="p-8 bg-white/5 border border-white/10">
-              <h3 className="text-2xl font-serif font-bold mb-4">FINLEX</h3>
-              <p className="text-primary-200 mb-4 leading-relaxed">
-                FINLEX is MONAD's focused hub for clients dealing with cross border
-                structuring, investor driven transactions and finance adjacent legal
-                needs. Built for founders, investors, family offices and internationally
-                mobile clients who need legal clarity across jurisdictions.
-              </p>
-              <p className="text-primary-200 mb-6 leading-relaxed">
-                FINLEX exists to turn complexity into usable decisions. Clients receive
-                clear options, clear trade offs and clear next steps.
-              </p>
-              <Link
-                href="/finlex"
-                className="inline-flex items-center text-white font-medium hover:text-primary-200 transition-colors"
-              >
-                Learn more about FINLEX
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
+            <div className="bg-white/5 border border-white/10 overflow-hidden">
+              <div className="relative h-48">
+                <Image
+                  src="/images/Tax Wealth and Asset Management.jpg"
+                  alt="FINLEX - Cross Border Structuring"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-primary-900/40" />
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-serif font-bold mb-4">FINLEX</h3>
+                <p className="text-primary-200 mb-4 leading-relaxed">
+                  FINLEX is MONAD's focused hub for clients dealing with cross border
+                  structuring, investor driven transactions and finance adjacent legal
+                  needs. Built for founders, investors, family offices and internationally
+                  mobile clients who need legal clarity across jurisdictions.
+                </p>
+                <Link
+                  href="/finlex"
+                  className="inline-flex items-center text-white font-medium hover:text-primary-200 transition-colors"
+                >
+                  Learn more about FINLEX
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </div>
             </div>
-            <div className="p-8 bg-white/5 border border-white/10">
-              <h3 className="text-2xl font-serif font-bold mb-4">MEDLEX</h3>
-              <p className="text-primary-200 mb-4 leading-relaxed">
-                Το MEDLEX είναι ο στοχευμένος κόμβος της MONAD για νομικές υπηρεσίες
-                ελληνικού δικαίου, με έμφαση στην πρακτική εφαρμογή και την ασφάλεια
-                δικαίου.
-              </p>
-              <p className="text-primary-200 mb-6 leading-relaxed">
-                Στόχος του MEDLEX είναι να προσφέρει ένα σταθερό σημείο αναφοράς για
-                όσους χρειάζονται σύγχρονη νομική υποστήριξη στην Ελλάδα.
-              </p>
-              <Link
-                href="/el/medlex"
-                className="inline-flex items-center text-white font-medium hover:text-primary-200 transition-colors"
-              >
-                Μάθετε περισσότερα
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
+            <div className="bg-white/5 border border-white/10 overflow-hidden">
+              <div className="relative h-48">
+                <Image
+                  src="/images/shutterstock_2724348917.jpg"
+                  alt="MEDLEX - Greek Legal Services"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-primary-900/40" />
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-serif font-bold mb-4">MEDLEX</h3>
+                <p className="text-primary-200 mb-4 leading-relaxed">
+                  Το MEDLEX είναι ο στοχευμένος κόμβος της MONAD για νομικές υπηρεσίες
+                  ελληνικού δικαίου, με έμφαση στην πρακτική εφαρμογή και την ασφάλεια
+                  δικαίου.
+                </p>
+                <Link
+                  href="/el/medlex"
+                  className="inline-flex items-center text-white font-medium hover:text-primary-200 transition-colors"
+                >
+                  Μάθετε περισσότερα
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

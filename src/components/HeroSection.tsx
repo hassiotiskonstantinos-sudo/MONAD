@@ -14,10 +14,9 @@ const HeroSection = () => {
           loop
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover"
-          poster="/images/hero-poster.jpg"
+          poster="/images/shutterstock_2644707669.jpg"
         >
-          <source src="/videos/hero-video.mp4" type="video/mp4" />
-          <source src="/videos/hero-video.webm" type="video/webm" />
+          <source src="/videos/shutterstock_3662626007.mov" type="video/quicktime" />
         </video>
         {/* Fallback gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 -z-10" />
