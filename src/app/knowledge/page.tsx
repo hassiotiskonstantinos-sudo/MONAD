@@ -1,61 +1,61 @@
 import Link from 'next/link'
-import { Calendar, User, ArrowRight, Tag } from 'lucide-react'
+import { Calendar, User, ArrowRight, Tag, ChevronRight } from 'lucide-react'
 import SectionHeading from '@/components/SectionHeading'
 
 const articles = [
   {
-    title: 'Understanding GDPR Compliance for Greek Businesses',
+    title: 'Cross-Border Structuring: Key Considerations for 2024',
     excerpt:
-      'A comprehensive guide to navigating GDPR requirements and ensuring your business remains compliant with EU data protection regulations.',
+      'An overview of legal and practical considerations when establishing cross-border corporate structures, including holding company selection, substance requirements and treaty access.',
     date: '2024-01-15',
-    author: 'Elena Mavros',
-    category: 'Technology',
-    slug: 'gdpr-compliance-greek-businesses',
+    author: 'MONAD Team',
+    category: 'Corporate',
+    slug: 'cross-border-structuring-2024',
   },
   {
-    title: 'Golden Visa Greece: Complete 2024 Guide',
+    title: 'Greek Golden Visa: Updated Requirements and Process',
     excerpt:
-      'Everything you need to know about the Greek Golden Visa program, including requirements, benefits, and application process.',
+      'A practical guide to the Greek Golden Visa program, including investment thresholds, application requirements, processing times and integration with broader residence planning.',
     date: '2024-01-10',
-    author: 'Christos Alexiou',
+    author: 'MONAD Team',
     category: 'Immigration',
     slug: 'golden-visa-greece-2024-guide',
   },
   {
-    title: 'Corporate Formation in Greece: A Step-by-Step Guide',
+    title: 'GDPR Compliance: Practical Steps for Growing Companies',
     excerpt:
-      'Learn the essential steps for establishing a company in Greece, from choosing the right entity type to registration procedures.',
+      'What companies need to know about GDPR compliance as they scale, including data mapping, processor agreements, international transfers and documentation requirements.',
     date: '2024-01-05',
-    author: 'Alexandra Papadopoulos',
-    category: 'Corporate',
-    slug: 'corporate-formation-greece-guide',
-  },
-  {
-    title: 'Real Estate Investment in Greece: Legal Considerations',
-    excerpt:
-      'Key legal aspects to consider when investing in Greek real estate, including due diligence, contracts, and tax implications.',
-    date: '2023-12-28',
-    author: 'Dimitrios Konstantinou',
-    category: 'Real Estate',
-    slug: 'real-estate-investment-greece',
-  },
-  {
-    title: 'Protecting Your Intellectual Property in the Digital Age',
-    excerpt:
-      'How to safeguard your IP assets in an increasingly digital world, from trademarks to software patents.',
-    date: '2023-12-20',
-    author: 'Elena Mavros',
+    author: 'MONAD Team',
     category: 'Technology',
-    slug: 'intellectual-property-digital-age',
+    slug: 'gdpr-compliance-growing-companies',
   },
   {
-    title: 'Employment Law Updates: What Employers Need to Know',
+    title: 'Real Estate Due Diligence in Greece: A Practical Guide',
     excerpt:
-      'Recent changes in Greek employment legislation and their implications for businesses and HR practices.',
+      'Key steps in Greek real estate due diligence, from title examination and planning verification to tax and encumbrance checks. Practical guidance for buyers and investors.',
+    date: '2023-12-28',
+    author: 'MONAD Team',
+    category: 'Real Estate',
+    slug: 'real-estate-due-diligence-greece',
+  },
+  {
+    title: 'Investment Documentation: Term Sheets to Completion',
+    excerpt:
+      'An overview of the documentation involved in investment transactions, from initial term sheets through to completion mechanics, with practical notes on negotiation and common issues.',
+    date: '2023-12-20',
+    author: 'MONAD Team',
+    category: 'Corporate',
+    slug: 'investment-documentation-guide',
+  },
+  {
+    title: 'Employment Law in Greece: What Employers Need to Know',
+    excerpt:
+      'Key aspects of Greek employment law for employers, including hiring, contracts, termination, collective arrangements and recent legislative changes.',
     date: '2023-12-15',
-    author: 'Maria Stefanou',
+    author: 'MONAD Team',
     category: 'Employment',
-    slug: 'employment-law-updates-2024',
+    slug: 'employment-law-greece-employers',
   },
 ]
 
@@ -66,20 +66,42 @@ const categories = [
   'Technology',
   'Immigration',
   'Employment',
-  'Litigation',
+  'Disputes',
 ]
 
 export default function KnowledgePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-primary-900">
-        <div className="container-custom">
+      <section className="relative pt-32 pb-24 bg-primary-900 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+              backgroundSize: '40px 40px',
+            }}
+          />
+        </div>
+        <div className="container-custom relative">
           <div className="max-w-3xl">
             <h1 className="heading-1 text-white mb-6">Knowledge</h1>
-            <p className="text-xl text-primary-200">
-              Insights, analysis, and updates from our legal experts to keep you
-              informed on the latest developments.
+            <p className="text-xl text-primary-200 leading-relaxed">
+              Practical insights on legal topics relevant to our clients. Articles,
+              guides and updates from the MONAD team.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Introduction */}
+      <section className="py-12 bg-white border-b border-primary-100">
+        <div className="container-custom">
+          <div className="max-w-4xl">
+            <p className="text-body text-lg leading-relaxed">
+              MONAD publishes practical guidance on legal topics that matter to our clients.
+              Articles focus on actionable information rather than academic analysis. Content
+              is updated regularly to reflect changes in law and practice.
             </p>
           </div>
         </div>
@@ -95,9 +117,9 @@ export default function KnowledgePage() {
                 {articles.map((article) => (
                   <article
                     key={article.slug}
-                    className="group border border-primary-100 p-8 card-hover"
+                    className="group border border-primary-100 p-8 hover:shadow-lg transition-shadow"
                   >
-                    <div className="flex items-center gap-4 text-sm text-primary-500 mb-4">
+                    <div className="flex flex-wrap items-center gap-4 text-sm text-primary-500 mb-4">
                       <span className="flex items-center">
                         <Calendar className="w-4 h-4 mr-1" />
                         {new Date(article.date).toLocaleDateString('en-US', {
@@ -107,43 +129,20 @@ export default function KnowledgePage() {
                         })}
                       </span>
                       <span className="flex items-center">
-                        <User className="w-4 h-4 mr-1" />
-                        {article.author}
-                      </span>
-                      <span className="flex items-center">
                         <Tag className="w-4 h-4 mr-1" />
                         {article.category}
                       </span>
                     </div>
                     <h2 className="text-2xl font-serif font-semibold mb-4 group-hover:text-primary-700 transition-colors">
-                      <Link href={`/knowledge/${article.slug}`}>
-                        {article.title}
-                      </Link>
+                      {article.title}
                     </h2>
-                    <p className="text-primary-600 mb-4">{article.excerpt}</p>
-                    <Link
-                      href={`/knowledge/${article.slug}`}
-                      className="inline-flex items-center text-primary-900 font-medium hover:text-primary-600 transition-colors"
-                    >
+                    <p className="text-primary-600 mb-4 leading-relaxed">{article.excerpt}</p>
+                    <span className="inline-flex items-center text-primary-900 font-medium group-hover:text-primary-600 transition-colors">
                       Read More
                       <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                    </Link>
+                    </span>
                   </article>
                 ))}
-              </div>
-
-              {/* Pagination */}
-              <div className="mt-12 flex justify-center gap-2">
-                <button className="px-4 py-2 bg-primary-900 text-white">1</button>
-                <button className="px-4 py-2 border border-primary-200 hover:bg-primary-50 transition-colors">
-                  2
-                </button>
-                <button className="px-4 py-2 border border-primary-200 hover:bg-primary-50 transition-colors">
-                  3
-                </button>
-                <button className="px-4 py-2 border border-primary-200 hover:bg-primary-50 transition-colors">
-                  Next
-                </button>
               </div>
             </div>
 
@@ -151,11 +150,12 @@ export default function KnowledgePage() {
             <div className="lg:col-span-1">
               {/* Categories */}
               <div className="mb-8">
-                <h3 className="text-lg font-semibold mb-4">Categories</h3>
+                <h3 className="text-lg font-semibold mb-4">Topics</h3>
                 <ul className="space-y-2">
                   {categories.map((category) => (
                     <li key={category}>
-                      <button className="text-primary-600 hover:text-primary-900 transition-colors">
+                      <button className="flex items-center text-primary-600 hover:text-primary-900 transition-colors">
+                        <ChevronRight className="w-4 h-4 mr-1" />
                         {category}
                       </button>
                     </li>
@@ -163,12 +163,11 @@ export default function KnowledgePage() {
                 </ul>
               </div>
 
-              {/* Newsletter */}
-              <div className="bg-primary-50 p-6">
-                <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
+              {/* Updates */}
+              <div className="bg-primary-50 p-6 mb-8">
+                <h3 className="text-lg font-semibold mb-4">Stay Informed</h3>
                 <p className="text-primary-600 text-sm mb-4">
-                  Subscribe to receive the latest legal insights directly in your
-                  inbox.
+                  Subscribe to receive updates when new articles are published.
                 </p>
                 <form className="space-y-3">
                   <input
@@ -183,17 +182,41 @@ export default function KnowledgePage() {
               </div>
 
               {/* Contact */}
-              <div className="mt-8 border border-primary-100 p-6">
-                <h3 className="text-lg font-semibold mb-4">Need Legal Advice?</h3>
+              <div className="border border-primary-100 p-6">
+                <h3 className="text-lg font-semibold mb-4">Need Specific Advice?</h3>
                 <p className="text-primary-600 text-sm mb-4">
-                  Contact our team for a consultation on your specific legal needs.
+                  Articles provide general guidance. For advice on your specific
+                  situation, contact the team directly.
                 </p>
                 <Link href="/contact" className="btn-secondary w-full text-sm text-center block">
                   Contact Us
                 </Link>
               </div>
+
+              {/* FINLEX */}
+              <div className="mt-8 bg-primary-900 text-white p-6">
+                <h3 className="text-lg font-semibold mb-4">FINLEX</h3>
+                <p className="text-primary-200 text-sm mb-4">
+                  Cross-border structuring and investor transactions.
+                </p>
+                <Link href="/finlex" className="inline-flex items-center text-white text-sm font-medium hover:text-primary-200 transition-colors">
+                  Learn More
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Disclaimer */}
+      <section className="py-8 bg-primary-50">
+        <div className="container-custom">
+          <p className="text-sm text-primary-500 text-center">
+            Articles are for general information only and do not constitute legal advice.
+            Content may not reflect the current state of the law. For advice on specific
+            matters, please contact us directly.
+          </p>
         </div>
       </section>
     </>

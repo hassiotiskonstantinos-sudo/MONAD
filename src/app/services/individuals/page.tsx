@@ -9,6 +9,7 @@ import {
   Gavel,
   Shield,
   ChevronRight,
+  ArrowRight,
 } from 'lucide-react'
 import SectionHeading from '@/components/SectionHeading'
 import ContactForm from '@/components/ContactForm'
@@ -19,12 +20,13 @@ const services = [
     icon: Users,
     title: 'Families and Business',
     description:
-      'Navigating the intersection of family and business interests with sensitivity and expertise.',
+      'MONAD advises families with business interests on governance, succession, wealth transfer and dispute prevention. The firm works with founders, inheritors and family offices to manage the legal complexity that comes with multi-generational ownership, competing interests and cross-border holdings.',
     features: [
-      'Family business governance',
-      'Succession planning',
-      'Shareholder agreements',
-      'Family constitutions',
+      'Family governance frameworks',
+      'Succession and transition planning',
+      'Shareholder arrangements',
+      'Family constitutions and protocols',
+      'Dispute prevention structures',
     ],
   },
   {
@@ -32,12 +34,13 @@ const services = [
     icon: FileText,
     title: 'Estate Administration',
     description:
-      'Comprehensive estate administration services to ensure smooth transfer of assets and fulfillment of wishes.',
+      'MONAD advises executors, administrators and beneficiaries on the administration of estates, both domestic and cross-border. Work includes probate applications, asset identification and collection, creditor management, tax filings and distribution to beneficiaries.',
     features: [
-      'Probate proceedings',
-      'Asset distribution',
-      'Trust administration',
-      'Estate tax planning',
+      'Probate and letters of administration',
+      'Asset identification and collection',
+      'Creditor and liability management',
+      'Estate tax coordination',
+      'Beneficiary distributions',
     ],
   },
   {
@@ -45,12 +48,13 @@ const services = [
     icon: Scale,
     title: 'Inheritance Law',
     description:
-      'Expert guidance on inheritance matters, protecting your legacy and ensuring fair distribution.',
+      'MONAD advises on inheritance matters, including wills, forced heirship, succession disputes and cross-border estates. The firm handles contentious and non-contentious matters, from will drafting to claims under foreign succession regimes.',
     features: [
-      'Wills and testaments',
+      'Will drafting and review',
+      'Cross-border succession planning',
+      'Forced heirship analysis',
       'Inheritance disputes',
-      'Cross-border inheritance',
-      'Forced heirship rules',
+      'Estate litigation',
     ],
   },
   {
@@ -58,12 +62,13 @@ const services = [
     icon: Plane,
     title: 'Immigration',
     description:
-      'Personal immigration services for individuals and families seeking to relocate or establish residence.',
+      'MONAD advises individuals and families on residence, permits, visas and citizenship matters. Work includes relocations, permit renewals, family reunification and coordination with tax and wealth planning where residence status affects broader planning.',
     features: [
-      'Residence permits',
+      'Residence permit applications',
       'Family reunification',
       'Citizenship applications',
-      'Long-term visas',
+      'Visa extensions and renewals',
+      'Coordination with tax planning',
     ],
   },
   {
@@ -71,12 +76,13 @@ const services = [
     icon: Award,
     title: 'Golden Visas',
     description:
-      'Expert assistance with Golden Visa applications for investment-based residence in Greece.',
+      'MONAD advises on Greek Golden Visa applications, from eligibility assessment through to permit issuance. The firm coordinates real estate acquisition, due diligence, application preparation and renewal. Work is integrated with tax residency planning where relevant.',
     features: [
-      'Real estate investment visas',
-      'Application preparation',
+      'Eligibility assessment',
+      'Real estate acquisition coordination',
+      'Application preparation and filing',
       'Due diligence support',
-      'Renewal and extension',
+      'Renewal and family extensions',
     ],
   },
   {
@@ -84,12 +90,13 @@ const services = [
     icon: Briefcase,
     title: 'Private Client / Non-Dom',
     description:
-      'Specialized services for high-net-worth individuals and non-domiciled clients.',
+      'MONAD advises internationally mobile individuals on residence, tax status, asset structuring and wealth preservation. The firm handles non-dom regimes, remittance planning, pre-arrival structuring and ongoing compliance. Work is coordinated with tax advisors in relevant jurisdictions.',
     features: [
-      'Non-dom tax planning',
-      'Wealth structuring',
-      'Asset protection',
-      'International tax advice',
+      'Non-dom regime planning',
+      'Pre-arrival structuring',
+      'Remittance basis planning',
+      'Asset protection structures',
+      'Multi-jurisdictional coordination',
     ],
   },
   {
@@ -97,12 +104,13 @@ const services = [
     icon: Gavel,
     title: 'Private Commercial Litigation',
     description:
-      'Representation in private commercial disputes with a focus on achieving optimal outcomes.',
+      'MONAD represents individuals in commercial disputes arising from investments, partnerships, contracts and professional relationships. The firm handles court proceedings, arbitration and negotiated settlements, with a focus on protecting personal exposure and reputation.',
     features: [
-      'Contract disputes',
-      'Partnership disputes',
-      'Shareholder disputes',
-      'Professional negligence',
+      'Investment disputes',
+      'Partnership and JV disputes',
+      'Contract enforcement',
+      'Professional negligence claims',
+      'Settlement negotiations',
     ],
   },
   {
@@ -110,12 +118,13 @@ const services = [
     icon: Shield,
     title: 'Private Wealth Disputes',
     description:
-      'Resolution of disputes involving significant personal wealth and complex asset structures.',
+      'MONAD represents individuals in disputes involving trusts, estates, family wealth and asset recovery. Work includes trust variation and removal applications, inheritance claims, breach of fiduciary duty actions and tracing claims across jurisdictions.',
     features: [
-      'Trust disputes',
-      'Inheritance litigation',
+      'Trust disputes and variations',
+      'Inheritance and estate claims',
+      'Breach of fiduciary duty',
+      'Asset tracing and recovery',
       'Family wealth conflicts',
-      'Asset recovery',
     ],
   },
 ]
@@ -124,31 +133,65 @@ export default function IndividualsServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-primary-900">
-        <div className="container-custom">
+      <section className="relative pt-32 pb-24 bg-primary-900 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+              backgroundSize: '40px 40px',
+            }}
+          />
+        </div>
+        <div className="container-custom relative">
           <div className="max-w-3xl">
-            <p className="text-primary-400 uppercase tracking-wider mb-4">
+            <p className="text-primary-400 uppercase tracking-wider text-sm font-medium mb-4">
               What We Do
             </p>
             <h1 className="heading-1 text-white mb-6">Services for Individuals</h1>
-            <p className="text-xl text-primary-200">
-              Our personalized services for individuals address a wide array of
-              legal needs, ensuring your personal and family matters are handled
-              with care, discretion, and expertise.
+            <p className="text-xl text-primary-200 mb-6 leading-relaxed">
+              MONAD advises individuals, families and private clients on personal legal matters,
+              from wealth planning and immigration to disputes and estate administration.
+            </p>
+            <p className="text-lg text-primary-300 leading-relaxed">
+              The approach is the same as for corporate clients: understand the objective,
+              identify the risks, provide clear options and execute with discretion.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Introduction */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="max-w-4xl">
+            <SectionHeading
+              title="Private Client Services"
+              subtitle="Discretion, clarity and decisive action for personal legal matters"
+            />
+            <p className="text-body text-lg leading-relaxed mb-6">
+              Private clients face legal complexity across borders: residence planning, wealth
+              structuring, family governance, succession and disputes. MONAD provides the same
+              rigour and responsiveness for individuals as it does for businesses.
+            </p>
+            <p className="text-body leading-relaxed">
+              Work is handled with discretion. Matters are senior-led. The focus is on
+              providing clear options and helping clients make confident decisions about
+              their personal affairs.
             </p>
           </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-primary-50">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service) => (
               <div
                 key={service.id}
                 id={service.id}
-                className="border border-primary-100 p-8 card-hover"
+                className="bg-white border border-primary-100 p-8 hover:shadow-lg transition-shadow"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-primary-100 flex items-center justify-center mr-4">
@@ -158,7 +201,7 @@ export default function IndividualsServicesPage() {
                     {service.title}
                   </h2>
                 </div>
-                <p className="text-primary-600 mb-4">{service.description}</p>
+                <p className="text-primary-600 mb-4 leading-relaxed">{service.description}</p>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center text-sm">
@@ -171,7 +214,7 @@ export default function IndividualsServicesPage() {
                   href="/contact"
                   className="inline-flex items-center text-primary-900 font-medium hover:text-primary-600 transition-colors"
                 >
-                  Learn More
+                  Discuss Your Matter
                   <ChevronRight className="ml-1 w-4 h-4" />
                 </Link>
               </div>
@@ -181,20 +224,47 @@ export default function IndividualsServicesPage() {
       </section>
 
       {/* MEDLEX Highlight */}
-      <section className="section-padding bg-primary-50">
+      <section className="py-20 bg-primary-900 text-white">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="heading-2 mb-6">MEDLEX - Medical Negligence</h2>
-            <p className="text-body mb-8">
-              At MONAD, we are dedicated to advocating for individuals who have
-              suffered due to medical negligence. Our experienced team meticulously
-              investigates each case, working with medical experts to hold
-              responsible parties accountable and secure the compensation you
-              deserve.
-            </p>
-            <Link href="/el/medlex" className="btn-primary inline-flex">
-              Learn More About MEDLEX
-            </Link>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="heading-2 mb-6">MEDLEX - Greek Legal Services</h2>
+              <p className="text-primary-200 mb-4 leading-relaxed">
+                MEDLEX is MONAD's Greek language hub for clients who need legal services in
+                Greece. Built for Greek speakers, residents and those doing business in
+                Greece who prefer to work in their native language.
+              </p>
+              <p className="text-primary-200 mb-6 leading-relaxed">
+                MEDLEX covers corporate, real estate, employment and dispute resolution
+                matters under Greek law, delivered with the same rigour and clarity as
+                MONAD's English language services.
+              </p>
+              <Link href="/el/medlex" className="btn-outline-light inline-flex items-center">
+                Learn More About MEDLEX
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
+            <div className="bg-white/10 p-8 border border-white/20">
+              <h3 className="text-xl font-semibold mb-4">MEDLEX Covers:</h3>
+              <ul className="space-y-3 text-primary-200">
+                <li className="flex items-start">
+                  <ChevronRight className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
+                  Corporate and commercial law
+                </li>
+                <li className="flex items-start">
+                  <ChevronRight className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
+                  Real estate transactions
+                </li>
+                <li className="flex items-start">
+                  <ChevronRight className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
+                  Employment and labour law
+                </li>
+                <li className="flex items-start">
+                  <ChevronRight className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
+                  Dispute resolution and litigation
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -205,23 +275,23 @@ export default function IndividualsServicesPage() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <SectionHeading
-                title="How Can We Help You?"
-                subtitle="Our team is ready to assist you with your personal legal matters."
+                title="Discuss Your Matter"
+                subtitle="Use the form to describe your situation. A response will follow within one business day."
               />
               <p className="text-body mb-6">
-                Whether you need assistance with estate planning, immigration, or
-                resolving a dispute, we provide personalized attention and expert
-                counsel to protect your interests and achieve your goals.
+                Personal matters require discretion. MONAD handles private client work
+                with confidentiality and sensitivity. Initial consultations are used
+                to understand your situation and determine how the firm can assist.
               </p>
               <div className="bg-primary-50 p-6">
-                <h4 className="font-semibold mb-2">Confidential Consultation</h4>
+                <h4 className="font-semibold mb-2">Confidentiality</h4>
                 <p className="text-primary-600 text-sm">
-                  All consultations are handled with the utmost discretion and
-                  confidentiality.
+                  All communications are treated as confidential. Information shared
+                  during initial discussions is protected even if no engagement follows.
                 </p>
               </div>
             </div>
-            <ContactForm compact />
+            <ContactForm title="Contact Private Client Team" />
           </div>
         </div>
       </section>

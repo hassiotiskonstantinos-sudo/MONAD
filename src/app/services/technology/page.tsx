@@ -8,6 +8,7 @@ import {
   Lock,
   Coins,
   ChevronRight,
+  ArrowRight,
 } from 'lucide-react'
 import SectionHeading from '@/components/SectionHeading'
 import ContactForm from '@/components/ContactForm'
@@ -18,12 +19,13 @@ const services = [
     icon: Lightbulb,
     title: 'Intellectual Property',
     description:
-      'Comprehensive IP protection strategies to safeguard your innovations and creative works.',
+      'MONAD advises on trademark portfolios, IP strategy, licensing, enforcement and disputes. Work includes clearance searches, registration filings, opposition and cancellation proceedings, licensing negotiations and infringement actions.',
     features: [
-      'Trademark registration',
+      'Trademark clearance and registration',
       'IP portfolio management',
-      'Licensing agreements',
-      'IP enforcement',
+      'Licensing and commercialization',
+      'Enforcement and infringement actions',
+      'IP due diligence for transactions',
     ],
   },
   {
@@ -31,12 +33,13 @@ const services = [
     icon: Palette,
     title: 'Copyright and Design',
     description:
-      'Protection for creative works, designs, and artistic expressions across all media.',
+      'MONAD advises on copyright and design protection across digital and physical media. Work includes rights clearance, licensing agreements, takedown procedures and infringement litigation.',
     features: [
-      'Copyright registration',
-      'Design protection',
-      'Content licensing',
-      'Infringement actions',
+      'Copyright registration and protection',
+      'Design rights and registration',
+      'Content licensing agreements',
+      'Infringement and takedown actions',
+      'Rights clearance and chain of title',
     ],
   },
   {
@@ -44,24 +47,26 @@ const services = [
     icon: Scale,
     title: 'Competition Law',
     description:
-      'Navigate competition regulations and ensure compliance with antitrust requirements.',
+      'MONAD advises on competition compliance, merger control and antitrust matters. Work includes compliance programs, merger filings, cartel investigations and abuse of dominance matters.',
     features: [
-      'Competition compliance',
-      'Merger control',
+      'Competition compliance programs',
+      'Merger control filings',
       'Cartel investigations',
-      'Market dominance issues',
+      'Abuse of dominance advisory',
+      'Distribution and pricing compliance',
     ],
   },
   {
     id: 'gdpr',
     icon: Shield,
-    title: 'GDPR',
+    title: 'GDPR and Data Protection',
     description:
-      'Ensure your business complies with EU data protection regulations and GDPR requirements.',
+      'MONAD advises on GDPR compliance, data protection frameworks and privacy matters. Work includes compliance audits, privacy policies, data processing agreements, international transfers and breach response.',
     features: [
       'GDPR compliance audits',
-      'Privacy policies',
+      'Privacy policies and notices',
       'Data processing agreements',
+      'International data transfers',
       'Data breach response',
     ],
   },
@@ -70,38 +75,41 @@ const services = [
     icon: Award,
     title: 'Patents',
     description:
-      'Patent strategy and protection for technological innovations and inventions.',
+      'MONAD coordinates patent strategy and works with patent attorneys on prosecution, portfolio management and freedom-to-operate analysis. The firm handles patent licensing, disputes and IP aspects of technology transactions.',
     features: [
-      'Patent applications',
-      'Patent prosecution',
-      'Freedom to operate',
-      'Patent litigation',
+      'Patent strategy coordination',
+      'Freedom-to-operate analysis',
+      'Patent licensing agreements',
+      'Patent disputes and litigation',
+      'Technology transaction support',
     ],
   },
   {
     id: 'data-privacy',
     icon: Lock,
-    title: 'Data Privacy, Cybersecurity, Technology Transactions, and SaaS',
+    title: 'Cybersecurity and Technology Transactions',
     description:
-      'Comprehensive legal support for technology businesses and digital operations.',
+      'MONAD advises on cybersecurity frameworks, technology contracts and SaaS arrangements. Work includes security policies, incident response planning, technology licensing, SaaS agreements and outsourcing contracts.',
     features: [
-      'Cybersecurity policies',
-      'SaaS agreements',
-      'Technology licensing',
-      'Data security compliance',
+      'Cybersecurity policies and frameworks',
+      'Incident response planning',
+      'Technology licensing agreements',
+      'SaaS and cloud contracts',
+      'Outsourcing and vendor agreements',
     ],
   },
   {
     id: 'crypto',
     icon: Coins,
-    title: "NFTs and Crypto",
+    title: 'Digital Assets and Blockchain',
     description:
-      'Legal guidance for blockchain technology, cryptocurrency, and digital assets.',
+      'MONAD advises on the legal aspects of blockchain projects, token structures and digital asset transactions. Work includes regulatory analysis, token documentation, NFT arrangements and DeFi structures.',
     features: [
       'Token legal frameworks',
-      'NFT contracts',
-      'Crypto compliance',
+      'Regulatory classification analysis',
+      'NFT contracts and licensing',
       'DeFi legal structures',
+      'Exchange and custody arrangements',
     ],
   },
 ]
@@ -110,18 +118,30 @@ export default function TechnologyServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-primary-900">
-        <div className="container-custom">
+      <section className="relative pt-32 pb-24 bg-primary-900 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+              backgroundSize: '40px 40px',
+            }}
+          />
+        </div>
+        <div className="container-custom relative">
           <div className="max-w-3xl">
-            <p className="text-primary-400 uppercase tracking-wider mb-4">
+            <p className="text-primary-400 uppercase tracking-wider text-sm font-medium mb-4">
               What We Do
             </p>
             <h1 className="heading-1 text-white mb-6">Technology & Innovation</h1>
-            <p className="text-xl text-primary-200">
-              The legal landscape is constantly evolving with advancements in
-              technology, and so are we. Our firm provides cutting-edge legal
-              counsel on intellectual property, data protection, and emerging
-              technologies.
+            <p className="text-xl text-primary-200 mb-6 leading-relaxed">
+              MONAD advises technology companies, digital businesses and innovators on IP,
+              data protection, technology transactions and emerging technology matters.
+            </p>
+            <p className="text-lg text-primary-300 leading-relaxed">
+              The focus is on practical advice that supports innovation while managing
+              legal risk. Work ranges from startup IP strategy to enterprise technology
+              procurement.
             </p>
           </div>
         </div>
@@ -131,31 +151,31 @@ export default function TechnologyServicesPage() {
       <section className="py-16 bg-primary-50">
         <div className="container-custom">
           <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="p-8 bg-white">
+            <div className="p-8 bg-white border border-primary-100">
               <Shield className="w-12 h-12 mx-auto mb-4 text-primary-900" />
               <h3 className="text-xl font-serif font-semibold mb-2">
-                Intellectual Property & GDPR Compliance
+                IP & Data Protection
               </h3>
               <p className="text-primary-600">
-                Protect your innovations while ensuring data privacy compliance.
+                Protect innovations and ensure GDPR compliance across operations.
               </p>
             </div>
-            <div className="p-8 bg-white">
+            <div className="p-8 bg-white border border-primary-100">
               <Lock className="w-12 h-12 mx-auto mb-4 text-primary-900" />
               <h3 className="text-xl font-serif font-semibold mb-2">
-                Cybersecurity & Technology Transactions
+                Cybersecurity & Transactions
               </h3>
               <p className="text-primary-600">
-                Secure your digital assets and technology deals.
+                Secure digital operations with robust policies and contracts.
               </p>
             </div>
-            <div className="p-8 bg-white">
+            <div className="p-8 bg-white border border-primary-100">
               <Coins className="w-12 h-12 mx-auto mb-4 text-primary-900" />
               <h3 className="text-xl font-serif font-semibold mb-2">
-                SaaS, NFTs, and Crypto
+                Digital Assets & Blockchain
               </h3>
               <p className="text-primary-600">
-                Navigate the evolving landscape of digital assets.
+                Navigate regulatory frameworks for tokens, NFTs and DeFi.
               </p>
             </div>
           </div>
@@ -166,73 +186,79 @@ export default function TechnologyServicesPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <SectionHeading
-            title="Our Technology Services"
-            subtitle="Expert legal support for the digital age"
+            title="Technology Legal Services"
+            subtitle="Practical solutions for digital businesses and innovators"
           />
-          <div className="space-y-12">
-            {services.map((service, index) => (
+          <div className="grid md:grid-cols-2 gap-8">
+            {services.map((service) => (
               <div
                 key={service.id}
                 id={service.id}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? '' : ''
-                }`}
+                className="border border-primary-100 p-8 hover:shadow-lg transition-shadow"
               >
-                <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-primary-100 flex items-center justify-center mr-4">
-                      <service.icon className="w-6 h-6 text-primary-900" />
-                    </div>
-                    <h2 className="heading-3">{service.title}</h2>
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-primary-100 flex items-center justify-center mr-4">
+                    <service.icon className="w-6 h-6 text-primary-900" />
                   </div>
-                  <p className="text-body mb-6">{service.description}</p>
-                  <ul className="space-y-3 mb-6">
-                    {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center">
-                        <ChevronRight className="w-5 h-5 text-primary-900 mr-2" />
-                        <span className="text-primary-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <h2 className="heading-3">{service.title}</h2>
                 </div>
-                <div className={`bg-primary-50 h-48 flex items-center justify-center ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                  <service.icon className="w-20 h-20 text-primary-200" />
-                </div>
+                <p className="text-body mb-6 leading-relaxed">{service.description}</p>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature) => (
+                    <li key={feature} className="flex items-center text-sm">
+                      <ChevronRight className="w-4 h-4 text-primary-900 mr-2 flex-shrink-0" />
+                      <span className="text-primary-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center text-primary-900 font-medium hover:text-primary-600 transition-colors"
+                >
+                  Discuss Your Needs
+                  <ChevronRight className="ml-1 w-4 h-4" />
+                </Link>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Crypto/NFT Special Section */}
+      {/* Digital Assets Section */}
       <section className="py-20 bg-primary-900 text-white">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <Coins className="w-16 h-16 mx-auto mb-6" />
-            <h2 className="heading-2 mb-6">NFTs, Crypto & Blockchain</h2>
-            <p className="text-primary-200 mb-8 leading-relaxed">
-              The world of digital assets is evolving rapidly, and legal frameworks
-              are catching up. Our team stays at the forefront of blockchain law,
-              helping clients navigate regulations, structure token offerings, and
-              protect their digital investments.
-            </p>
-            <div className="grid md:grid-cols-3 gap-8 text-left">
-              <div className="bg-white/10 p-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <Coins className="w-16 h-16 mb-6" />
+              <h2 className="heading-2 mb-6">Digital Assets & Blockchain</h2>
+              <p className="text-primary-200 mb-4 leading-relaxed">
+                Blockchain technology and digital assets present unique legal challenges
+                across securities, tax, IP and contract law. MONAD provides practical
+                guidance for projects navigating this evolving regulatory landscape.
+              </p>
+              <p className="text-primary-200 mb-6 leading-relaxed">
+                Work includes token classification analysis, regulatory strategy,
+                documentation for token sales and DeFi projects, and NFT licensing
+                arrangements.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <div className="bg-white/10 p-6 border border-white/20">
                 <h4 className="font-semibold mb-2">Token Legal Framework</h4>
                 <p className="text-primary-300 text-sm">
-                  Structuring compliant token offerings and classifications
+                  Classification analysis, regulatory strategy and compliant documentation
                 </p>
               </div>
-              <div className="bg-white/10 p-6">
+              <div className="bg-white/10 p-6 border border-white/20">
                 <h4 className="font-semibold mb-2">NFT Contracts</h4>
                 <p className="text-primary-300 text-sm">
-                  Smart contract review and NFT marketplace agreements
+                  IP licensing, marketplace agreements and creator arrangements
                 </p>
               </div>
-              <div className="bg-white/10 p-6">
-                <h4 className="font-semibold mb-2">Regulatory Compliance</h4>
+              <div className="bg-white/10 p-6 border border-white/20">
+                <h4 className="font-semibold mb-2">DeFi Structures</h4>
                 <p className="text-primary-300 text-sm">
-                  Navigating crypto regulations and licensing requirements
+                  Protocol documentation, governance frameworks and regulatory analysis
                 </p>
               </div>
             </div>
@@ -246,17 +272,23 @@ export default function TechnologyServicesPage() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <SectionHeading
-                title="Technology Legal Consultation"
-                subtitle="Stay ahead in the digital landscape with expert legal guidance."
+                title="Discuss Your Technology Matter"
+                subtitle="Use the form to describe your project or legal need."
               />
-              <p className="text-body">
-                Whether you are a startup, an established tech company, or
-                transitioning to digital operations, our technology law team
-                provides the expertise you need to protect your innovations and
-                ensure compliance.
+              <p className="text-body mb-6">
+                Whether building a startup, scaling a technology business, or navigating
+                digital transformation, MONAD provides practical technology law advice
+                focused on supporting innovation while managing risk.
               </p>
+              <div className="bg-white p-6">
+                <p className="text-sm text-primary-600">
+                  <strong>Startups:</strong> MONAD works with early-stage technology
+                  companies on IP strategy, data protection, commercial contracts and
+                  investment documentation.
+                </p>
+              </div>
             </div>
-            <ContactForm compact />
+            <ContactForm title="Contact Technology Team" />
           </div>
         </div>
       </section>
