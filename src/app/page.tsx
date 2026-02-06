@@ -88,25 +88,36 @@ const teamMembers = [
     name: 'Konstantinos Chassiotis',
     role: 'Managing Partner',
     linkedin: 'https://www.linkedin.com/in/chassiotiskonstantinos',
+    image: '/images/1741424447628.jpeg',
     initials: 'KC',
   },
   {
     name: 'Dr. Christos Zoumpoulis',
     role: 'Partner',
     linkedin: 'https://www.linkedin.com/in/christos-zoumpoulis-dr-iur-63544813/',
+    image: '/images/1516501964751.jpeg',
     initials: 'CZ',
   },
   {
     name: 'Maria Sireti',
     role: 'Associate',
     linkedin: 'https://www.linkedin.com/in/maria-sireti-7256b7218/',
+    image: '/images/1666012706689.jpeg',
     initials: 'MS',
   },
   {
     name: 'Vasileios Kottas',
     role: 'Associate',
     linkedin: 'https://www.linkedin.com/in/vasileioskottas/',
+    image: '/images/1573389706301.jpeg',
     initials: 'VK',
+  },
+  {
+    name: 'Barbara Papakonstantinou',
+    role: 'Associate',
+    linkedin: 'https://www.linkedin.com/in/barbara-papakonstantinou-070109254/',
+    image: '/images/1758318032743.jpeg',
+    initials: 'BP',
   },
 ]
 
@@ -208,7 +219,7 @@ export default function Home() {
           </div>
 
           {/* Team Grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
             {teamMembers.map((member, index) => (
               <a
                 key={index}
@@ -218,10 +229,19 @@ export default function Home() {
                 className="group block"
               >
                 <div className="relative aspect-[3/4] bg-neutral-800 overflow-hidden mb-4">
-                  {/* Placeholder with initials - replace with actual photos */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-neutral-700 to-neutral-900">
-                    <span className="text-4xl md:text-5xl font-serif text-white/30">{member.initials}</span>
-                  </div>
+                  {/* Profile Image or Initials Fallback */}
+                  {member.image ? (
+                    <Image
+                      src={getAssetPath(member.image)}
+                      alt={member.name}
+                      fill
+                      className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-neutral-700 to-neutral-900">
+                      <span className="text-4xl md:text-5xl font-serif text-white/30">{member.initials}</span>
+                    </div>
+                  )}
                   {/* LinkedIn icon overlay on hover */}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
                     <Linkedin className="w-8 h-8 text-white" />
@@ -229,11 +249,11 @@ export default function Home() {
                   {/* Orange line at bottom */}
                   <div className="absolute bottom-0 left-0 right-0 h-1 bg-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
                 </div>
-                <h3 className="text-white font-serif text-lg group-hover:text-orange-500 transition-colors">{member.name}</h3>
+                <h3 className="text-white font-serif text-base group-hover:text-orange-500 transition-colors">{member.name}</h3>
                 <p className="text-white/50 text-sm font-light">{member.role}</p>
                 <div className="flex items-center gap-2 mt-2 text-white/40 group-hover:text-orange-500 transition-colors">
                   <Linkedin className="w-4 h-4" />
-                  <span className="text-xs">View Profile</span>
+                  <span className="text-xs">LinkedIn</span>
                 </div>
               </a>
             ))}
