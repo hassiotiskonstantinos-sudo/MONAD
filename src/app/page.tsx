@@ -290,21 +290,27 @@ export default function Home() {
       {/* FINLEX Section - 50% White / 50% Black Split */}
       <section className="border-t border-white/10">
         <div className="grid lg:grid-cols-2 min-h-[500px]">
-          {/* Left - White background with logo at true size */}
+          {/* Left - White background with logo at TRUE natural size */}
           <div className="bg-white p-12 lg:p-16 flex flex-col justify-center">
-            <Image
-              src={getAssetPath('/images/finlex-logo_lrg.png')}
-              alt="FINLEX"
-              width={200}
-              height={60}
-              className="w-auto h-auto max-h-12 mb-10"
-            />
-            <blockquote className="text-2xl md:text-3xl font-serif text-neutral-800 leading-relaxed mb-8">
+            <div className="mb-12">
+              <Image
+                src={getAssetPath('/images/finlex-logo_lrg.png')}
+                alt="FINLEX"
+                width={180}
+                height={54}
+                className="w-[180px] h-auto"
+                unoptimized
+              />
+            </div>
+            <blockquote className="text-2xl md:text-3xl font-serif text-neutral-800 leading-relaxed mb-6">
               &ldquo;We fight for investors who have been wronged. Our mission is to recover what is rightfully yours.&rdquo;
             </blockquote>
-            <p className="text-neutral-500 text-base font-light leading-relaxed mb-8">
+            <p className="text-neutral-500 text-lg font-light leading-relaxed mb-6">
               Exposed to investment fraud or mis-sold financial products? Our expert legal team
               works on a no-win, no-fee basis to recover your losses.
+            </p>
+            <p className="text-neutral-400 text-base font-light leading-relaxed mb-8">
+              Join thousands of investors who have successfully recovered their funds through our dedicated claims process.
             </p>
             <a
               href="https://financial-claims.com"
@@ -316,19 +322,19 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Right - Black background with scaled down preview (80%) */}
+          {/* Right - Black background with scaled down preview (60%) */}
           <div className="bg-black p-8 lg:p-16 flex items-center justify-center">
-            <div className="w-[80%] border border-white/20 bg-white overflow-hidden">
+            <div className="w-[60%] border border-white/20 bg-white overflow-hidden shadow-2xl">
               <div className="bg-neutral-800 p-2 flex items-center gap-1.5">
-                <div className="w-2.5 h-2.5 rounded-full bg-red-500" />
-                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500" />
-                <div className="w-2.5 h-2.5 rounded-full bg-green-500" />
-                <span className="text-white/40 text-xs ml-2">financial-claims.com</span>
+                <div className="w-2 h-2 rounded-full bg-red-500" />
+                <div className="w-2 h-2 rounded-full bg-yellow-500" />
+                <div className="w-2 h-2 rounded-full bg-green-500" />
+                <span className="text-white/40 text-[10px] ml-2">financial-claims.com</span>
               </div>
-              <div className="relative h-[320px] overflow-hidden">
+              <div className="relative h-[280px] overflow-hidden">
                 <iframe
                   src="https://financial-claims.com"
-                  className="absolute top-[-120px] left-0 w-full h-[500px] pointer-events-none"
+                  className="absolute top-[-100px] left-0 w-full h-[450px] pointer-events-none"
                   title="FINLEX Website Preview"
                   scrolling="no"
                 />
