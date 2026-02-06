@@ -104,6 +104,7 @@ const teamMembers = [
     linkedin: 'https://www.linkedin.com/in/barbara-papakonstantinou-070109254/',
     image: '/images/1758318032743.jpeg',
     initials: 'BP',
+    zoom: true,
   },
   {
     name: 'Maria Sireti',
@@ -235,7 +236,7 @@ export default function Home() {
                       src={getAssetPath(member.image)}
                       alt={member.name}
                       fill
-                      className="object-cover grayscale"
+                      className={`object-cover grayscale ${member.zoom ? 'scale-[1.3]' : ''}`}
                     />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-neutral-700 to-neutral-900">
@@ -289,20 +290,21 @@ export default function Home() {
       {/* FINLEX Section - 50% White / 50% Black Split */}
       <section className="border-t border-white/10">
         <div className="grid lg:grid-cols-2 min-h-[500px]">
-          {/* Left - White background with logo */}
+          {/* Left - White background with logo at true size */}
           <div className="bg-white p-12 lg:p-16 flex flex-col justify-center">
             <Image
               src={getAssetPath('/images/finlex-logo_lrg.png')}
               alt="FINLEX"
-              width={280}
-              height={80}
-              className="h-16 w-auto mb-8"
+              width={200}
+              height={60}
+              className="w-auto h-auto max-h-12 mb-10"
             />
-            <p className="text-sm text-neutral-400 uppercase tracking-widest mb-4">A MONAD Platform</p>
-            <h2 className="text-3xl font-serif text-neutral-900 mb-6">Financial Claims Recovery</h2>
-            <p className="text-neutral-600 text-lg font-light leading-relaxed mb-8">
-              Our team of experts helps clients recover losses from mis-sold financial products,
-              investment fraud and financial misconduct. No win, no fee.
+            <blockquote className="text-2xl md:text-3xl font-serif text-neutral-800 leading-relaxed mb-8">
+              &ldquo;We fight for investors who have been wronged. Our mission is to recover what is rightfully yours.&rdquo;
+            </blockquote>
+            <p className="text-neutral-500 text-base font-light leading-relaxed mb-8">
+              Exposed to investment fraud or mis-sold financial products? Our expert legal team
+              works on a no-win, no-fee basis to recover your losses.
             </p>
             <a
               href="https://financial-claims.com"
@@ -314,19 +316,19 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Right - Black background with preview (scrolled past logo) */}
-          <div className="bg-black p-8 lg:p-12 flex items-center">
-            <div className="w-full border border-white/20 bg-white overflow-hidden">
-              <div className="bg-neutral-800 p-3 flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-red-500" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                <div className="w-3 h-3 rounded-full bg-green-500" />
-                <span className="text-white/40 text-sm ml-3">financial-claims.com</span>
+          {/* Right - Black background with scaled down preview (80%) */}
+          <div className="bg-black p-8 lg:p-16 flex items-center justify-center">
+            <div className="w-[80%] border border-white/20 bg-white overflow-hidden">
+              <div className="bg-neutral-800 p-2 flex items-center gap-1.5">
+                <div className="w-2.5 h-2.5 rounded-full bg-red-500" />
+                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500" />
+                <div className="w-2.5 h-2.5 rounded-full bg-green-500" />
+                <span className="text-white/40 text-xs ml-2">financial-claims.com</span>
               </div>
-              <div className="relative h-[400px] overflow-hidden">
+              <div className="relative h-[320px] overflow-hidden">
                 <iframe
                   src="https://financial-claims.com"
-                  className="absolute top-[-150px] left-0 w-full h-[600px] pointer-events-none"
+                  className="absolute top-[-120px] left-0 w-full h-[500px] pointer-events-none"
                   title="FINLEX Website Preview"
                   scrolling="no"
                 />
