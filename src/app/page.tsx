@@ -286,51 +286,51 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FINLEX Section - BLACK with logo on white */}
-      <section className="py-20 bg-black border-t border-white/10">
-        <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left - Logo on white background and Text */}
-            <div>
-              <div className="inline-block bg-white p-6 mb-8">
-                <Image
-                  src={getAssetPath('/images/finlex-logo_lrg.png')}
-                  alt="FINLEX"
-                  width={200}
-                  height={60}
-                  className="h-12 w-auto"
-                />
-              </div>
-              <p className="text-sm text-white/40 uppercase tracking-widest mb-4">A MONAD Platform</p>
-              <h2 className="text-3xl font-serif text-white mb-6">Financial Claims Recovery</h2>
-              <p className="text-white/60 text-lg font-light leading-relaxed mb-8">
-                Our team of experts helps clients recover losses from mis-sold financial products,
-                investment fraud and financial misconduct. No win, no fee.
-              </p>
-              <a
-                href="https://financial-claims.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center bg-orange-500 text-white px-8 py-4 text-base font-medium hover:bg-orange-600 transition-colors"
-              >
-                Visit FINLEX <ArrowRight className="ml-3 w-5 h-5" />
-              </a>
-            </div>
+      {/* FINLEX Section - 50% White / 50% Black Split */}
+      <section className="border-t border-white/10">
+        <div className="grid lg:grid-cols-2 min-h-[500px]">
+          {/* Left - White background with logo */}
+          <div className="bg-white p-12 lg:p-16 flex flex-col justify-center">
+            <Image
+              src={getAssetPath('/images/finlex-logo_lrg.png')}
+              alt="FINLEX"
+              width={280}
+              height={80}
+              className="h-16 w-auto mb-8"
+            />
+            <p className="text-sm text-neutral-400 uppercase tracking-widest mb-4">A MONAD Platform</p>
+            <h2 className="text-3xl font-serif text-neutral-900 mb-6">Financial Claims Recovery</h2>
+            <p className="text-neutral-600 text-lg font-light leading-relaxed mb-8">
+              Our team of experts helps clients recover losses from mis-sold financial products,
+              investment fraud and financial misconduct. No win, no fee.
+            </p>
+            <a
+              href="https://financial-claims.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center bg-orange-500 text-white px-8 py-4 text-base font-medium hover:bg-orange-600 transition-colors w-fit"
+            >
+              Visit FINLEX <ArrowRight className="ml-3 w-5 h-5" />
+            </a>
+          </div>
 
-            {/* Right - Website Preview Mirror */}
-            <div className="border border-white/20 bg-white overflow-hidden">
+          {/* Right - Black background with preview (scrolled past logo) */}
+          <div className="bg-black p-8 lg:p-12 flex items-center">
+            <div className="w-full border border-white/20 bg-white overflow-hidden">
               <div className="bg-neutral-800 p-3 flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-red-500" />
                 <div className="w-3 h-3 rounded-full bg-yellow-500" />
                 <div className="w-3 h-3 rounded-full bg-green-500" />
                 <span className="text-white/40 text-sm ml-3">financial-claims.com</span>
               </div>
-              <iframe
-                src="https://financial-claims.com"
-                className="w-full h-[400px] pointer-events-none"
-                title="FINLEX Website Preview"
-                scrolling="no"
-              />
+              <div className="relative h-[400px] overflow-hidden">
+                <iframe
+                  src="https://financial-claims.com"
+                  className="absolute top-[-150px] left-0 w-full h-[600px] pointer-events-none"
+                  title="FINLEX Website Preview"
+                  scrolling="no"
+                />
+              </div>
             </div>
           </div>
         </div>
