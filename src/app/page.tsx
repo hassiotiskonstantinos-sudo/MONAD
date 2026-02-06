@@ -74,22 +74,72 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection />
 
+      {/* Photo Gallery Section */}
+      <section className="py-4 bg-white">
+        <div className="container-custom">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="relative h-48 md:h-64">
+              <Image
+                src={getAssetPath('/images/private-equity.jpg')}
+                alt="Corporate Law"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="relative h-48 md:h-64">
+              <Image
+                src={getAssetPath('/images/regulatory.jpg')}
+                alt="Regulatory Compliance"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="relative h-48 md:h-64">
+              <Image
+                src={getAssetPath('/images/startups.jpg')}
+                alt="Startups & Ventures"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="relative h-48 md:h-64">
+              <Image
+                src={getAssetPath('/images/digital-assets-blockchain.jpg')}
+                alt="Technology & Innovation"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Introduction Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="max-w-4xl">
-            <p className="text-body text-lg leading-relaxed mb-8">
-              Clients come to MONAD when a decision has consequences. A company is forming,
-              a deal is closing, a relationship is breaking down, an asset must be protected,
-              a dispute is escalating, a relocation is planned, a product is launching, a
-              regulator is asking questions. In those moments, legal advice cannot be theoretical.
-              It must be accurate, readable, commercially aligned and immediately usable.
-            </p>
-            <p className="text-body text-lg leading-relaxed">
-              MONAD combines senior led advice with practical delivery. Matters are handled
-              with discretion, responsiveness and a commitment to clarity. The aim is simple:
-              to help clients make confident decisions, reduce exposure, and secure outcomes.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative h-80 lg:h-[400px]">
+              <Image
+                src={getAssetPath('/images/c.jpeg')}
+                alt="MONAD Office"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div>
+              <p className="text-body text-lg leading-relaxed mb-8">
+                Clients come to MONAD when a decision has consequences. A company is forming,
+                a deal is closing, a relationship is breaking down, an asset must be protected,
+                a dispute is escalating, a relocation is planned, a product is launching, a
+                regulator is asking questions. In those moments, legal advice cannot be theoretical.
+                It must be accurate, readable, commercially aligned and immediately usable.
+              </p>
+              <p className="text-body text-lg leading-relaxed">
+                MONAD combines senior led advice with practical delivery. Matters are handled
+                with discretion, responsiveness and a commitment to clarity. The aim is simple:
+                to help clients make confident decisions, reduce exposure, and secure outcomes.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -246,7 +296,7 @@ export default function Home() {
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-8">
             <div className="bg-white/5 border border-white/10 overflow-hidden">
-              <div className="relative h-48">
+              <div className="relative h-64 md:h-80">
                 <Image
                   src={getAssetPath('/images/tax-wealth-management.jpg')}
                   alt="FINLEX - Cross Border Structuring"
@@ -273,7 +323,7 @@ export default function Home() {
               </div>
             </div>
             <div className="bg-white/5 border border-white/10 overflow-hidden">
-              <div className="relative h-48">
+              <div className="relative h-64 md:h-80">
                 <Image
                   src={getAssetPath('/images/shutterstock_2724348917.jpg')}
                   alt="MEDLEX - Greek Legal Services"
@@ -298,6 +348,61 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Practice Areas Photo Grid */}
+      <section className="py-4 bg-white">
+        <div className="container-custom">
+          <div className="grid grid-cols-3 gap-4">
+            <div className="relative h-48 md:h-72 col-span-2">
+              <Image
+                src={getAssetPath('/images/shutterstock_1100117846.jpg')}
+                alt="Private Client Services"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-black/40" />
+              <div className="absolute bottom-6 left-6 text-white">
+                <h3 className="text-xl md:text-2xl font-serif font-bold">Private Client</h3>
+                <p className="text-sm text-white/80">Immigration, Wealth & Estate</p>
+              </div>
+            </div>
+            <div className="relative h-48 md:h-72">
+              <Image
+                src={getAssetPath('/images/shutterstock_2249889569.jpg')}
+                alt="Corporate Services"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-black/40" />
+              <div className="absolute bottom-6 left-6 text-white">
+                <h3 className="text-lg md:text-xl font-serif font-bold">Corporate</h3>
+                <p className="text-xs md:text-sm text-white/80">M&A & Transactions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Full Width Photo Banner */}
+      <section className="relative h-[40vh]">
+        <Image
+          src={getAssetPath('/images/AdobeStock_62203512.jpeg')}
+          alt="Athens Cityscape"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-primary-900/60" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center text-white max-w-3xl px-6">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
+              Based in Athens, Serving Clients Worldwide
+            </h2>
+            <p className="text-lg text-primary-200">
+              Strategic legal advice for cross-border transactions and international matters
+            </p>
           </div>
         </div>
       </section>

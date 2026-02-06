@@ -40,9 +40,9 @@ const Navigation = () => {
             <Image
               src={getAssetPath('/images/logo-monad.png')}
               alt="MONAD"
-              width={150}
-              height={50}
-              className={`h-10 w-auto ${isScrolled ? '' : 'brightness-0 invert'}`}
+              width={450}
+              height={150}
+              className={`h-28 w-auto ${isScrolled ? 'h-20' : 'brightness-0 invert'}`}
               priority
             />
           </Link>

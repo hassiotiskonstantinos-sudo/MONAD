@@ -13,9 +13,9 @@ const Footer = () => {
             <Image
               src={getAssetPath('/images/logo-monad.png')}
               alt="MONAD"
-              width={150}
-              height={50}
-              className="h-10 w-auto brightness-0 invert mb-6"
+              width={450}
+              height={150}
+              className="h-28 w-auto brightness-0 invert mb-6"
             />
             <p className="text-primary-300 leading-relaxed mb-6">
               Premium legal solutions for businesses and individuals. Expert counsel
