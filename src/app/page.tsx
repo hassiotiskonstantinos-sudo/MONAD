@@ -8,16 +8,19 @@ import { getAssetPath } from '@/lib/constants'
 const featuredNews = [
   {
     category: 'Corporate',
+    color: 'bg-blue-500',
     title: 'Cross-Border M&A: Navigating Complexity',
     date: 'Jan 2024',
   },
   {
     category: 'Private Client',
+    color: 'bg-emerald-500',
     title: 'Golden Visa Programs: What Has Changed',
     date: 'Dec 2023',
   },
   {
     category: 'Technology',
+    color: 'bg-purple-500',
     title: 'AI Governance and the EU AI Act',
     date: 'Nov 2023',
   },
@@ -56,7 +59,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Insights - Compact Grid */}
+      {/* Insights - Compact Grid with Colored Categories */}
       <section className="py-12 bg-neutral-900 border-t border-white/10">
         <div className="container-custom">
           <div className="flex justify-between items-center mb-8">
@@ -66,7 +69,10 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-px bg-white/10">
             {featuredNews.map((item, index) => (
               <article key={index} className="bg-neutral-900 p-6 hover:bg-neutral-800 transition-colors cursor-pointer group">
-                <span className="text-xs text-orange-500 uppercase tracking-wider">{item.category}</span>
+                <div className="flex items-center gap-2 mb-2">
+                  <span className={`w-2 h-2 rounded-full ${item.color}`}></span>
+                  <span className="text-xs text-white/60 uppercase tracking-wider">{item.category}</span>
+                </div>
                 <h3 className="text-white font-medium mt-2 mb-1 group-hover:text-orange-500 transition-colors">{item.title}</h3>
                 <span className="text-white/40 text-xs">{item.date}</span>
               </article>
@@ -127,21 +133,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FINLEX Section - WHITE */}
-      <section className="py-16 bg-white">
+      {/* FINLEX Section - BLACK with logo on white */}
+      <section className="py-16 bg-black border-t border-white/10">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left - Logo on white background and Text */}
             <div>
-              <Image
-                src={getAssetPath('/images/finlex-logo_lrg.png')}
-                alt="FINLEX"
-                width={200}
-                height={60}
-                className="h-12 w-auto mb-6"
-              />
-              <p className="text-xs text-gray-400 uppercase tracking-wider mb-3">A MONAD Platform</p>
-              <h2 className="text-2xl font-serif text-gray-900 mb-4">Financial Claims Recovery</h2>
-              <p className="text-gray-600 text-sm leading-relaxed mb-6">
+              <div className="inline-block bg-white p-4 mb-6">
+                <Image
+                  src={getAssetPath('/images/finlex-logo_lrg.png')}
+                  alt="FINLEX"
+                  width={180}
+                  height={50}
+                  className="h-10 w-auto"
+                />
+              </div>
+              <p className="text-xs text-white/40 uppercase tracking-wider mb-3">A MONAD Platform</p>
+              <h2 className="text-2xl font-serif text-white mb-4">Financial Claims Recovery</h2>
+              <p className="text-white/60 text-sm leading-relaxed mb-6">
                 Our team of experts helps clients recover losses from mis-sold financial products,
                 investment fraud and financial misconduct. No win, no fee.
               </p>
@@ -149,48 +158,33 @@ export default function Home() {
                 href="https://financial-claims.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center bg-black text-white px-6 py-3 text-sm font-medium hover:bg-orange-500 transition-colors"
+                className="inline-flex items-center bg-orange-500 text-white px-6 py-3 text-sm font-medium hover:bg-orange-600 transition-colors"
               >
                 Visit FINLEX <ArrowRight className="ml-2 w-4 h-4" />
               </a>
             </div>
-            <div className="border border-gray-200">
-              <div className="bg-black p-3 flex items-center gap-2">
-                <div className="flex gap-1.5">
-                  <div className="w-2.5 h-2.5 rounded-full bg-red-500" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-500" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-green-500" />
-                </div>
-                <span className="text-white/50 text-xs ml-2">financial-claims.com/blog</span>
+
+            {/* Right - Website Preview Mirror */}
+            <div className="border border-white/20 bg-white overflow-hidden">
+              <div className="bg-neutral-800 p-2 flex items-center gap-1.5">
+                <div className="w-2.5 h-2.5 rounded-full bg-red-500" />
+                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500" />
+                <div className="w-2.5 h-2.5 rounded-full bg-green-500" />
+                <span className="text-white/40 text-xs ml-2">financial-claims.com</span>
               </div>
-              <div className="p-6">
-                <div className="mb-4">
-                  <span className="font-serif font-bold text-gray-900">FIN</span>
-                  <span className="font-serif font-bold text-orange-500">LEX</span>
-                  <span className="text-gray-400 text-xs ml-2">Blog</span>
-                </div>
-                <div className="space-y-4">
-                  <div className="border-b border-gray-100 pb-3">
-                    <span className="text-xs text-orange-500 uppercase">Claims</span>
-                    <h4 className="text-sm font-medium text-gray-900">Understanding Mis-sold Investments</h4>
-                  </div>
-                  <div className="border-b border-gray-100 pb-3">
-                    <span className="text-xs text-orange-500 uppercase">Process</span>
-                    <h4 className="text-sm font-medium text-gray-900">The Claims Process Explained</h4>
-                  </div>
-                  <div>
-                    <span className="text-xs text-orange-500 uppercase">Success</span>
-                    <h4 className="text-sm font-medium text-gray-900">Recent: €2.5M Recovery</h4>
-                  </div>
-                </div>
-              </div>
+              <iframe
+                src="https://financial-claims.com"
+                className="w-full h-[320px] pointer-events-none"
+                title="FINLEX Website Preview"
+                scrolling="no"
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* Location - Compact */}
-      <section className="py-12 bg-black border-t border-white/10">
+      <section className="py-12 bg-neutral-900 border-t border-white/10">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
@@ -204,28 +198,40 @@ export default function Home() {
                 Get in touch <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
-            <div className="relative h-[250px]">
+            <div className="relative h-[200px]">
               <Image src={getAssetPath('/images/regulatory.jpg')} alt="Athens" fill className="object-cover" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact - Tight */}
-      <section className="py-12 bg-neutral-900 border-t border-white/10">
+      {/* Contact - Mishcon Style */}
+      <section className="py-16 bg-black border-t border-white/10">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-8">
-            <div>
-              <h2 className="text-2xl font-serif text-white mb-4">Get in touch</h2>
-              <p className="text-white/50 text-sm mb-4">
-                Describe your matter. We respond within one business day.
+          <div className="grid lg:grid-cols-12 gap-12">
+            <div className="lg:col-span-5">
+              <h2 className="text-3xl font-serif text-white mb-4">Get in touch</h2>
+              <p className="text-white/60 text-sm mb-6">
+                Use the contact form to send us a message. We will respond within one business day.
               </p>
-              <p className="text-white/30 text-xs">
-                Sending a message does not create a lawyer-client relationship.
+              <div className="space-y-4 text-sm">
+                <div>
+                  <h4 className="text-white/40 uppercase text-xs tracking-wider mb-1">Email</h4>
+                  <a href="mailto:contact@monad.law" className="text-white hover:text-orange-500">contact@monad.law</a>
+                </div>
+                <div>
+                  <h4 className="text-white/40 uppercase text-xs tracking-wider mb-1">Location</h4>
+                  <p className="text-white/70">Athens, Greece</p>
+                </div>
+              </div>
+              <p className="text-white/30 text-xs mt-8">
+                Contacting us does not create a lawyer-client relationship.
               </p>
             </div>
-            <div className="bg-white p-6">
-              <ContactForm />
+            <div className="lg:col-span-7">
+              <div className="bg-neutral-900 p-6 border border-white/10">
+                <ContactForm />
+              </div>
             </div>
           </div>
         </div>
