@@ -7,10 +7,9 @@ import { getAssetPath } from '@/lib/constants'
 
 const HeroSection = () => {
   return (
-    <section className="relative h-[80vh] overflow-hidden">
+    <section className="relative h-[85vh] min-h-[600px] overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0">
-        {/* Video - works in Safari, Chrome might need mp4 */}
         <video
           autoPlay
           muted
@@ -22,7 +21,7 @@ const HeroSection = () => {
           <source src={getAssetPath('/videos/shutterstock_3662626007.mov')} type="video/quicktime" />
           <source src={getAssetPath('/videos/shutterstock_3662626007.mov')} type="video/mp4" />
         </video>
-        {/* Fallback Image for browsers that don't support video */}
+        {/* Fallback Image */}
         <Image
           src={getAssetPath('/images/shutterstock_2644707669.jpg')}
           alt="MONAD Law Firm"
@@ -32,36 +31,35 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* Dark Overlay - gradient for text readability while keeping video crisp */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/30" />
+      {/* Subtle dark overlay */}
+      <div className="absolute inset-0 bg-black/40" />
 
       {/* Content */}
-      <div className="relative h-full container-custom flex flex-col justify-center pt-32 pb-12">
-        <div className="max-w-4xl">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-4 leading-tight">
-            Clear Thinking.<br />
-            <span className="text-orange-400">Decisive Execution.</span>
+      <div className="relative h-full container-custom flex flex-col justify-end pb-20">
+        <div className="max-w-3xl">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight">
+            Clear thinking.<br />
+            Decisive execution.
           </h1>
 
-          <p className="text-base md:text-lg text-white/90 mb-6 leading-relaxed max-w-3xl">
-            MONAD is a modern law firm built for clients who need clear thinking and decisive
-            execution. The work ranges from corporate structuring and cross border tax planning
-            to immigration, technology transactions, real estate and disputes.
+          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl leading-relaxed">
+            Strategic legal advice for companies, investors and private clients
+            navigating complex matters across borders.
           </p>
 
           <div className="flex flex-wrap gap-4">
             <Link
               href="/services/companies"
-              className="btn-orange flex items-center"
+              className="inline-flex items-center bg-white text-primary-900 px-6 py-3 font-medium hover:bg-orange-500 hover:text-white transition-colors"
             >
-              Explore Services
+              Our services
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
               href="/contact"
-              className="btn-outline-light flex items-center"
+              className="inline-flex items-center border-2 border-white text-white px-6 py-3 font-medium hover:bg-white hover:text-primary-900 transition-colors"
             >
-              Get in Touch
+              Contact us
             </Link>
           </div>
         </div>
