@@ -99,6 +99,13 @@ const teamMembers = [
     initials: 'CZ',
   },
   {
+    name: 'Barbara Papakonstantinou',
+    role: 'Associate',
+    linkedin: 'https://www.linkedin.com/in/barbara-papakonstantinou-070109254/',
+    image: '/images/1758318032743.jpeg',
+    initials: 'BP',
+  },
+  {
     name: 'Maria Sireti',
     role: 'Associate',
     linkedin: 'https://www.linkedin.com/in/maria-sireti-7256b7218/',
@@ -111,13 +118,6 @@ const teamMembers = [
     linkedin: 'https://www.linkedin.com/in/vasileioskottas/',
     image: '/images/1573389706301.jpeg',
     initials: 'VK',
-  },
-  {
-    name: 'Barbara Papakonstantinou',
-    role: 'Associate',
-    linkedin: 'https://www.linkedin.com/in/barbara-papakonstantinou-070109254/',
-    image: '/images/1758318032743.jpeg',
-    initials: 'BP',
   },
 ]
 
@@ -235,7 +235,7 @@ export default function Home() {
                       src={getAssetPath(member.image)}
                       alt={member.name}
                       fill
-                      className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                      className="object-cover grayscale"
                     />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-neutral-700 to-neutral-900">
