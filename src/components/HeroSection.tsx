@@ -7,7 +7,7 @@ import { getAssetPath } from '@/lib/constants'
 
 const HeroSection = () => {
   return (
-    <section className="relative h-[60vh] overflow-hidden">
+    <section className="relative h-[80vh] overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0">
         {/* Video - works in Safari, Chrome might need mp4 */}
