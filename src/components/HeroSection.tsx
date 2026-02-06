@@ -32,8 +32,8 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* Dark Overlay with Prussian blue tint */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-prussian-500/50 to-black/70" />
+      {/* Dark Overlay - gradient for text readability while keeping video crisp */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/30" />
 
       {/* Content */}
       <div className="relative h-full container-custom flex flex-col justify-center pt-32 pb-12">

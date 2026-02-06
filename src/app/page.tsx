@@ -11,49 +11,14 @@ import {
   Landmark,
   TrendingUp,
   Gavel,
-  ChevronRight,
   ArrowRight,
+  CheckCircle,
 } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import ContactForm from '@/components/ContactForm'
 import HeroSection from '@/components/HeroSection'
 import { getAssetPath } from '@/lib/constants'
-
-const pillars = [
-  {
-    title: 'For Companies',
-    description:
-      'Formation, governance, commercial contracting, M&A, private equity, employment, regulatory compliance, fraud and asset recovery, and international dispute resolution.',
-    icon: Building2,
-    href: '/services/companies',
-    image: '/images/private-equity.jpg',
-  },
-  {
-    title: 'For Individuals',
-    description:
-      'Immigration, Golden Visas, inheritance, estate administration, family business matters and private wealth disputes.',
-    icon: Users,
-    href: '/services/individuals',
-    image: '/images/shutterstock_1100117846.jpg',
-  },
-  {
-    title: 'Technology & Innovation',
-    description:
-      'IP, copyright and design, GDPR and data privacy, cybersecurity governance, technology transactions, SaaS contracting, and digital assets.',
-    icon: Cpu,
-    href: '/services/technology',
-    image: '/images/digital-assets-blockchain.jpg',
-  },
-  {
-    title: 'Real Estate',
-    description:
-      'Transactions, development, construction, planning, licensing and investment structuring.',
-    icon: HomeIcon,
-    href: '/services/real-estate',
-    image: '/images/AdobeStock_62203512.jpeg',
-  },
-]
 
 const companyServices = [
   { name: 'Corporate Formation', icon: Briefcase },
@@ -113,47 +78,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Four Pillars - Each with Image Background */}
-      <section className="bg-primary-900">
-        <div className="text-center py-16">
-          <div className="container-custom">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
+      {/* What MONAD Does - White section for balance */}
+      <section className="py-20 bg-white">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-900 mb-6">
               What MONAD Does
             </h2>
-            <p className="text-white/70 max-w-2xl mx-auto">
+            <p className="text-primary-600 text-lg leading-relaxed">
               MONAD advises companies, founders, investors and private clients on the legal
               and strategic issues that sit at the center of modern life and commerce.
             </p>
           </div>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4">
-          {pillars.map((pillar) => (
-            <Link key={pillar.title} href={pillar.href} className="group relative h-80 overflow-hidden">
-              <Image
-                src={getAssetPath(pillar.image)}
-                alt={pillar.title}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
-              <div className="absolute inset-0 bg-prussian-500/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <div className="bg-orange-500 w-12 h-12 flex items-center justify-center mb-4">
-                  <pillar.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-serif font-bold text-white mb-2">
-                  {pillar.title}
-                </h3>
-                <p className="text-white/80 text-sm leading-relaxed line-clamp-2 mb-3">
-                  {pillar.description}
-                </p>
-                <span className="inline-flex items-center text-orange-400 text-sm font-medium group-hover:text-orange-300">
-                  Explore
-                  <ChevronRight className="ml-1 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                </span>
-              </div>
+          <div className="grid md:grid-cols-4 gap-6">
+            <Link href="/services/companies" className="group p-8 border border-primary-200 hover:border-orange-500 hover:shadow-lg transition-all">
+              <Building2 className="w-10 h-10 text-prussian-500 group-hover:text-orange-500 mx-auto mb-4 transition-colors" />
+              <h3 className="text-primary-900 font-semibold mb-2 text-center">For Companies</h3>
+              <p className="text-primary-500 text-sm text-center">Corporate, M&A, Compliance</p>
             </Link>
-          ))}
+            <Link href="/services/individuals" className="group p-8 border border-primary-200 hover:border-orange-500 hover:shadow-lg transition-all">
+              <Users className="w-10 h-10 text-prussian-500 group-hover:text-orange-500 mx-auto mb-4 transition-colors" />
+              <h3 className="text-primary-900 font-semibold mb-2 text-center">For Individuals</h3>
+              <p className="text-primary-500 text-sm text-center">Immigration, Inheritance, Wealth</p>
+            </Link>
+            <Link href="/services/technology" className="group p-8 border border-primary-200 hover:border-orange-500 hover:shadow-lg transition-all">
+              <Cpu className="w-10 h-10 text-prussian-500 group-hover:text-orange-500 mx-auto mb-4 transition-colors" />
+              <h3 className="text-primary-900 font-semibold mb-2 text-center">Technology</h3>
+              <p className="text-primary-500 text-sm text-center">IP, GDPR, Digital Assets</p>
+            </Link>
+            <Link href="/services/real-estate" className="group p-8 border border-primary-200 hover:border-orange-500 hover:shadow-lg transition-all">
+              <HomeIcon className="w-10 h-10 text-prussian-500 group-hover:text-orange-500 mx-auto mb-4 transition-colors" />
+              <h3 className="text-primary-900 font-semibold mb-2 text-center">Real Estate</h3>
+              <p className="text-primary-500 text-sm text-center">Transactions, Development</p>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -257,19 +215,26 @@ export default function Home() {
         <div className="container-custom relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-white">
-              <div className="inline-block bg-orange-500 px-6 py-3 mb-6">
-                <span className="text-3xl font-serif font-bold tracking-wide">FINLEX</span>
+              {/* FINLEX Logo */}
+              <div className="mb-8">
+                <div className="inline-block bg-white px-8 py-4">
+                  <span className="text-4xl font-serif font-bold tracking-wide text-prussian-500">FIN</span>
+                  <span className="text-4xl font-serif font-bold tracking-wide text-orange-500">LEX</span>
+                </div>
               </div>
               <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
                 Financial Claims Recovery
               </h2>
               <p className="text-white/90 mb-6 leading-relaxed text-lg">
-                FINLEX is MONAD's dedicated platform for clients seeking to recover losses
+                FINLEX is MONAD&apos;s dedicated platform for clients seeking to recover losses
                 from mis-sold financial products, investment fraud, and financial misconduct.
+                Our team of <strong>leading experts</strong> in financial litigation has a proven track record
+                of success.
               </p>
               <p className="text-white/80 mb-8 leading-relaxed">
-                Our team has extensive experience handling claims against banks, investment
-                firms, and financial advisors. We work on a no-win, no-fee basis for qualifying cases.
+                As recognized <strong>experts</strong> in this specialized field, we handle claims against banks,
+                investment firms, and financial advisors with unmatched expertise.
+                We work on a no-win, no-fee basis for qualifying cases.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
@@ -289,51 +254,75 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="bg-white rounded-lg shadow-2xl overflow-hidden">
-              <div className="bg-gray-100 px-4 py-2 flex items-center gap-2 border-b">
-                <div className="flex gap-1.5">
-                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                </div>
-                <div className="flex-1 bg-white rounded px-3 py-1 text-xs text-gray-500 truncate">
-                  financial-claims.com
+            {/* Static Preview Card */}
+            <div className="bg-white shadow-2xl overflow-hidden">
+              <div className="bg-prussian-500 p-6">
+                <span className="text-2xl font-serif font-bold text-white">FIN</span>
+                <span className="text-2xl font-serif font-bold text-orange-400">LEX</span>
+                <p className="text-white/80 text-sm mt-2">Leading Experts in Financial Claims Recovery</p>
+              </div>
+              <div className="p-8">
+                <h3 className="text-xl font-semibold text-primary-900 mb-4">Expert Recovery Services</h3>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-center text-primary-700">
+                    <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />
+                    Mis-sold Investment Products
+                  </li>
+                  <li className="flex items-center text-primary-700">
+                    <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />
+                    Investment Fraud Losses
+                  </li>
+                  <li className="flex items-center text-primary-700">
+                    <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />
+                    Financial Advisor Misconduct
+                  </li>
+                  <li className="flex items-center text-primary-700">
+                    <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />
+                    Bank Negligence Claims
+                  </li>
+                </ul>
+                <div className="bg-orange-50 border-l-4 border-orange-500 p-4">
+                  <p className="text-sm text-primary-700">
+                    <strong className="text-orange-600">No Win, No Fee</strong> – We only get paid when you recover your losses.
+                  </p>
                 </div>
               </div>
-              <iframe
-                src="https://financial-claims.com/index.html"
-                className="w-full h-[400px] border-0"
-                title="FINLEX - Financial Claims"
-              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Athens - Global Reach Banner */}
-      <section className="relative h-[50vh]">
-        <Image
-          src={getAssetPath('/images/regulatory.jpg')}
-          alt="Global Legal Services"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent" />
-        <div className="absolute inset-0 flex items-center">
-          <div className="container-custom">
-            <div className="max-w-xl">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
-                Based in <span className="text-orange-400">Athens</span>,
+      {/* Athens - Global Reach - White section for balance */}
+      <section className="py-20 bg-white">
+        <div className="container-custom">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-900 mb-6">
+                Based in <span className="text-orange-500">Athens</span>,
                 <br />Serving Clients Worldwide
               </h2>
-              <p className="text-lg text-white/80 mb-8">
+              <p className="text-lg text-primary-600 mb-6 leading-relaxed">
                 Strategic legal advice for cross-border transactions and international matters.
                 MONAD works with clients across Europe, the Middle East, and beyond.
+              </p>
+              <p className="text-primary-500 mb-8 leading-relaxed">
+                Our team combines deep local knowledge with international experience,
+                enabling us to guide clients through complex multi-jurisdictional matters
+                with precision and efficiency.
               </p>
               <Link href="/contact" className="btn-orange inline-flex items-center">
                 Get in Touch
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
+            </div>
+            <div className="relative h-[400px]">
+              <Image
+                src={getAssetPath('/images/regulatory.jpg')}
+                alt="Global Legal Services"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-prussian-500/20" />
             </div>
           </div>
         </div>

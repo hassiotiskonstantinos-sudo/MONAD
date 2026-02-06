@@ -9,6 +9,7 @@ import {
   Briefcase,
   FileCheck,
   Landmark,
+  CheckCircle,
 } from 'lucide-react'
 import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
@@ -205,9 +206,11 @@ export default function HomePageGreek() {
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-white">
-              <div className="flex items-center mb-6">
-                <div className="bg-orange-500 px-6 py-3">
-                  <span className="text-3xl font-serif font-bold tracking-wide">MEDLEX</span>
+              {/* MEDLEX Logo */}
+              <div className="mb-8">
+                <div className="inline-block bg-white px-8 py-4">
+                  <span className="text-4xl font-serif font-bold tracking-wide text-prussian-500">MED</span>
+                  <span className="text-4xl font-serif font-bold tracking-wide text-orange-500">LEX</span>
                 </div>
               </div>
               <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
@@ -239,22 +242,39 @@ export default function HomePageGreek() {
                 </Link>
               </div>
             </div>
-            <div className="bg-white rounded-lg shadow-2xl overflow-hidden">
-              <div className="bg-gray-100 px-4 py-2 flex items-center gap-2 border-b">
-                <div className="flex gap-1.5">
-                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                </div>
-                <div className="flex-1 bg-white rounded px-3 py-1 text-xs text-gray-500 truncate">
-                  medlex.gr
+            {/* Static Preview Card */}
+            <div className="bg-white shadow-2xl overflow-hidden">
+              <div className="bg-prussian-500 p-6">
+                <span className="text-2xl font-serif font-bold text-white">MED</span>
+                <span className="text-2xl font-serif font-bold text-orange-400">LEX</span>
+                <p className="text-white/80 text-sm mt-2">Νομικές Υπηρεσίες στην Ελλάδα</p>
+              </div>
+              <div className="p-8">
+                <h3 className="text-xl font-semibold text-primary-900 mb-4">Τομείς Εξειδίκευσης</h3>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-center text-primary-700">
+                    <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />
+                    Εταιρικό Δίκαιο
+                  </li>
+                  <li className="flex items-center text-primary-700">
+                    <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />
+                    Ακίνητα & Κατασκευές
+                  </li>
+                  <li className="flex items-center text-primary-700">
+                    <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />
+                    Εργατικό Δίκαιο
+                  </li>
+                  <li className="flex items-center text-primary-700">
+                    <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />
+                    Φορολογικός Σχεδιασμός
+                  </li>
+                </ul>
+                <div className="bg-orange-50 border-l-4 border-orange-500 p-4">
+                  <p className="text-sm text-primary-700">
+                    <strong className="text-orange-600">Ελληνικό Δίκαιο</strong> – Εξειδικευμένη νομική υποστήριξη στην ελληνική γλώσσα.
+                  </p>
                 </div>
               </div>
-              <iframe
-                src="https://medlex.gr/"
-                className="w-full h-[400px] border-0"
-                title="MEDLEX - Νομικές Υπηρεσίες"
-              />
             </div>
           </div>
         </div>
