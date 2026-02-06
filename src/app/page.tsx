@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Linkedin } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import ContactForm from '@/components/ContactForm'
@@ -23,6 +23,36 @@ const featuredNews = [
     color: 'bg-purple-500',
     title: 'AI Governance and the EU AI Act',
     date: 'Nov 2023',
+  },
+  {
+    category: 'Disputes',
+    color: 'bg-orange-500',
+    title: 'International Arbitration Trends',
+    date: 'Oct 2023',
+  },
+  {
+    category: 'Real Estate',
+    color: 'bg-cyan-500',
+    title: 'Commercial Property Investment in Greece',
+    date: 'Sep 2023',
+  },
+  {
+    category: 'Corporate',
+    color: 'bg-blue-500',
+    title: 'Due Diligence in Cross-Border Transactions',
+    date: 'Aug 2023',
+  },
+  {
+    category: 'Private Client',
+    color: 'bg-emerald-500',
+    title: 'Estate Planning for International Families',
+    date: 'Jul 2023',
+  },
+  {
+    category: 'Technology',
+    color: 'bg-purple-500',
+    title: 'Data Protection Compliance Updates',
+    date: 'Jun 2023',
   },
 ]
 
@@ -50,6 +80,33 @@ const practiceAreaCards = [
     title: 'Real Estate',
     description: 'We bring market-leading skills that span the real estate lifecycle to the newest, most dynamic parts of the economy.',
     href: '/services/real-estate',
+  },
+]
+
+const teamMembers = [
+  {
+    name: 'Konstantinos Chassiotis',
+    role: 'Managing Partner',
+    linkedin: 'https://www.linkedin.com/in/chassiotiskonstantinos',
+    initials: 'KC',
+  },
+  {
+    name: 'Dr. Christos Zoumpoulis',
+    role: 'Partner',
+    linkedin: 'https://www.linkedin.com/in/christos-zoumpoulis-dr-iur-63544813/',
+    initials: 'CZ',
+  },
+  {
+    name: 'Maria Sireti',
+    role: 'Associate',
+    linkedin: 'https://www.linkedin.com/in/maria-sireti-7256b7218/',
+    initials: 'MS',
+  },
+  {
+    name: 'Vasileios Kottas',
+    role: 'Associate',
+    linkedin: 'https://www.linkedin.com/in/vasileioskottas/',
+    initials: 'VK',
   },
 ]
 
@@ -108,7 +165,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Insights - Compact Grid with Colored Categories */}
+      {/* Featured Insights - 2 rows of 4 */}
       <section className="py-16 bg-neutral-900 border-t border-white/10">
         <div className="container-custom">
           <div className="flex justify-between items-center mb-10">
@@ -117,18 +174,74 @@ export default function Home() {
               View all
             </Link>
           </div>
-          <div className="grid md:grid-cols-3 gap-px bg-white/10">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
             {featuredNews.map((item, index) => (
-              <article key={index} className="bg-neutral-900 p-8 hover:bg-neutral-800 transition-colors cursor-pointer group">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className={`w-2.5 h-2.5 rounded-full ${item.color}`}></span>
-                  <span className="text-sm text-white/60 uppercase tracking-wider">{item.category}</span>
+              <article key={index} className="bg-neutral-900 p-6 hover:bg-neutral-800 transition-colors cursor-pointer group">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className={`w-2 h-2 rounded-full ${item.color}`}></span>
+                  <span className="text-xs text-white/60 uppercase tracking-wider">{item.category}</span>
                 </div>
-                <h3 className="text-xl text-white font-serif mb-3 group-hover:text-orange-500 transition-colors">{item.title}</h3>
-                <span className="text-white/40 text-sm">{item.date}</span>
+                <h3 className="text-base lg:text-lg text-white font-serif mb-2 group-hover:text-orange-500 transition-colors leading-tight">{item.title}</h3>
+                <span className="text-white/40 text-xs">{item.date}</span>
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Meet Our People - Parallax Section like Mishcon */}
+      <section className="relative py-24 bg-fixed bg-cover bg-center" style={{ backgroundImage: `url('${getAssetPath('/images/shutterstock_2724348917.jpg')}')` }}>
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/70" />
+
+        <div className="relative container-custom">
+          <div className="flex justify-between items-end mb-12">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-serif text-white mb-4">Meet our people</h2>
+              <p className="text-white/60 text-lg font-light max-w-xl">
+                Our team combines deep expertise with a personal approach to deliver exceptional results.
+              </p>
+            </div>
+            <Link href="/team" className="hidden md:inline-flex items-center text-white hover:text-orange-500 text-base font-light transition-colors group">
+              View all <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform" />
+            </Link>
+          </div>
+
+          {/* Team Grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {teamMembers.map((member, index) => (
+              <a
+                key={index}
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block"
+              >
+                <div className="relative aspect-[3/4] bg-neutral-800 overflow-hidden mb-4">
+                  {/* Placeholder with initials - replace with actual photos */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-neutral-700 to-neutral-900">
+                    <span className="text-4xl md:text-5xl font-serif text-white/30">{member.initials}</span>
+                  </div>
+                  {/* LinkedIn icon overlay on hover */}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <Linkedin className="w-8 h-8 text-white" />
+                  </div>
+                  {/* Orange line at bottom */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                </div>
+                <h3 className="text-white font-serif text-lg group-hover:text-orange-500 transition-colors">{member.name}</h3>
+                <p className="text-white/50 text-sm font-light">{member.role}</p>
+                <div className="flex items-center gap-2 mt-2 text-white/40 group-hover:text-orange-500 transition-colors">
+                  <Linkedin className="w-4 h-4" />
+                  <span className="text-xs">View Profile</span>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <Link href="/team" className="md:hidden inline-flex items-center text-white hover:text-orange-500 text-base font-light transition-colors group mt-8">
+            View all team members <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform" />
+          </Link>
         </div>
       </section>
 
