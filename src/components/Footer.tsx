@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react'
+import { getAssetPath } from '@/lib/constants'
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
           {/* About */}
           <div>
             <Image
-              src="/images/logo-monad.png"
+              src={getAssetPath('/images/logo-monad.png')}
               alt="MONAD"
               width={150}
               height={50}

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X, ChevronDown, Globe } from 'lucide-react'
+import { getAssetPath } from '@/lib/constants'
 
 const services = [
   { name: 'For Companies', href: '/services/companies' },
@@ -37,7 +38,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo-monad.png"
+              src={getAssetPath('/images/logo-monad.png')}
               alt="MONAD"
               width={150}
               height={50}

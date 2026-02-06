@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
 import SectionHeading from '@/components/SectionHeading'
 import ContactForm from '@/components/ContactForm'
+import { getAssetPath } from '@/lib/constants'
 
 const services = [
   {
@@ -122,7 +123,7 @@ export default function RealEstateServicesPage() {
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/AdobeStock_62203512.jpeg"
+            src={getAssetPath('/images/AdobeStock_62203512.jpeg')}
             alt="Real Estate Services"
             fill
             className="object-cover"

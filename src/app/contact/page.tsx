@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { MapPin, Mail, Clock, ChevronRight } from 'lucide-react'
 import ContactForm from '@/components/ContactForm'
 import Link from 'next/link'
+import { getAssetPath } from '@/lib/constants'
 
 export default function ContactPage() {
   return (
@@ -10,7 +11,7 @@ export default function ContactPage() {
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/shutterstock_2644707669.jpg"
+            src={getAssetPath('/images/shutterstock_2644707669.jpg')}
             alt="Contact MONAD"
             fill
             className="object-cover"

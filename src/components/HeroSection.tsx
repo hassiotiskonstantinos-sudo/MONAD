@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
+import { getAssetPath } from '@/lib/constants'
 
 const HeroSection = () => {
   return (
@@ -16,14 +17,14 @@ const HeroSection = () => {
           loop
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover"
-          poster="/images/shutterstock_2644707669.jpg"
+          poster={getAssetPath('/images/shutterstock_2644707669.jpg')}
         >
-          <source src="/videos/shutterstock_3662626007.mov" type="video/quicktime" />
-          <source src="/videos/shutterstock_3662626007.mov" type="video/mp4" />
+          <source src={getAssetPath('/videos/shutterstock_3662626007.mov')} type="video/quicktime" />
+          <source src={getAssetPath('/videos/shutterstock_3662626007.mov')} type="video/mp4" />
         </video>
         {/* Fallback Image for browsers that don't support video */}
         <Image
-          src="/images/shutterstock_2644707669.jpg"
+          src={getAssetPath('/images/shutterstock_2644707669.jpg')}
           alt="MONAD Law Firm"
           fill
           className="object-cover -z-10"

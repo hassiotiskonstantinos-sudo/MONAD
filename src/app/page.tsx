@@ -19,6 +19,7 @@ import Image from 'next/image'
 import ContactForm from '@/components/ContactForm'
 import SectionHeading from '@/components/SectionHeading'
 import HeroSection from '@/components/HeroSection'
+import { getAssetPath } from '@/lib/constants'
 
 const pillars = [
   {
@@ -190,7 +191,7 @@ export default function Home() {
               </div>
               <div className="mt-8 relative h-64 w-full">
                 <Image
-                  src="/images/shutterstock_2249889569.jpg"
+                  src={getAssetPath('/images/shutterstock_2249889569.jpg')}
                   alt="MONAD Law Firm"
                   fill
                   className="object-cover"
@@ -247,7 +248,7 @@ export default function Home() {
             <div className="bg-white/5 border border-white/10 overflow-hidden">
               <div className="relative h-48">
                 <Image
-                  src="/images/tax-wealth-management.jpg"
+                  src={getAssetPath('/images/tax-wealth-management.jpg')}
                   alt="FINLEX - Cross Border Structuring"
                   fill
                   className="object-cover"
@@ -274,7 +275,7 @@ export default function Home() {
             <div className="bg-white/5 border border-white/10 overflow-hidden">
               <div className="relative h-48">
                 <Image
-                  src="/images/shutterstock_2724348917.jpg"
+                  src={getAssetPath('/images/shutterstock_2724348917.jpg')}
                   alt="MEDLEX - Greek Legal Services"
                   fill
                   className="object-cover"

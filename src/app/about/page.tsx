@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Target, Eye, ArrowRight } from 'lucide-react'
 import SectionHeading from '@/components/SectionHeading'
 import Link from 'next/link'
+import { getAssetPath } from '@/lib/constants'
 
 export default function AboutPage() {
   return (
@@ -10,7 +11,7 @@ export default function AboutPage() {
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/regulatory.jpg"
+            src={getAssetPath('/images/regulatory.jpg')}
             alt="About MONAD"
             fill
             className="object-cover"
