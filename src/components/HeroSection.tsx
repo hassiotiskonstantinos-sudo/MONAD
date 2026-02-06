@@ -32,18 +32,18 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/60" />
+      {/* Dark Overlay with Prussian blue tint */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-prussian-500/50 to-black/70" />
 
       {/* Content */}
       <div className="relative h-full container-custom flex flex-col justify-center pt-32 pb-12">
         <div className="max-w-4xl">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-4 leading-tight">
             Clear Thinking.<br />
-            Decisive Execution.
+            <span className="text-orange-400">Decisive Execution.</span>
           </h1>
 
-          <p className="text-base md:text-lg text-primary-100 mb-6 leading-relaxed max-w-3xl">
+          <p className="text-base md:text-lg text-white/90 mb-6 leading-relaxed max-w-3xl">
             MONAD is a modern law firm built for clients who need clear thinking and decisive
             execution. The work ranges from corporate structuring and cross border tax planning
             to immigration, technology transactions, real estate and disputes.
@@ -52,7 +52,7 @@ const HeroSection = () => {
           <div className="flex flex-wrap gap-4">
             <Link
               href="/services/companies"
-              className="btn-primary flex items-center"
+              className="btn-orange flex items-center"
             >
               Explore Services
               <ArrowRight className="ml-2 w-5 h-5" />

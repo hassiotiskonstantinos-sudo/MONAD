@@ -200,49 +200,61 @@ export default function HomePageGreek() {
         </div>
       </section>
 
-      {/* MEDLEX Highlight */}
-      <section className="section-padding bg-primary-900 text-white">
+      {/* MEDLEX Section */}
+      <section className="py-20 bg-prussian-500">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div className="p-8 bg-white/5 border border-white/10">
-              <h3 className="text-2xl font-serif font-bold mb-4">MEDLEX</h3>
-              <p className="text-primary-200 mb-6 leading-relaxed">
-                Στη MONAD, είμαστε αφοσιωμένοι στην υπεράσπιση ατόμων που έχουν
-                υποφέρει λόγω ιατρικής αμέλειας. Η έμπειρη ομάδα μας ερευνά
-                σχολαστικά κάθε υπόθεση, συνεργαζόμενη με ιατρικούς εμπειρογνώμονες
-                για να θέσει τους υπεύθυνους προ των ευθυνών τους.
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-white">
+              <div className="flex items-center mb-6">
+                <div className="bg-orange-500 px-6 py-3">
+                  <span className="text-3xl font-serif font-bold tracking-wide">MEDLEX</span>
+                </div>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
+                Νομικές Υπηρεσίες Ελληνικού Δικαίου
+              </h2>
+              <p className="text-white/90 mb-6 leading-relaxed text-lg">
+                Το MEDLEX είναι η εξειδικευμένη πλατφόρμα της MONAD για νομικές υπηρεσίες
+                στην Ελλάδα, με έμφαση σε εταιρικά, ακίνητα και εργατικά θέματα.
               </p>
-              <p className="text-primary-200 mb-6 leading-relaxed">
-                Αφήστε μας να είμαστε η φωνή σας στην αναζήτηση δικαιοσύνης και
-                στην εξασφάλιση της αποζημίωσης που σας αξίζει.
+              <p className="text-white/80 mb-8 leading-relaxed">
+                Η ομάδα μας παρέχει υψηλού επιπέδου νομική υποστήριξη στην ελληνική γλώσσα,
+                με βαθιά γνώση του ελληνικού δικαίου και της τοπικής αγοράς.
               </p>
-              <Link
-                href="/el/medlex"
-                className="inline-flex items-center text-white font-medium hover:text-primary-200 transition-colors"
-              >
-                Μάθετε Περισσότερα →
-              </Link>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="https://medlex.gr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-orange-500 text-white px-8 py-3 font-medium hover:bg-orange-600 transition-colors inline-flex items-center"
+                >
+                  Επισκεφθείτε το MEDLEX
+                  <Globe className="ml-2 w-5 h-5" />
+                </a>
+                <Link
+                  href="/el/medlex"
+                  className="border-2 border-white text-white px-8 py-3 font-medium hover:bg-white hover:text-prussian-500 transition-colors inline-flex items-center"
+                >
+                  Μάθετε Περισσότερα
+                </Link>
+              </div>
             </div>
-
-            <div className="p-8 bg-white/5 border border-white/10">
-              <h3 className="text-2xl font-serif font-bold mb-4">FINLEX</h3>
-              <p className="text-primary-200 mb-6 leading-relaxed">
-                Στη MONAD κατανοούμε τον αντίκτυπο των οικονομικών απωλειών. Η
-                ομάδα Ανάκτησης FINLEX είναι αφοσιωμένη στο να βοηθήσει τους
-                πελάτες να ανακτήσουν τον έλεγχο διεκδικώντας αποζημίωση για
-                επενδύσεις που πωλήθηκαν παραπλανητικά.
-              </p>
-              <p className="text-primary-200 mb-6 leading-relaxed">
-                Από σύνθετα χρηματοοικονομικά προϊόντα έως εναλλακτικές επενδύσεις
-                όπως τέχνη ή κρυπτονομίσματα, έχουμε εμπειρία στη διαχείριση ενός
-                ευρέος φάσματος υποθέσεων.
-              </p>
-              <Link
-                href="/finlex"
-                className="inline-flex items-center text-white font-medium hover:text-primary-200 transition-colors"
-              >
-                Διεκδικήστε τα Χρήματά σας →
-              </Link>
+            <div className="bg-white rounded-lg shadow-2xl overflow-hidden">
+              <div className="bg-gray-100 px-4 py-2 flex items-center gap-2 border-b">
+                <div className="flex gap-1.5">
+                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+                <div className="flex-1 bg-white rounded px-3 py-1 text-xs text-gray-500 truncate">
+                  medlex.gr
+                </div>
+              </div>
+              <iframe
+                src="https://medlex.gr/"
+                className="w-full h-[400px] border-0"
+                title="MEDLEX - Νομικές Υπηρεσίες"
+              />
             </div>
           </div>
         </div>

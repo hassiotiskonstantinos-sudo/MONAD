@@ -157,18 +157,18 @@ export default function Home() {
                 <div
                   className={`group p-8 h-full card-hover ${
                     index === 0
-                      ? 'bg-primary-900 text-white'
+                      ? 'bg-prussian-500 text-white'
                       : 'bg-white border border-primary-100'
                   }`}
                 >
                   <div
                     className={`w-14 h-14 flex items-center justify-center mb-6 ${
-                      index === 0 ? 'bg-white/10' : 'bg-primary-50'
+                      index === 0 ? 'bg-orange-500' : 'bg-orange-50'
                     }`}
                   >
                     <pillar.icon
                       className={`w-7 h-7 ${
-                        index === 0 ? 'text-white' : 'text-primary-900'
+                        index === 0 ? 'text-white' : 'text-orange-500'
                       }`}
                     />
                   </div>
@@ -181,7 +181,7 @@ export default function Home() {
                   </h3>
                   <p
                     className={`text-sm leading-relaxed mb-4 ${
-                      index === 0 ? 'text-primary-200' : 'text-primary-600'
+                      index === 0 ? 'text-white/80' : 'text-primary-600'
                     }`}
                   >
                     {pillar.description}
@@ -189,8 +189,8 @@ export default function Home() {
                   <span
                     className={`inline-flex items-center text-sm font-medium ${
                       index === 0
-                        ? 'text-white group-hover:text-primary-200'
-                        : 'text-primary-900 group-hover:text-primary-600'
+                        ? 'text-orange-400 group-hover:text-orange-300'
+                        : 'text-orange-500 group-hover:text-orange-600'
                     }`}
                   >
                     Learn more
@@ -248,11 +248,11 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="bg-primary-900 text-white p-10">
+            <div className="bg-prussian-500 text-white p-10">
               <h3 className="text-2xl font-serif font-semibold mb-6">
                 Most Demanded Services
               </h3>
-              <p className="text-primary-200 mb-8 text-sm leading-relaxed">
+              <p className="text-white/80 mb-8 text-sm leading-relaxed">
                 Many clients begin with one of the following needs and then expand
                 into broader support. MONAD treats these as gateways to a wider
                 relationship, where the objective is long term legal stability and
@@ -260,27 +260,27 @@ export default function Home() {
               </p>
               <div className="space-y-6">
                 <div>
-                  <h5 className="text-sm uppercase tracking-wider text-primary-400 mb-3">
+                  <h5 className="text-sm uppercase tracking-wider text-orange-400 mb-3">
                     For Companies
                   </h5>
                   <div className="grid grid-cols-2 gap-2">
                     {companyServices.map((service) => (
                       <div key={service.name} className="flex items-center text-sm">
-                        <service.icon className="w-4 h-4 mr-2 text-primary-400" />
-                        <span className="text-primary-100">{service.name}</span>
+                        <service.icon className="w-4 h-4 mr-2 text-orange-400" />
+                        <span className="text-white/90">{service.name}</span>
                       </div>
                     ))}
                   </div>
                 </div>
                 <div>
-                  <h5 className="text-sm uppercase tracking-wider text-primary-400 mb-3">
+                  <h5 className="text-sm uppercase tracking-wider text-orange-400 mb-3">
                     For Individuals
                   </h5>
                   <div className="grid grid-cols-2 gap-2">
                     {individualServices.map((service) => (
                       <div key={service.name} className="flex items-center text-sm">
-                        <service.icon className="w-4 h-4 mr-2 text-primary-400" />
-                        <span className="text-primary-100">{service.name}</span>
+                        <service.icon className="w-4 h-4 mr-2 text-orange-400" />
+                        <span className="text-white/90">{service.name}</span>
                       </div>
                     ))}
                   </div>
@@ -291,62 +291,61 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FINLEX & MEDLEX */}
-      <section className="py-20 bg-primary-900 text-white">
+      {/* FINLEX Section */}
+      <section className="py-20 bg-prussian-500">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-8">
-            <div className="bg-white/5 border border-white/10 overflow-hidden">
-              <div className="relative h-64 md:h-80">
-                <Image
-                  src={getAssetPath('/images/tax-wealth-management.jpg')}
-                  alt="FINLEX - Cross Border Structuring"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-primary-900/40" />
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-white">
+              <div className="flex items-center mb-6">
+                <div className="bg-orange-500 px-6 py-3">
+                  <span className="text-3xl font-serif font-bold tracking-wide">FINLEX</span>
+                </div>
               </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-serif font-bold mb-4">FINLEX</h3>
-                <p className="text-primary-200 mb-4 leading-relaxed">
-                  FINLEX is MONAD's focused hub for clients dealing with cross border
-                  structuring, investor driven transactions and finance adjacent legal
-                  needs. Built for founders, investors, family offices and internationally
-                  mobile clients who need legal clarity across jurisdictions.
-                </p>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
+                Financial Claims Recovery
+              </h2>
+              <p className="text-white/90 mb-6 leading-relaxed text-lg">
+                FINLEX is MONAD's dedicated platform for clients seeking to recover losses
+                from mis-sold financial products, investment fraud, and financial misconduct.
+              </p>
+              <p className="text-white/80 mb-8 leading-relaxed">
+                Our team has extensive experience handling claims against banks, investment
+                firms, and financial advisors. We work on a no-win, no-fee basis for qualifying cases.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="https://financial-claims.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-orange inline-flex items-center"
+                >
+                  Visit FINLEX Website
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
                 <Link
                   href="/finlex"
-                  className="inline-flex items-center text-white font-medium hover:text-primary-200 transition-colors"
+                  className="btn-outline-light inline-flex items-center"
                 >
-                  Learn more about FINLEX
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  Learn More
                 </Link>
               </div>
             </div>
-            <div className="bg-white/5 border border-white/10 overflow-hidden">
-              <div className="relative h-64 md:h-80">
-                <Image
-                  src={getAssetPath('/images/shutterstock_2724348917.jpg')}
-                  alt="MEDLEX - Greek Legal Services"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-primary-900/40" />
+            <div className="bg-white rounded-lg shadow-2xl overflow-hidden">
+              <div className="bg-gray-100 px-4 py-2 flex items-center gap-2 border-b">
+                <div className="flex gap-1.5">
+                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+                <div className="flex-1 bg-white rounded px-3 py-1 text-xs text-gray-500 truncate">
+                  financial-claims.com
+                </div>
               </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-serif font-bold mb-4">MEDLEX</h3>
-                <p className="text-primary-200 mb-4 leading-relaxed">
-                  Το MEDLEX είναι ο στοχευμένος κόμβος της MONAD για νομικές υπηρεσίες
-                  ελληνικού δικαίου, με έμφαση στην πρακτική εφαρμογή και την ασφάλεια
-                  δικαίου.
-                </p>
-                <Link
-                  href="/el/medlex"
-                  className="inline-flex items-center text-white font-medium hover:text-primary-200 transition-colors"
-                >
-                  Μάθετε περισσότερα
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </div>
+              <iframe
+                src="https://financial-claims.com/index.html"
+                className="w-full h-[400px] border-0"
+                title="FINLEX - Financial Claims"
+              />
             </div>
           </div>
         </div>
@@ -394,15 +393,21 @@ export default function Home() {
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-primary-900/60" />
+        <div className="absolute inset-0 bg-prussian-500/70" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white max-w-3xl px-6">
             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
               Based in Athens, Serving Clients Worldwide
             </h2>
-            <p className="text-lg text-primary-200">
+            <p className="text-lg text-white/80">
               Strategic legal advice for cross-border transactions and international matters
             </p>
+            <div className="mt-6">
+              <Link href="/contact" className="btn-orange inline-flex items-center">
+                Get in Touch
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
