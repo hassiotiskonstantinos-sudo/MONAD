@@ -34,28 +34,28 @@ const HeroSection = () => {
       {/* Minimal overlay */}
       <div className="absolute inset-0 bg-black/30" />
 
-      {/* Content at bottom - Mishcon style */}
-      <div className="relative h-full container-custom flex flex-col justify-end pb-24">
-        <div className="max-w-3xl">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-8 leading-none">
+      {/* Content at bottom - Mishcon style with orange accent */}
+      <div className="relative h-full container-custom flex flex-col justify-end pb-32">
+        <div className="max-w-4xl">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-white mb-10 leading-[1.1]">
             Clear thinking.
             <br />
-            Decisive execution.
+            <span className="text-orange-500">Decisive</span> execution.
           </h1>
-          <div className="flex flex-wrap gap-6">
+          <div className="flex flex-wrap gap-8">
             <Link
               href="/services/companies"
-              className="inline-flex items-center text-white text-lg font-medium hover:text-orange-400 transition-colors group"
+              className="inline-flex items-center text-white text-xl font-light hover:text-orange-500 transition-colors group"
             >
               Our services
-              <ArrowRight className="ml-2 w-5 h-5 transform group-hover:translate-x-2 transition-transform" />
+              <ArrowRight className="ml-3 w-5 h-5 transform group-hover:translate-x-2 transition-transform" />
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center text-white text-lg font-medium hover:text-orange-400 transition-colors group"
+              className="inline-flex items-center text-white text-xl font-light hover:text-orange-500 transition-colors group"
             >
               Contact us
-              <ArrowRight className="ml-2 w-5 h-5 transform group-hover:translate-x-2 transition-transform" />
+              <ArrowRight className="ml-3 w-5 h-5 transform group-hover:translate-x-2 transition-transform" />
             </Link>
           </div>
         </div>

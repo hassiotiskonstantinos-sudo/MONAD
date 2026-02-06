@@ -30,67 +30,68 @@ const Navigation = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black shadow-lg py-2' : 'bg-transparent py-4'
+        isScrolled ? 'bg-black shadow-lg py-3' : 'bg-transparent py-6'
       }`}
     >
       <div className="container-custom">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo - Double Size */}
           <Link href="/" className="flex items-center">
             <Image
               src={getAssetPath('/images/logo-monad.png')}
               alt="MONAD"
-              width={450}
-              height={150}
-              className={`w-auto brightness-0 invert ${isScrolled ? 'h-12' : 'h-16'}`}
+              width={500}
+              height={180}
+              className={`w-auto brightness-0 invert transition-all duration-300 ${isScrolled ? 'h-16' : 'h-24'}`}
               priority
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6">
+          {/* Desktop Navigation - Bigger text, Mishcon style */}
+          <div className="hidden lg:flex items-center space-x-8">
             <Link
               href="/"
-              className="text-white/80 hover:text-orange-500 transition-colors text-sm"
+              className="text-white hover:text-orange-500 transition-colors text-base font-light tracking-wide"
             >
               Home
             </Link>
             <Link
               href="/about"
-              className="text-white/80 hover:text-orange-500 transition-colors text-sm"
+              className="text-white hover:text-orange-500 transition-colors text-base font-light tracking-wide"
             >
               About
             </Link>
 
-            {/* Services Dropdown */}
+            {/* Services Dropdown with orange accent */}
             <div className="relative">
               <button
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
-                className="flex items-center text-white/80 hover:text-orange-500 transition-colors text-sm"
+                className="flex items-center text-white hover:text-orange-500 transition-colors text-base font-light tracking-wide"
               >
+                <span className="text-orange-500 mr-1">•</span>
                 Services
-                <ChevronDown className="ml-1 w-3 h-3" />
+                <ChevronDown className="ml-1 w-4 h-4" />
               </button>
               {servicesOpen && (
                 <div
                   onMouseEnter={() => setServicesOpen(true)}
                   onMouseLeave={() => setServicesOpen(false)}
-                  className="absolute top-full left-0 mt-2 w-48 bg-black border border-white/10 py-1"
+                  className="absolute top-full left-0 mt-2 w-56 bg-black border border-white/10 py-2"
                 >
                   {services.map((service) => (
                     <Link
                       key={service.name}
                       href={service.href}
-                      className="block px-4 py-2 text-white/70 hover:text-orange-500 hover:bg-white/5 text-sm transition-colors"
+                      className="block px-5 py-3 text-white/80 hover:text-orange-500 hover:bg-white/5 text-base font-light transition-colors"
                     >
                       {service.name}
                     </Link>
                   ))}
-                  <div className="border-t border-white/10 my-1"></div>
+                  <div className="border-t border-white/10 my-2"></div>
                   <Link
                     href="/finlex"
-                    className="block px-4 py-2 text-orange-500 hover:bg-white/5 text-sm font-medium"
+                    className="block px-5 py-3 text-orange-500 hover:bg-white/5 text-base font-medium"
                   >
                     FINLEX
                   </Link>
@@ -100,44 +101,45 @@ const Navigation = () => {
 
             <Link
               href="/team"
-              className="text-white/80 hover:text-orange-500 transition-colors text-sm"
+              className="text-white hover:text-orange-500 transition-colors text-base font-light tracking-wide"
             >
+              <span className="text-orange-500 mr-1">•</span>
               People
             </Link>
             <Link
               href="/knowledge"
-              className="text-white/80 hover:text-orange-500 transition-colors text-sm"
+              className="text-white hover:text-orange-500 transition-colors text-base font-light tracking-wide"
             >
               Insights
             </Link>
             <Link
               href="/contact"
-              className="text-white/80 hover:text-orange-500 transition-colors text-sm"
+              className="text-white hover:text-orange-500 transition-colors text-base font-light tracking-wide"
             >
               Contact
             </Link>
 
             {/* Language Switcher */}
-            <div className="relative border-l border-white/20 pl-6">
+            <div className="relative border-l border-white/20 pl-8 ml-4">
               <button
                 onClick={() => setLangOpen(!langOpen)}
-                className="flex items-center text-white/60 hover:text-white transition-colors text-sm"
+                className="flex items-center text-white/70 hover:text-white transition-colors text-base font-light"
               >
-                <Globe className="w-4 h-4 mr-1" />
+                <Globe className="w-5 h-5 mr-2" />
                 EN
               </button>
               {langOpen && (
-                <div className="absolute top-full right-0 mt-2 w-24 bg-black border border-white/10 py-1">
+                <div className="absolute top-full right-0 mt-2 w-28 bg-black border border-white/10 py-2">
                   <Link
                     href="/"
-                    className="block px-3 py-1.5 text-white/70 hover:text-orange-500 text-sm"
+                    className="block px-4 py-2 text-white/80 hover:text-orange-500 text-base font-light"
                     onClick={() => setLangOpen(false)}
                   >
                     English
                   </Link>
                   <Link
                     href="/el"
-                    className="block px-3 py-1.5 text-white/70 hover:text-orange-500 text-sm"
+                    className="block px-4 py-2 text-white/80 hover:text-orange-500 text-base font-light"
                     onClick={() => setLangOpen(false)}
                   >
                     Ελληνικά
@@ -152,29 +154,29 @@ const Navigation = () => {
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 text-white"
           >
-            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden mt-4 pb-4 bg-black border-t border-white/10">
+          <div className="lg:hidden mt-6 pb-6 bg-black border-t border-white/10">
             <div className="flex flex-col">
-              <Link href="/" className="px-4 py-3 text-white/80 hover:text-orange-500 text-sm" onClick={() => setIsOpen(false)}>Home</Link>
-              <Link href="/about" className="px-4 py-3 text-white/80 hover:text-orange-500 text-sm" onClick={() => setIsOpen(false)}>About</Link>
+              <Link href="/" className="px-4 py-4 text-white hover:text-orange-500 text-lg font-light" onClick={() => setIsOpen(false)}>Home</Link>
+              <Link href="/about" className="px-4 py-4 text-white hover:text-orange-500 text-lg font-light" onClick={() => setIsOpen(false)}>About</Link>
               <div className="border-t border-white/10 mx-4 my-2"></div>
               {services.map((service) => (
-                <Link key={service.name} href={service.href} className="px-4 py-2 text-white/60 hover:text-orange-500 text-sm" onClick={() => setIsOpen(false)}>{service.name}</Link>
+                <Link key={service.name} href={service.href} className="px-4 py-3 text-white/70 hover:text-orange-500 text-base font-light" onClick={() => setIsOpen(false)}>{service.name}</Link>
               ))}
-              <Link href="/finlex" className="px-4 py-2 text-orange-500 text-sm font-medium" onClick={() => setIsOpen(false)}>FINLEX</Link>
+              <Link href="/finlex" className="px-4 py-3 text-orange-500 text-base font-medium" onClick={() => setIsOpen(false)}>FINLEX</Link>
               <div className="border-t border-white/10 mx-4 my-2"></div>
-              <Link href="/team" className="px-4 py-3 text-white/80 hover:text-orange-500 text-sm" onClick={() => setIsOpen(false)}>People</Link>
-              <Link href="/knowledge" className="px-4 py-3 text-white/80 hover:text-orange-500 text-sm" onClick={() => setIsOpen(false)}>Insights</Link>
-              <Link href="/contact" className="px-4 py-3 text-white/80 hover:text-orange-500 text-sm" onClick={() => setIsOpen(false)}>Contact</Link>
+              <Link href="/team" className="px-4 py-4 text-white hover:text-orange-500 text-lg font-light" onClick={() => setIsOpen(false)}>People</Link>
+              <Link href="/knowledge" className="px-4 py-4 text-white hover:text-orange-500 text-lg font-light" onClick={() => setIsOpen(false)}>Insights</Link>
+              <Link href="/contact" className="px-4 py-4 text-white hover:text-orange-500 text-lg font-light" onClick={() => setIsOpen(false)}>Contact</Link>
               <div className="border-t border-white/10 mx-4 my-2"></div>
-              <div className="px-4 py-2 flex space-x-4">
-                <Link href="/" className="text-white text-sm">EN</Link>
-                <Link href="/el" className="text-white/50 text-sm">EL</Link>
+              <div className="px-4 py-3 flex space-x-6">
+                <Link href="/" className="text-white text-base font-light">EN</Link>
+                <Link href="/el" className="text-white/50 text-base font-light">EL</Link>
               </div>
             </div>
           </div>
