@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://hassiotiskonstantinos-sudo.github.io/MONAD/</loc>
+    <lastmod>2024-02-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hassiotiskonstantinos-sudo.github.io/MONAD/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://hassiotiskonstantinos-sudo.github.io/MONAD/el/"/>
+  </url>
+
+  <!-- Greek Homepage -->
+  <url>
+    <loc>https://hassiotiskonstantinos-sudo.github.io/MONAD/el/</loc>
+    <lastmod>2024-02-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hassiotiskonstantinos-sudo.github.io/MONAD/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://hassiotiskonstantinos-sudo.github.io/MONAD/el/"/>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://hassiotiskonstantinos-sudo.github.io/MONAD/about/</loc>
+    <lastmod>2024-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Team -->
+  <url>
+    <loc>https://hassiotiskonstantinos-sudo.github.io/MONAD/team/</loc>
+    <lastmod>2024-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://hassiotiskonstantinos-sudo.github.io/MONAD/contact/</loc>
+    <lastmod>2024-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Knowledge/Insights -->
+  <url>
+    <loc>https://hassiotiskonstantinos-sudo.github.io/MONAD/knowledge/</loc>
+    <lastmod>2024-02-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Services - Companies -->
+  <url>
+    <loc>https://hassiotiskonstantinos-sudo.github.io/MONAD/services/companies/</loc>
+    <lastmod>2024-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Services - Individuals -->
+  <url>
+    <loc>https://hassiotiskonstantinos-sudo.github.io/MONAD/services/individuals/</loc>
+    <lastmod>2024-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Services - Real Estate -->
+  <url>
+    <loc>https://hassiotiskonstantinos-sudo.github.io/MONAD/services/real-estate/</loc>
+    <lastmod>2024-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Services - Technology -->
+  <url>
+    <loc>https://hassiotiskonstantinos-sudo.github.io/MONAD/services/technology/</loc>
+    <lastmod>2024-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- FINLEX -->
+  <url>
+    <loc>https://hassiotiskonstantinos-sudo.github.io/MONAD/finlex/</loc>
+    <lastmod>2024-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Greek MEDLEX -->
+  <url>
+    <loc>https://hassiotiskonstantinos-sudo.github.io/MONAD/el/medlex/</loc>
+    <lastmod>2024-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
