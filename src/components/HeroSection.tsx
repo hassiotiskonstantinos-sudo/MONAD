@@ -7,7 +7,7 @@ import { getAssetPath } from '@/lib/constants'
 
 const HeroSection = () => {
   return (
-    <section className="relative h-[85vh] min-h-[600px] overflow-hidden">
+    <section className="relative h-screen min-h-[700px] overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0">
         <video
@@ -31,37 +31,40 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* Subtle dark overlay */}
-      <div className="absolute inset-0 bg-black/40" />
+      {/* Minimal overlay */}
+      <div className="absolute inset-0 bg-black/30" />
 
-      {/* Content */}
-      <div className="relative h-full container-custom flex flex-col justify-end pb-20">
+      {/* Content at bottom - Mishcon style */}
+      <div className="relative h-full container-custom flex flex-col justify-end pb-24">
         <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight">
-            Clear thinking.<br />
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-8 leading-none">
+            Clear thinking.
+            <br />
             Decisive execution.
           </h1>
-
-          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl leading-relaxed">
-            Strategic legal advice for companies, investors and private clients
-            navigating complex matters across borders.
-          </p>
-
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-6">
             <Link
               href="/services/companies"
-              className="inline-flex items-center bg-white text-primary-900 px-6 py-3 font-medium hover:bg-orange-500 hover:text-white transition-colors"
+              className="inline-flex items-center text-white text-lg font-medium hover:text-orange-400 transition-colors group"
             >
               Our services
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-5 h-5 transform group-hover:translate-x-2 transition-transform" />
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center border-2 border-white text-white px-6 py-3 font-medium hover:bg-white hover:text-primary-900 transition-colors"
+              className="inline-flex items-center text-white text-lg font-medium hover:text-orange-400 transition-colors group"
             >
               Contact us
+              <ArrowRight className="ml-2 w-5 h-5 transform group-hover:translate-x-2 transition-transform" />
             </Link>
           </div>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-bounce" />
         </div>
       </div>
     </section>
