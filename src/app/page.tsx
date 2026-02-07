@@ -287,43 +287,43 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FINLEX Section - 50% White / 50% Black Split */}
+      {/* FINLEX Section - 50% White / 50% Black Split (Desktop) | White only (Mobile) */}
       <section className="border-t border-white/10">
-        <div className="grid lg:grid-cols-2 min-h-[500px]">
-          {/* Left - White background with logo at TRUE natural size */}
-          <div className="bg-white p-12 lg:p-16 flex flex-col justify-center">
-            <div className="mb-12">
+        <div className="grid lg:grid-cols-2">
+          {/* Left - White background with logo (Full width on mobile, 50% on desktop) */}
+          <div className="bg-white p-8 md:p-12 lg:p-16 flex flex-col justify-center min-h-[400px] lg:min-h-[500px]">
+            <div className="mb-8 lg:mb-12">
               <Image
                 src={getAssetPath('/images/finlex-logo_lrg.png')}
                 alt="FINLEX"
                 width={180}
                 height={54}
-                className="w-[180px] h-auto"
+                className="w-[150px] lg:w-[180px] h-auto"
                 unoptimized
               />
             </div>
-            <blockquote className="text-2xl md:text-3xl font-serif text-neutral-800 leading-relaxed mb-6">
+            <blockquote className="text-xl md:text-2xl lg:text-3xl font-serif text-neutral-800 leading-relaxed mb-6">
               &ldquo;We fight for investors who have been wronged. Our mission is to recover what is rightfully yours.&rdquo;
             </blockquote>
-            <p className="text-neutral-500 text-lg font-light leading-relaxed mb-6">
+            <p className="text-neutral-500 text-base lg:text-lg font-light leading-relaxed mb-4 lg:mb-6">
               Exposed to investment fraud or mis-sold financial products? Our expert legal team
               works on a no-win, no-fee basis to recover your losses.
             </p>
-            <p className="text-neutral-400 text-base font-light leading-relaxed mb-8">
+            <p className="text-neutral-400 text-sm lg:text-base font-light leading-relaxed mb-6 lg:mb-8">
               Join thousands of investors who have successfully recovered their funds through our dedicated claims process.
             </p>
             <a
               href="https://financial-claims.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center bg-orange-500 text-white px-8 py-4 text-base font-medium hover:bg-orange-600 transition-colors w-fit"
+              className="inline-flex items-center bg-orange-500 text-white px-6 lg:px-8 py-3 lg:py-4 text-sm lg:text-base font-medium hover:bg-orange-600 transition-colors w-fit"
             >
-              Visit FINLEX <ArrowRight className="ml-3 w-5 h-5" />
+              Visit FINLEX <ArrowRight className="ml-2 lg:ml-3 w-4 lg:w-5 h-4 lg:h-5" />
             </a>
           </div>
 
-          {/* Right - Black background with scaled down preview (60%) */}
-          <div className="bg-black p-8 lg:p-16 flex items-center justify-center">
+          {/* Right - Black background with preview (DESKTOP ONLY) */}
+          <div className="hidden lg:flex bg-black p-16 items-center justify-center">
             <div className="w-[60%] border border-white/20 bg-white overflow-hidden shadow-2xl">
               <div className="bg-neutral-800 p-2 flex items-center gap-1.5">
                 <div className="w-2 h-2 rounded-full bg-red-500" />
