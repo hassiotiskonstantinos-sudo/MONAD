@@ -1,8 +1,18 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Target, Eye, ArrowRight } from 'lucide-react'
 import SectionHeading from '@/components/SectionHeading'
 import Link from 'next/link'
 import { getAssetPath } from '@/lib/constants'
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description: 'Learn about MONAD Law Firm - a leading legal practice in Athens, Greece. Our mission, values, and commitment to delivering clear thinking and decisive execution for our clients.',
+  openGraph: {
+    title: 'About MONAD Law Firm',
+    description: 'A leading legal practice in Athens, Greece committed to clear thinking and decisive execution.',
+  },
+}
 
 export default function AboutPage() {
   return (

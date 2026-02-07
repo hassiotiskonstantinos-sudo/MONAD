@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import {
@@ -16,6 +17,16 @@ import {
 import SectionHeading from '@/components/SectionHeading'
 import ContactForm from '@/components/ContactForm'
 import { getAssetPath } from '@/lib/constants'
+
+export const metadata: Metadata = {
+  title: 'Corporate & Business Law Services',
+  description: 'Expert corporate law services in Greece. Company formation, M&A, corporate governance, commercial contracts, dispute resolution, and cross-border transactions. MONAD Law Firm.',
+  keywords: ['corporate law Greece', 'company formation Athens', 'M&A lawyers', 'business law', 'commercial contracts'],
+  openGraph: {
+    title: 'Corporate & Business Law Services | MONAD',
+    description: 'Expert corporate law services in Greece. Company formation, M&A, corporate governance, and cross-border transactions.',
+  },
+}
 
 const services = [
   {

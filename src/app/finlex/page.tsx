@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import {
@@ -12,6 +13,16 @@ import {
 import ContactForm from '@/components/ContactForm'
 import SectionHeading from '@/components/SectionHeading'
 import { getAssetPath } from '@/lib/constants'
+
+export const metadata: Metadata = {
+  title: 'FINLEX - Financial Claims Recovery',
+  description: 'FINLEX by MONAD - Expert financial claims recovery services. Recover losses from mis-sold financial products, investment fraud, and financial misconduct. No win, no fee.',
+  keywords: ['financial claims recovery', 'investment fraud', 'mis-sold products', 'FINLEX', 'no win no fee'],
+  openGraph: {
+    title: 'FINLEX - Financial Claims Recovery | MONAD',
+    description: 'Recover losses from investment fraud and mis-sold financial products. No win, no fee.',
+  },
+}
 
 const services = [
   {

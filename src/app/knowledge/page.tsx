@@ -1,6 +1,16 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Calendar, User, ArrowRight, Tag, ChevronRight } from 'lucide-react'
 import SectionHeading from '@/components/SectionHeading'
+
+export const metadata: Metadata = {
+  title: 'Insights & Knowledge',
+  description: 'Legal insights and articles from MONAD Law Firm. Stay informed about corporate law, real estate, technology, and private client matters in Greece and internationally.',
+  openGraph: {
+    title: 'Legal Insights | MONAD Law Firm',
+    description: 'Legal insights and articles on corporate, real estate, technology, and private client law.',
+  },
+}
 
 const articles = [
   {

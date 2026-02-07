@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import {
@@ -15,6 +16,16 @@ import {
 import SectionHeading from '@/components/SectionHeading'
 import ContactForm from '@/components/ContactForm'
 import { getAssetPath } from '@/lib/constants'
+
+export const metadata: Metadata = {
+  title: 'Private Client & Individual Services',
+  description: 'Legal services for individuals in Greece. Immigration, Golden Visa, estate planning, family law, wealth management, and private client advisory. MONAD Law Firm Athens.',
+  keywords: ['private client lawyer Greece', 'Golden Visa Greece', 'immigration lawyer Athens', 'estate planning', 'family law Greece'],
+  openGraph: {
+    title: 'Private Client & Individual Services | MONAD',
+    description: 'Legal services for individuals: Immigration, Golden Visa, estate planning, family law, and wealth management.',
+  },
+}
 
 const services = [
   {

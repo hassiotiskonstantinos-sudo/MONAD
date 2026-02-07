@@ -1,8 +1,18 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { MapPin, Mail, Clock, ChevronRight } from 'lucide-react'
 import ContactForm from '@/components/ContactForm'
 import Link from 'next/link'
 import { getAssetPath } from '@/lib/constants'
+
+export const metadata: Metadata = {
+  title: 'Contact Us',
+  description: 'Contact MONAD Law Firm in Athens, Greece. Get in touch with our legal team for corporate, private client, real estate, and technology law matters.',
+  openGraph: {
+    title: 'Contact MONAD Law Firm',
+    description: 'Get in touch with our legal team in Athens, Greece.',
+  },
+}
 
 export default function ContactPage() {
   return (

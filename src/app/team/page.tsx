@@ -1,6 +1,16 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ChevronRight, ArrowRight } from 'lucide-react'
 import SectionHeading from '@/components/SectionHeading'
+
+export const metadata: Metadata = {
+  title: 'Our Team',
+  description: 'Meet the legal professionals at MONAD Law Firm. Our experienced team of lawyers in Athens provides expert counsel across corporate, private client, real estate, and technology law.',
+  openGraph: {
+    title: 'Our Team | MONAD Law Firm',
+    description: 'Meet the experienced legal professionals at MONAD Law Firm in Athens.',
+  },
+}
 
 export default function TeamPage() {
   return (

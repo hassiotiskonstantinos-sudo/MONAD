@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import {
@@ -14,6 +15,16 @@ import {
 import SectionHeading from '@/components/SectionHeading'
 import ContactForm from '@/components/ContactForm'
 import { getAssetPath } from '@/lib/constants'
+
+export const metadata: Metadata = {
+  title: 'Technology & Innovation Law',
+  description: 'Technology and innovation law services in Greece. GDPR compliance, data protection, intellectual property, fintech, blockchain, AI governance, and startup legal support.',
+  keywords: ['technology lawyer Greece', 'GDPR compliance', 'data protection', 'intellectual property', 'fintech law', 'startup lawyer'],
+  openGraph: {
+    title: 'Technology & Innovation Law | MONAD',
+    description: 'Technology law services: GDPR, data protection, IP, fintech, blockchain, and startup support.',
+  },
+}
 
 const services = [
   {

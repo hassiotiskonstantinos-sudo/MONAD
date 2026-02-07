@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import {
@@ -14,6 +15,16 @@ import {
 import SectionHeading from '@/components/SectionHeading'
 import ContactForm from '@/components/ContactForm'
 import { getAssetPath } from '@/lib/constants'
+
+export const metadata: Metadata = {
+  title: 'Real Estate Law Services',
+  description: 'Real estate legal services in Greece. Property transactions, due diligence, construction law, development projects, and commercial leasing. MONAD Law Firm Athens.',
+  keywords: ['real estate lawyer Greece', 'property law Athens', 'Greek property purchase', 'construction law', 'commercial leasing'],
+  openGraph: {
+    title: 'Real Estate Law Services | MONAD',
+    description: 'Real estate legal services: Property transactions, due diligence, construction law, and commercial leasing.',
+  },
+}
 
 const services = [
   {
