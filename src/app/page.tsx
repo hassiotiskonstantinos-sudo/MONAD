@@ -287,53 +287,55 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FINLEX Section - 50% White / 50% Black Split (Desktop) | White only (Mobile) */}
-      <section className="border-t border-white/10">
-        <div className="grid lg:grid-cols-2">
-          {/* Left - White background with logo (Full width on mobile, 50% on desktop) */}
-          <div className="bg-white p-8 md:p-12 lg:p-16 flex flex-col justify-center min-h-[400px] lg:min-h-[500px]">
-            <div className="mb-8 lg:mb-12">
+      {/* FINLEX Section - Full White with CTA */}
+      <section className="border-t border-white/10 bg-white">
+        <div className="container-custom py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="mb-8">
               <Image
                 src={getAssetPath('/images/finlex-logo_lrg.png')}
                 alt="FINLEX"
-                width={180}
-                height={54}
-                className="w-[150px] lg:w-[180px] h-auto"
+                width={220}
+                height={66}
+                className="w-[180px] lg:w-[220px] h-auto mx-auto"
                 unoptimized
               />
             </div>
-            <blockquote className="text-xl md:text-2xl lg:text-3xl font-serif text-neutral-800 leading-relaxed mb-6">
+            <blockquote className="text-2xl md:text-3xl lg:text-4xl font-serif text-neutral-800 leading-relaxed mb-8">
               &ldquo;We fight for investors who have been wronged. Our mission is to recover what is rightfully yours.&rdquo;
             </blockquote>
-            <p className="text-neutral-500 text-base lg:text-lg font-light leading-relaxed mb-4 lg:mb-6">
+            <p className="text-neutral-500 text-lg lg:text-xl font-light leading-relaxed mb-6 max-w-2xl mx-auto">
               Exposed to investment fraud or mis-sold financial products? Our expert legal team
               works on a no-win, no-fee basis to recover your losses.
             </p>
-            <p className="text-neutral-400 text-sm lg:text-base font-light leading-relaxed mb-6 lg:mb-8">
+            <p className="text-neutral-400 text-base lg:text-lg font-light leading-relaxed mb-10 max-w-2xl mx-auto">
               Join thousands of investors who have successfully recovered their funds through our dedicated claims process.
             </p>
-            <a
-              href="https://financial-claims.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center bg-orange-500 text-white px-6 lg:px-8 py-3 lg:py-4 text-sm lg:text-base font-medium hover:bg-orange-600 transition-colors w-fit"
-            >
-              Visit FINLEX <ArrowRight className="ml-2 lg:ml-3 w-4 lg:w-5 h-4 lg:h-5" />
-            </a>
-          </div>
 
-          {/* Right - Black background with full preview (DESKTOP ONLY) */}
-          <div className="hidden lg:block bg-black">
-            <div className="h-full w-full bg-white overflow-hidden">
-              <div className="relative h-full min-h-[500px] overflow-hidden">
-                <iframe
-                  src="https://financial-claims.com"
-                  className="absolute top-0 left-0 w-full h-full pointer-events-none"
-                  title="FINLEX Website Preview"
-                  scrolling="no"
-                />
-              </div>
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="https://financial-claims.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center bg-orange-500 text-white px-8 py-4 text-base font-medium hover:bg-orange-600 transition-colors"
+              >
+                Visit FINLEX <ArrowRight className="ml-3 w-5 h-5" />
+              </a>
+              <a
+                href="https://financial-claims.com/blog.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center bg-neutral-800 text-white px-8 py-4 text-base font-medium hover:bg-neutral-700 transition-colors"
+              >
+                Resource Center <ArrowRight className="ml-3 w-5 h-5" />
+              </a>
             </div>
+
+            {/* Additional CTA text */}
+            <p className="text-neutral-500 text-sm mt-8 font-light">
+              Protect your rights. Stay informed. Visit our Resource Center for guides, case studies, and investor alerts.
+            </p>
           </div>
         </div>
       </section>
@@ -353,8 +355,8 @@ export default function Home() {
                 Get in touch <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
               </Link>
             </div>
-            <div className="relative h-[400px] lg:h-[450px]">
-              <Image src={getAssetPath('/images/private-equity.jpg')} alt="Athens" fill className="object-cover grayscale" />
+            <div className="relative h-[450px] lg:h-[550px]">
+              <Image src={getAssetPath('/images/2.jpg')} alt="Athens" fill className="object-cover grayscale" />
             </div>
           </div>
         </div>
