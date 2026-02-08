@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X, ChevronDown, Globe } from 'lucide-react'
@@ -18,6 +18,35 @@ const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
+
+  const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const langTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+
+  const handleServicesEnter = () => {
+    if (servicesTimeoutRef.current) {
+      clearTimeout(servicesTimeoutRef.current)
+    }
+    setServicesOpen(true)
+  }
+
+  const handleServicesLeave = () => {
+    servicesTimeoutRef.current = setTimeout(() => {
+      setServicesOpen(false)
+    }, 150)
+  }
+
+  const handleLangEnter = () => {
+    if (langTimeoutRef.current) {
+      clearTimeout(langTimeoutRef.current)
+    }
+    setLangOpen(true)
+  }
+
+  const handleLangLeave = () => {
+    langTimeoutRef.current = setTimeout(() => {
+      setLangOpen(false)
+    }, 150)
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,38 +92,38 @@ const Navigation = () => {
             </Link>
 
             {/* Services Dropdown with orange accent */}
-            <div className="relative">
+            <div
+              className="relative"
+              onMouseEnter={handleServicesEnter}
+              onMouseLeave={handleServicesLeave}
+            >
               <button
-                onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => setServicesOpen(false)}
-                className="flex items-center text-white hover:text-orange-500 transition-colors text-base font-light tracking-wide"
+                className="flex items-center text-white hover:text-orange-500 transition-colors text-base font-light tracking-wide py-2"
               >
                 <span className="text-orange-500 mr-1">•</span>
                 Services
                 <ChevronDown className="ml-1 w-4 h-4" />
               </button>
               {servicesOpen && (
-                <div
-                  onMouseEnter={() => setServicesOpen(true)}
-                  onMouseLeave={() => setServicesOpen(false)}
-                  className="absolute top-full left-0 mt-2 w-56 bg-black border border-white/10 py-2"
-                >
-                  {services.map((service) => (
+                <div className="absolute top-full left-0 pt-2">
+                  <div className="w-56 bg-black border border-white/10 py-2">
+                    {services.map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className="block px-5 py-3 text-white/80 hover:text-orange-500 hover:bg-white/5 text-base font-light transition-colors"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                    <div className="border-t border-white/10 my-2"></div>
                     <Link
-                      key={service.name}
-                      href={service.href}
-                      className="block px-5 py-3 text-white/80 hover:text-orange-500 hover:bg-white/5 text-base font-light transition-colors"
+                      href="/finlex"
+                      className="block px-5 py-3 text-orange-500 hover:bg-white/5 text-base font-medium"
                     >
-                      {service.name}
+                      FINLEX
                     </Link>
-                  ))}
-                  <div className="border-t border-white/10 my-2"></div>
-                  <Link
-                    href="/finlex"
-                    className="block px-5 py-3 text-orange-500 hover:bg-white/5 text-base font-medium"
-                  >
-                    FINLEX
-                  </Link>
+                  </div>
                 </div>
               )}
             </div>
@@ -120,30 +149,35 @@ const Navigation = () => {
             </Link>
 
             {/* Language Switcher */}
-            <div className="relative border-l border-white/20 pl-8 ml-4">
+            <div
+              className="relative border-l border-white/20 pl-8 ml-4"
+              onMouseEnter={handleLangEnter}
+              onMouseLeave={handleLangLeave}
+            >
               <button
-                onClick={() => setLangOpen(!langOpen)}
-                className="flex items-center text-white/70 hover:text-white transition-colors text-base font-light"
+                className="flex items-center text-white/70 hover:text-white transition-colors text-base font-light py-2"
               >
                 <Globe className="w-5 h-5 mr-2" />
                 EN
               </button>
               {langOpen && (
-                <div className="absolute top-full right-0 mt-2 w-28 bg-black border border-white/10 py-2">
-                  <Link
-                    href="/"
-                    className="block px-4 py-2 text-white/80 hover:text-orange-500 text-base font-light"
-                    onClick={() => setLangOpen(false)}
-                  >
-                    English
-                  </Link>
-                  <Link
-                    href="/el"
-                    className="block px-4 py-2 text-white/80 hover:text-orange-500 text-base font-light"
-                    onClick={() => setLangOpen(false)}
-                  >
-                    Ελληνικά
-                  </Link>
+                <div className="absolute top-full right-0 pt-2">
+                  <div className="w-28 bg-black border border-white/10 py-2">
+                    <Link
+                      href="/"
+                      className="block px-4 py-2 text-white/80 hover:text-orange-500 text-base font-light"
+                      onClick={() => setLangOpen(false)}
+                    >
+                      English
+                    </Link>
+                    <Link
+                      href="/el"
+                      className="block px-4 py-2 text-white/80 hover:text-orange-500 text-base font-light"
+                      onClick={() => setLangOpen(false)}
+                    >
+                      Ελληνικά
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>

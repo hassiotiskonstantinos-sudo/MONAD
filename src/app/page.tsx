@@ -58,7 +58,7 @@ const featuredNews = [
 
 const practiceAreaCards = [
   {
-    image: '/images/shutterstock_2249889569.jpg',
+    image: '/images/AdobeStock_62203512.jpeg',
     title: 'Disputes',
     description: 'We have the breadth of capability – with the creativity and tenacity - to resolve any dispute, however complex or new, whatever the scale.',
     href: '/services/companies',
@@ -70,13 +70,13 @@ const practiceAreaCards = [
     href: '/services/technology',
   },
   {
-    image: '/images/private-equity.jpg',
+    image: '/images/shutterstock_2249889569.jpg',
     title: 'Private Wealth and Capital',
     description: 'We understand how to serve private individuals and families in a modern world, to shape their lives and maximise their role in the new global economy.',
     href: '/services/individuals',
   },
   {
-    image: '/images/regulatory.jpg',
+    image: '/images/shutterstock_2724348917.jpg',
     title: 'Real Estate',
     description: 'We bring market-leading skills that span the real estate lifecycle to the newest, most dynamic parts of the economy.',
     href: '/services/real-estate',
@@ -322,19 +322,13 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Right - Black background with preview (DESKTOP ONLY) */}
-          <div className="hidden lg:flex bg-black p-16 items-center justify-center">
-            <div className="w-[60%] border border-white/20 bg-white overflow-hidden shadow-2xl">
-              <div className="bg-neutral-800 p-2 flex items-center gap-1.5">
-                <div className="w-2 h-2 rounded-full bg-red-500" />
-                <div className="w-2 h-2 rounded-full bg-yellow-500" />
-                <div className="w-2 h-2 rounded-full bg-green-500" />
-                <span className="text-white/40 text-[10px] ml-2">financial-claims.com</span>
-              </div>
-              <div className="relative h-[280px] overflow-hidden">
+          {/* Right - Black background with full preview (DESKTOP ONLY) */}
+          <div className="hidden lg:block bg-black">
+            <div className="h-full w-full bg-white overflow-hidden">
+              <div className="relative h-full min-h-[500px] overflow-hidden">
                 <iframe
                   src="https://financial-claims.com"
-                  className="absolute top-[-100px] left-0 w-full h-[450px] pointer-events-none"
+                  className="absolute top-0 left-0 w-full h-full pointer-events-none"
                   title="FINLEX Website Preview"
                   scrolling="no"
                 />
@@ -359,8 +353,8 @@ export default function Home() {
                 Get in touch <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
               </Link>
             </div>
-            <div className="relative h-[300px]">
-              <Image src={getAssetPath('/images/AdobeStock_62203512.jpeg')} alt="Athens" fill className="object-cover grayscale" />
+            <div className="relative h-[400px] lg:h-[450px]">
+              <Image src={getAssetPath('/images/private-equity.jpg')} alt="Athens" fill className="object-cover grayscale" />
             </div>
           </div>
         </div>

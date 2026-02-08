@@ -1,13 +1,19 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import { getAssetPath } from '@/lib/constants'
 
 const HeroSection = () => {
+  const [videoLoaded, setVideoLoaded] = useState(false)
+
   return (
-    <section className="relative h-screen min-h-[700px] overflow-hidden">
+    <section className="relative h-screen min-h-[700px] overflow-hidden bg-black">
+      {/* Black background base */}
+      <div className="absolute inset-0 bg-black" />
+
       {/* Video Background */}
       <div className="absolute inset-0">
         <video
@@ -15,20 +21,12 @@ const HeroSection = () => {
           muted
           loop
           playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          poster={getAssetPath('/images/shutterstock_2644707669.jpg')}
+          onLoadedData={() => setVideoLoaded(true)}
+          className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
         >
           <source src={getAssetPath('/videos/shutterstock_3662626007.mov')} type="video/quicktime" />
           <source src={getAssetPath('/videos/shutterstock_3662626007.mov')} type="video/mp4" />
         </video>
-        {/* Fallback Image */}
-        <Image
-          src={getAssetPath('/images/shutterstock_2644707669.jpg')}
-          alt="MONAD Law Firm"
-          fill
-          className="object-cover -z-10"
-          priority
-        />
       </div>
 
       {/* Minimal overlay */}
