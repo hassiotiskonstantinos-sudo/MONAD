@@ -338,14 +338,15 @@ export default function HomePageGreek() {
               </div>
             </div>
             <blockquote className="text-xl md:text-2xl lg:text-3xl font-serif text-white leading-relaxed mb-6">
-              &ldquo;Νομικές υπηρεσίες υψηλού επιπέδου στην ελληνική γλώσσα.&rdquo;
+              &ldquo;Εξειδικευμένες νομικές υπηρεσίες στον τομέα της υγείας και του ιατρικού δικαίου.&rdquo;
             </blockquote>
             <p className="text-white/70 text-base lg:text-lg font-light leading-relaxed mb-4 lg:mb-6">
               Το MEDLEX είναι η εξειδικευμένη πλατφόρμα της MONAD για νομικές υπηρεσίες
-              στην Ελλάδα, με έμφαση σε εταιρικά, ακίνητα και εργατικά θέματα.
+              στον τομέα της υγείας. Υποστηρίζουμε ιατρούς, κλινικές, φαρμακευτικές εταιρείες
+              και ασθενείς σε όλο το φάσμα του ιατρικού δικαίου.
             </p>
             <p className="text-white/50 text-sm lg:text-base font-light leading-relaxed mb-6 lg:mb-8">
-              Βαθιά γνώση του ελληνικού δικαίου και της τοπικής αγοράς.
+              Ιατρική ευθύνη • Δίκαιο φαρμάκων • Βιοηθική • Προστασία ασθενών
             </p>
             <div className="flex flex-wrap gap-4">
               <a
@@ -372,28 +373,28 @@ export default function HomePageGreek() {
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center text-neutral-700">
                   <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />
-                  Εταιρικό Δίκαιο
+                  Ιατρική Ευθύνη & Αμέλεια
                 </li>
                 <li className="flex items-center text-neutral-700">
                   <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />
-                  Ακίνητα & Κατασκευές
+                  Δίκαιο Φαρμάκων & Ιατροτεχνολογικών
                 </li>
                 <li className="flex items-center text-neutral-700">
                   <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />
-                  Εργατικό Δίκαιο
+                  Συμβάσεις Υγειονομικών Μονάδων
                 </li>
                 <li className="flex items-center text-neutral-700">
                   <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />
-                  Φορολογικός Σχεδιασμός
+                  Δικαιώματα Ασθενών
                 </li>
                 <li className="flex items-center text-neutral-700">
                   <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />
-                  Κληρονομικό Δίκαιο
+                  Βιοηθική & Κλινικές Δοκιμές
                 </li>
               </ul>
               <div className="bg-orange-50 border-l-4 border-orange-500 p-4">
                 <p className="text-sm text-neutral-700">
-                  <strong className="text-orange-600">Ελληνικό Δίκαιο</strong> – Εξειδικευμένη νομική υποστήριξη στην ελληνική γλώσσα.
+                  <strong className="text-orange-600">Ιατρικό Δίκαιο</strong> – Εξειδικευμένη νομική υποστήριξη για επαγγελματίες υγείας και ασθενείς.
                 </p>
               </div>
             </div>
