@@ -287,76 +287,103 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FINLEX Section - Full White with CTA */}
-      <section className="border-t border-white/10 bg-white">
-        <div className="container-custom py-16 lg:py-24">
-          <div className="max-w-4xl mx-auto text-center">
+      {/* FINLEX Section - 50/50 Split */}
+      <section className="border-t border-white/10">
+        <div className="grid lg:grid-cols-2">
+          {/* Left - White background with FINLEX logo */}
+          <div className="bg-white p-8 md:p-12 lg:p-16 flex flex-col justify-center min-h-[400px] lg:min-h-[500px]">
             <div className="mb-8">
               <Image
                 src={getAssetPath('/images/finlex-logo_lrg.png')}
                 alt="FINLEX"
-                width={220}
-                height={66}
-                className="w-[180px] lg:w-[220px] h-auto mx-auto"
+                width={180}
+                height={54}
+                className="w-[150px] lg:w-[180px] h-auto"
                 unoptimized
               />
             </div>
-            <blockquote className="text-2xl md:text-3xl lg:text-4xl font-serif text-neutral-800 leading-relaxed mb-8">
+            <blockquote className="text-xl md:text-2xl lg:text-3xl font-serif text-neutral-800 leading-relaxed mb-6">
               &ldquo;We fight for investors who have been wronged. Our mission is to recover what is rightfully yours.&rdquo;
             </blockquote>
-            <p className="text-neutral-500 text-lg lg:text-xl font-light leading-relaxed mb-6 max-w-2xl mx-auto">
+            <p className="text-neutral-500 text-base lg:text-lg font-light leading-relaxed mb-6">
               Exposed to investment fraud or mis-sold financial products? Our expert legal team
               works on a no-win, no-fee basis to recover your losses.
             </p>
-            <p className="text-neutral-400 text-base lg:text-lg font-light leading-relaxed mb-10 max-w-2xl mx-auto">
-              Join thousands of investors who have successfully recovered their funds through our dedicated claims process.
-            </p>
+            <a
+              href="https://financial-claims.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center bg-orange-500 text-white px-8 py-4 text-base font-medium hover:bg-orange-600 transition-colors w-fit"
+            >
+              Visit FINLEX <ArrowRight className="ml-3 w-5 h-5" />
+            </a>
+          </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="https://financial-claims.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center bg-orange-500 text-white px-8 py-4 text-base font-medium hover:bg-orange-600 transition-colors"
-              >
-                Visit FINLEX <ArrowRight className="ml-3 w-5 h-5" />
-              </a>
-              <a
-                href="https://financial-claims.com/blog.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center bg-neutral-800 text-white px-8 py-4 text-base font-medium hover:bg-neutral-700 transition-colors"
-              >
-                Resource Center <ArrowRight className="ml-3 w-5 h-5" />
-              </a>
-            </div>
-
-            {/* Additional CTA text */}
-            <p className="text-neutral-500 text-sm mt-8 font-light">
-              Protect your rights. Stay informed. Visit our Resource Center for guides, case studies, and investor alerts.
+          {/* Right - Black background with Resource Center */}
+          <div className="bg-black p-8 md:p-12 lg:p-16 flex flex-col justify-center min-h-[400px] lg:min-h-[500px]">
+            <span className="text-orange-500 text-sm uppercase tracking-widest mb-4">Resource Center</span>
+            <h3 className="text-2xl md:text-3xl font-serif text-white leading-tight mb-6">
+              Protect Your Rights.<br />
+              <span className="text-white/60">Stay Informed.</span>
+            </h3>
+            <p className="text-white/50 text-base lg:text-lg font-light leading-relaxed mb-4">
+              Access our comprehensive library of guides, case studies, and investor alerts to understand your options.
             </p>
+            <ul className="text-white/40 text-sm font-light space-y-2 mb-8">
+              <li className="flex items-center"><span className="text-orange-500 mr-2">•</span> Investment fraud recovery guides</li>
+              <li className="flex items-center"><span className="text-orange-500 mr-2">•</span> Broker misconduct case studies</li>
+              <li className="flex items-center"><span className="text-orange-500 mr-2">•</span> Real-time investor alerts</li>
+              <li className="flex items-center"><span className="text-orange-500 mr-2">•</span> Regulatory updates & news</li>
+            </ul>
+            <a
+              href="https://financial-claims.com/blog.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center border border-white/30 text-white px-8 py-4 text-base font-medium hover:bg-white/10 transition-colors w-fit"
+            >
+              Visit Resource Center <ArrowRight className="ml-3 w-5 h-5" />
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Location */}
-      <section className="py-16 bg-neutral-900 border-t border-white/10">
-        <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-serif text-white mb-6">
-                Based in Athens. <span className="text-orange-500">Working globally.</span>
-              </h2>
-              <p className="text-white/50 text-lg font-light leading-relaxed mb-6">
-                Serving clients across Europe, the Middle East and beyond.
-              </p>
-              <Link href="/contact" className="inline-flex items-center text-white hover:text-orange-500 text-base font-light transition-colors group">
-                Get in touch <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
+      {/* Athens - Full Width Dramatic Section */}
+      <section className="relative h-[500px] lg:h-[600px] overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src={getAssetPath('/images/2.jpg')}
+            alt="Athens, Greece"
+            fill
+            className="object-cover"
+          />
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
+        </div>
+
+        {/* Content */}
+        <div className="relative h-full container-custom flex items-center">
+          <div className="max-w-xl">
+            <span className="text-orange-500 text-sm uppercase tracking-widest mb-4 block">Our Location</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6 leading-tight">
+              Based in Athens
+            </h2>
+            <p className="text-white/70 text-lg lg:text-xl font-light leading-relaxed mb-8">
+              From the heart of Greece, we serve clients across Europe, the Middle East, and beyond. Our strategic location bridges East and West.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center bg-orange-500 text-white px-8 py-4 text-base font-medium hover:bg-orange-600 transition-colors"
+              >
+                Get in touch <ArrowRight className="ml-3 w-5 h-5" />
               </Link>
-            </div>
-            <div className="relative h-[450px] lg:h-[550px]">
-              <Image src={getAssetPath('/images/2.jpg')} alt="Athens" fill className="object-cover grayscale" />
+              <Link
+                href="/about"
+                className="inline-flex items-center border border-white/30 text-white px-8 py-4 text-base font-medium hover:bg-white/10 transition-colors"
+              >
+                About us <ArrowRight className="ml-3 w-5 h-5" />
+              </Link>
             </div>
           </div>
         </div>
