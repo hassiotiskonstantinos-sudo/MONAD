@@ -111,6 +111,42 @@ button {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.btn-finlex {
+  background-color: #f97316;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  border-radius: 2rem;
+}
+
+.btn-finlex:hover {
+  background-color: #ea580c;
+}
+
+.btn-finlex .btn-icon {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.5rem;
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #000;
+  border-radius: 2rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+}
+
+.btn-white:hover {
+  background-color: #f5f5f5;
+}
+
+.btn-white .btn-icon {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.5rem;
+}
+
 .btn-full {
   width: 100%;
   justify-content: center;
@@ -141,14 +177,14 @@ button {
 }
 
 .logo-img {
-  height: 6rem;
+  height: 7.2rem;
   width: auto;
   filter: brightness(0) invert(1);
   transition: height 0.3s ease;
 }
 
 .navbar.scrolled .logo-img {
-  height: 4rem;
+  height: 4.8rem;
 }
 
 .nav-links {
@@ -1329,7 +1365,7 @@ a.contact-value:hover {
 }
 
 .footer-logo {
-  height: 3rem;
+  height: 4.2rem;
   width: auto;
   filter: brightness(0) invert(1);
   margin-bottom: 1rem;
