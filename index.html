@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/MONAD/">
+  <title>MONAD | Premium Legal Solutions in Athens, Greece</title>
+  <meta name="description" content="MONAD is a leading law firm in Athens, Greece offering expert legal counsel in corporate law, dispute resolution, real estate, technology, private wealth, and cross-border transactions.">
+  <meta name="keywords" content="law firm Athens, Greek lawyers, corporate law Greece, dispute resolution, real estate law, technology law, private wealth, cross-border transactions, FINLEX">
+  <meta name="author" content="MONAD Law Firm">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MONAD | Premium Legal Solutions in Athens, Greece">
+  <meta property="og:description" content="Expert legal counsel in corporate law, dispute resolution, real estate, technology, and private wealth.">
+  <meta property="og:image" content="images/logo-monad.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="images/logo-monad.png" alt="MONAD" class="logo-img">
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+
+          <!-- Services Dropdown -->
+          <div class="dropdown">
+            <button class="nav-link dropdown-trigger">
+              <span class="orange-dot"></span>
+              Services
+              <i data-lucide="chevron-down" class="dropdown-icon"></i>
+            </button>
+            <div class="dropdown-menu">
+              <a href="services/companies.html" class="dropdown-item">For Companies</a>
+              <a href="services/individuals.html" class="dropdown-item">For Individuals</a>
+              <a href="services/real-estate.html" class="dropdown-item">Real Estate</a>
+              <a href="services/technology.html" class="dropdown-item">Technology & Innovation</a>
+              <div class="dropdown-divider"></div>
+              <a href="finlex.html" class="dropdown-item finlex-link">FINLEX</a>
+            </div>
+          </div>
+
+          <a href="team.html" class="nav-link"><span class="orange-dot"></span>People</a>
+          <a href="knowledge.html" class="nav-link">Insights</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+
+          <!-- Language Switcher -->
+          <div class="lang-switcher">
+            <div class="dropdown">
+              <button class="nav-link dropdown-trigger lang-trigger">
+                <i data-lucide="globe" class="globe-icon"></i>
+                EN
+              </button>
+              <div class="dropdown-menu lang-menu">
+                <a href="index.html" class="dropdown-item">English</a>
+                <a href="el/index.html" class="dropdown-item">Ελληνικά</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i data-lucide="menu" id="menuIcon"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav" id="mobileNav">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <div class="mobile-divider"></div>
+        <a href="services/companies.html" class="mobile-nav-link sub">For Companies</a>
+        <a href="services/individuals.html" class="mobile-nav-link sub">For Individuals</a>
+        <a href="services/real-estate.html" class="mobile-nav-link sub">Real Estate</a>
+        <a href="services/technology.html" class="mobile-nav-link sub">Technology & Innovation</a>
+        <a href="finlex.html" class="mobile-nav-link finlex">FINLEX</a>
+        <div class="mobile-divider"></div>
+        <a href="team.html" class="mobile-nav-link">People</a>
+        <a href="knowledge.html" class="mobile-nav-link">Insights</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+        <div class="mobile-divider"></div>
+        <div class="mobile-lang">
+          <a href="index.html" class="lang-option active">EN</a>
+          <a href="el/index.html" class="lang-option">EL</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <video autoplay muted loop playsinline class="hero-video" id="heroVideo">
+      <source src="videos/shutterstock_3662626007.mov" type="video/quicktime">
+      <source src="videos/shutterstock_3662626007.mov" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h1 class="hero-title">
+        Clear thinking.<br>
+        <span class="orange">Decisive execution.</span>
+      </h1>
+      <p class="hero-subtitle">
+        Premium legal solutions for businesses and individuals navigating complex challenges.
+      </p>
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn btn-primary">
+          Get in touch
+          <i data-lucide="arrow-right" class="btn-icon"></i>
+        </a>
+        <a href="about.html" class="btn btn-outline">
+          Learn more
+          <i data-lucide="arrow-right" class="btn-icon"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statement Section -->
+  <section class="statement">
+    <div class="container">
+      <p class="statement-text">
+        We advise on matters where the
+        <span class="orange"> outcome defines</span> what comes next.
+      </p>
+    </div>
+  </section>
+
+  <!-- Practice Areas -->
+  <section class="practice-areas">
+    <div class="practice-grid">
+      <!-- Disputes -->
+      <a href="services/companies.html" class="practice-card">
+        <div class="practice-image">
+          <img src="images/AdobeStock_62203512.jpeg" alt="Disputes">
+        </div>
+        <div class="practice-overlay"></div>
+        <div class="practice-content">
+          <h3 class="practice-title">Disputes</h3>
+          <p class="practice-desc">We have the breadth of capability – with the creativity and tenacity - to resolve any dispute, however complex or new, whatever the scale.</p>
+          <span class="practice-link">
+            Read more
+            <i data-lucide="arrow-right" class="practice-arrow"></i>
+          </span>
+        </div>
+      </a>
+
+      <!-- Innovation Economy -->
+      <a href="services/technology.html" class="practice-card">
+        <div class="practice-image">
+          <img src="images/startups.jpg" alt="The Innovation Economy">
+        </div>
+        <div class="practice-overlay"></div>
+        <div class="practice-content">
+          <h3 class="practice-title">The Innovation Economy</h3>
+          <p class="practice-desc">We support the people and the organisations that drive the Innovation Economy; we help innovative clients deliver at the edge of what's possible.</p>
+          <span class="practice-link">
+            Read more
+            <i data-lucide="arrow-right" class="practice-arrow"></i>
+          </span>
+        </div>
+      </a>
+
+      <!-- Private Wealth -->
+      <a href="services/individuals.html" class="practice-card">
+        <div class="practice-image">
+          <img src="images/shutterstock_2249889569.jpg" alt="Private Wealth and Capital">
+        </div>
+        <div class="practice-overlay"></div>
+        <div class="practice-content">
+          <h3 class="practice-title">Private Wealth and Capital</h3>
+          <p class="practice-desc">We understand how to serve private individuals and families in a modern world, to shape their lives and maximise their role in the new global economy.</p>
+          <span class="practice-link">
+            Read more
+            <i data-lucide="arrow-right" class="practice-arrow"></i>
+          </span>
+        </div>
+      </a>
+
+      <!-- Real Estate -->
+      <a href="services/real-estate.html" class="practice-card">
+        <div class="practice-image">
+          <img src="images/shutterstock_2724348917.jpg" alt="Real Estate">
+        </div>
+        <div class="practice-overlay"></div>
+        <div class="practice-content">
+          <h3 class="practice-title">Real Estate</h3>
+          <p class="practice-desc">We bring market-leading skills that span the real estate lifecycle to the newest, most dynamic parts of the economy.</p>
+          <span class="practice-link">
+            Read more
+            <i data-lucide="arrow-right" class="practice-arrow"></i>
+          </span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Featured Insights -->
+  <section class="insights">
+    <div class="container">
+      <div class="insights-header">
+        <h2 class="section-title">Featured Insights</h2>
+        <a href="knowledge.html" class="view-all">View all</a>
+      </div>
+      <div class="insights-grid">
+        <article class="insight-card">
+          <div class="insight-category">
+            <span class="category-dot blue"></span>
+            <span class="category-name">Corporate</span>
+          </div>
+          <h3 class="insight-title">Cross-Border M&A: Navigating Complexity</h3>
+          <span class="insight-date">Jan 2024</span>
+        </article>
+        <article class="insight-card">
+          <div class="insight-category">
+            <span class="category-dot green"></span>
+            <span class="category-name">Private Client</span>
+          </div>
+          <h3 class="insight-title">Golden Visa Programs: What Has Changed</h3>
+          <span class="insight-date">Dec 2023</span>
+        </article>
+        <article class="insight-card">
+          <div class="insight-category">
+            <span class="category-dot purple"></span>
+            <span class="category-name">Technology</span>
+          </div>
+          <h3 class="insight-title">AI Governance and the EU AI Act</h3>
+          <span class="insight-date">Nov 2023</span>
+        </article>
+        <article class="insight-card">
+          <div class="insight-category">
+            <span class="category-dot orange"></span>
+            <span class="category-name">Disputes</span>
+          </div>
+          <h3 class="insight-title">International Arbitration Trends</h3>
+          <span class="insight-date">Oct 2023</span>
+        </article>
+        <article class="insight-card">
+          <div class="insight-category">
+            <span class="category-dot cyan"></span>
+            <span class="category-name">Real Estate</span>
+          </div>
+          <h3 class="insight-title">Commercial Property Investment in Greece</h3>
+          <span class="insight-date">Sep 2023</span>
+        </article>
+        <article class="insight-card">
+          <div class="insight-category">
+            <span class="category-dot blue"></span>
+            <span class="category-name">Corporate</span>
+          </div>
+          <h3 class="insight-title">Due Diligence in Cross-Border Transactions</h3>
+          <span class="insight-date">Aug 2023</span>
+        </article>
+        <article class="insight-card">
+          <div class="insight-category">
+            <span class="category-dot green"></span>
+            <span class="category-name">Private Client</span>
+          </div>
+          <h3 class="insight-title">Estate Planning for International Families</h3>
+          <span class="insight-date">Jul 2023</span>
+        </article>
+        <article class="insight-card">
+          <div class="insight-category">
+            <span class="category-dot purple"></span>
+            <span class="category-name">Technology</span>
+          </div>
+          <h3 class="insight-title">Data Protection Compliance Updates</h3>
+          <span class="insight-date">Jun 2023</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet Our People -->
+  <section class="team-section" style="background-image: url('images/shutterstock_2724348917.jpg');">
+    <div class="team-overlay"></div>
+    <div class="container team-container">
+      <div class="team-header">
+        <div>
+          <h2 class="team-title">Meet our people</h2>
+          <p class="team-subtitle">Our team combines deep expertise with a personal approach to deliver exceptional results.</p>
+        </div>
+        <a href="team.html" class="view-all-team">
+          View all
+          <i data-lucide="arrow-right" class="view-arrow"></i>
+        </a>
+      </div>
+      <div class="team-grid">
+        <!-- Konstantinos Chassiotis -->
+        <a href="https://www.linkedin.com/in/chassiotiskonstantinos" target="_blank" rel="noopener noreferrer" class="team-card">
+          <div class="team-photo">
+            <img src="images/1573389706301.jpeg" alt="Konstantinos Chassiotis">
+            <div class="team-photo-overlay">
+              <i data-lucide="linkedin" class="linkedin-icon"></i>
+            </div>
+            <div class="team-photo-bar"></div>
+          </div>
+          <h3 class="team-name">Konstantinos Chassiotis</h3>
+          <p class="team-role">Managing Partner</p>
+          <div class="team-linkedin">
+            <i data-lucide="linkedin" class="team-linkedin-icon"></i>
+            <span>LinkedIn</span>
+          </div>
+        </a>
+
+        <!-- Dr. Christos Zoumpoulis -->
+        <a href="https://www.linkedin.com/in/christos-zoumpoulis-dr-iur-63544813/" target="_blank" rel="noopener noreferrer" class="team-card">
+          <div class="team-photo">
+            <img src="images/1516501964751.jpeg" alt="Dr. Christos Zoumpoulis">
+            <div class="team-photo-overlay">
+              <i data-lucide="linkedin" class="linkedin-icon"></i>
+            </div>
+            <div class="team-photo-bar"></div>
+          </div>
+          <h3 class="team-name">Dr. Christos Zoumpoulis</h3>
+          <p class="team-role">Partner</p>
+          <div class="team-linkedin">
+            <i data-lucide="linkedin" class="team-linkedin-icon"></i>
+            <span>LinkedIn</span>
+          </div>
+        </a>
+
+        <!-- Barbara Papakonstantinou -->
+        <a href="https://www.linkedin.com/in/barbara-papakonstantinou-070109254/" target="_blank" rel="noopener noreferrer" class="team-card">
+          <div class="team-photo">
+            <img src="images/1666012706689.jpeg" alt="Barbara Papakonstantinou" class="zoom-photo">
+            <div class="team-photo-overlay">
+              <i data-lucide="linkedin" class="linkedin-icon"></i>
+            </div>
+            <div class="team-photo-bar"></div>
+          </div>
+          <h3 class="team-name">Barbara Papakonstantinou</h3>
+          <p class="team-role">Associate</p>
+          <div class="team-linkedin">
+            <i data-lucide="linkedin" class="team-linkedin-icon"></i>
+            <span>LinkedIn</span>
+          </div>
+        </a>
+
+        <!-- Maria Sireti -->
+        <a href="https://www.linkedin.com/in/maria-sireti-7256b7218/" target="_blank" rel="noopener noreferrer" class="team-card">
+          <div class="team-photo">
+            <img src="images/1758318032743.jpeg" alt="Maria Sireti">
+            <div class="team-photo-overlay">
+              <i data-lucide="linkedin" class="linkedin-icon"></i>
+            </div>
+            <div class="team-photo-bar"></div>
+          </div>
+          <h3 class="team-name">Maria Sireti</h3>
+          <p class="team-role">Associate</p>
+          <div class="team-linkedin">
+            <i data-lucide="linkedin" class="team-linkedin-icon"></i>
+            <span>LinkedIn</span>
+          </div>
+        </a>
+
+        <!-- Vasileios Kottas -->
+        <a href="https://www.linkedin.com/in/vasileioskottas/" target="_blank" rel="noopener noreferrer" class="team-card">
+          <div class="team-photo">
+            <img src="images/1741424447628.jpeg" alt="Vasileios Kottas">
+            <div class="team-photo-overlay">
+              <i data-lucide="linkedin" class="linkedin-icon"></i>
+            </div>
+            <div class="team-photo-bar"></div>
+          </div>
+          <h3 class="team-name">Vasileios Kottas</h3>
+          <p class="team-role">Associate</p>
+          <div class="team-linkedin">
+            <i data-lucide="linkedin" class="team-linkedin-icon"></i>
+            <span>LinkedIn</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why MONAD -->
+  <section class="why-monad">
+    <div class="container">
+      <h2 class="section-title white">Why clients choose <span class="orange">MONAD</span></h2>
+      <div class="why-grid">
+        <div class="why-item">
+          <h4 class="why-title">Direct advice</h4>
+          <p class="why-desc">We explain what matters—without hiding behind jargon.</p>
+        </div>
+        <div class="why-item">
+          <h4 class="why-title">Partner led</h4>
+          <p class="why-desc">The person responsible stays engaged. No layers, no handoffs.</p>
+        </div>
+        <div class="why-item">
+          <h4 class="why-title">Cross-border</h4>
+          <p class="why-desc">Structured to manage complexity across jurisdictions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINLEX Section -->
+  <section class="finlex-section">
+    <div class="finlex-grid">
+      <!-- Left - White -->
+      <div class="finlex-left">
+        <div class="finlex-logo-wrap">
+          <img src="images/finlex-logo_lrg.png" alt="FINLEX" class="finlex-logo">
+        </div>
+        <blockquote class="finlex-quote">
+          "We fight for investors who have been wronged. Our mission is to recover what is rightfully yours."
+        </blockquote>
+        <p class="finlex-desc">
+          Exposed to investment fraud or mis-sold financial products? Our expert legal team
+          works on a no-win, no-fee basis to recover your losses.
+        </p>
+        <a href="https://financial-claims.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Visit FINLEX
+          <i data-lucide="arrow-right" class="btn-icon"></i>
+        </a>
+      </div>
+
+      <!-- Right - Black Resource Center -->
+      <div class="finlex-right">
+        <span class="resource-label">Resource Center</span>
+        <h3 class="resource-title">
+          Protect Your Rights.<br>
+          <span class="resource-subtitle">Stay Informed.</span>
+        </h3>
+        <p class="resource-desc">
+          Access our comprehensive library of guides, case studies, and investor alerts to understand your options.
+        </p>
+        <ul class="resource-list">
+          <li><span class="orange-dot"></span> Investment fraud recovery guides</li>
+          <li><span class="orange-dot"></span> Broker misconduct case studies</li>
+          <li><span class="orange-dot"></span> Real-time investor alerts</li>
+          <li><span class="orange-dot"></span> Regulatory updates & news</li>
+        </ul>
+        <a href="https://financial-claims.com/blog.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light">
+          Visit Resource Center
+          <i data-lucide="arrow-right" class="btn-icon"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Athens Section -->
+  <section class="athens-section">
+    <div class="athens-bg">
+      <img src="images/2.jpg" alt="Athens, Greece">
+      <div class="athens-gradient"></div>
+    </div>
+    <div class="athens-content container">
+      <div class="athens-text">
+        <span class="athens-label">Our Location</span>
+        <h2 class="athens-title">Based in Athens</h2>
+        <p class="athens-desc">
+          From the heart of Greece, we serve clients across Europe, the Middle East, and beyond. Our strategic location bridges East and West.
+        </p>
+        <div class="athens-buttons">
+          <a href="contact.html" class="btn btn-primary">
+            Get in touch
+            <i data-lucide="arrow-right" class="btn-icon"></i>
+          </a>
+          <a href="about.html" class="btn btn-outline-light">
+            About us
+            <i data-lucide="arrow-right" class="btn-icon"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2 class="contact-title">Get in touch</h2>
+          <p class="contact-subtitle">Use the contact form to send us a message. We will respond within one business day.</p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <h4 class="contact-label">Email</h4>
+              <a href="mailto:contact@monad.law" class="contact-value">contact@monad.law</a>
+            </div>
+            <div class="contact-item">
+              <h4 class="contact-label">Location</h4>
+              <p class="contact-value">Athens, Greece</p>
+            </div>
+            <div class="contact-item">
+              <h4 class="contact-label">Working Hours</h4>
+              <p class="contact-value">Monday – Friday, 9:00 – 18:00</p>
+            </div>
+          </div>
+
+          <p class="contact-disclaimer">Contacting us does not create a lawyer-client relationship.</p>
+        </div>
+
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              Send Message
+              <i data-lucide="arrow-right" class="btn-icon"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo-monad.png" alt="MONAD" class="footer-logo">
+          <p class="footer-tagline">Clear thinking. Decisive execution.</p>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-heading">Services</h4>
+          <a href="services/companies.html">For Companies</a>
+          <a href="services/individuals.html">For Individuals</a>
+          <a href="services/real-estate.html">Real Estate</a>
+          <a href="services/technology.html">Technology</a>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-heading">Firm</h4>
+          <a href="about.html">About</a>
+          <a href="team.html">People</a>
+          <a href="knowledge.html">Insights</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-heading">Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 MONAD Law Firm. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    const menuIcon = document.getElementById('menuIcon');
+    let isMenuOpen = false;
+
+    mobileMenuBtn.addEventListener('click', () => {
+      isMenuOpen = !isMenuOpen;
+      mobileNav.classList.toggle('active', isMenuOpen);
+      menuIcon.setAttribute('data-lucide', isMenuOpen ? 'x' : 'menu');
+      lucide.createIcons();
+    });
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Video loaded
+    const heroVideo = document.getElementById('heroVideo');
+    heroVideo.addEventListener('loadeddata', () => {
+      heroVideo.classList.add('loaded');
+    });
+
+    // Dropdown hover handling
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+      let timeout;
+      dropdown.addEventListener('mouseenter', () => {
+        clearTimeout(timeout);
+        dropdown.classList.add('active');
+      });
+      dropdown.addEventListener('mouseleave', () => {
+        timeout = setTimeout(() => {
+          dropdown.classList.remove('active');
+        }, 150);
+      });
+    });
+
+    // Form submission
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for your message. We will get back to you soon.');
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>
