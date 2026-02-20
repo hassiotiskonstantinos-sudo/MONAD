@@ -3,388 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MONAD | Νομικές Υπηρεσίες Υψηλής Ποιότητας στην Αθήνα</title>
-  <meta name="description" content="Η MONAD είναι μια κορυφαία δικηγορική εταιρεία στην Αθήνα, προσφέροντας εξειδικευμένες νομικές υπηρεσίες σε εταιρικό δίκαιο, επίλυση διαφορών, ακίνητα, τεχνολογία και ιδιωτικό πλούτο.">
-  <meta name="theme-color" content="#000000">
+  <title>MONAD | Σύντομα Διαθέσιμο</title>
+  <meta name="description" content="Η ελληνική έκδοση της ιστοσελίδας της MONAD βρίσκεται υπό κατασκευή. Επισκεφθείτε την αγγλική έκδοση.">
+  <meta name="robots" content="noindex, nofollow">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="../styles-el.css">
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .logo-wrap {
+      margin-bottom: 3rem;
+    }
+
+    .logo-img {
+      height: 5rem;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+
+    .divider {
+      width: 3rem;
+      height: 3px;
+      background: #f97316;
+      margin: 2rem auto;
+      border-radius: 2px;
+    }
+
+    .wip-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      opacity: 0.6;
+    }
+
+    .wip-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #f97316;
+      margin-bottom: 1rem;
+    }
+
+    .wip-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+
+    .wip-subtitle {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.6);
+      max-width: 480px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-en {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: #f97316;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: 0.9rem 2rem;
+      border-radius: 2rem;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn-en:hover {
+      background-color: #ea6a0a;
+      transform: translateY(-1px);
+    }
+
+    .btn-en svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .footer-note {
+      position: fixed;
+      bottom: 2rem;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.25);
+      letter-spacing: 0.05em;
+    }
+  </style>
 </head>
-<body class="greek-page">
-  <!-- Navigation -->
-  <nav id="navbar" class="navbar navbar-light">
-    <div class="container">
-      <div class="nav-content">
-        <!-- Logo -->
-        <a href="./index.html" class="logo">
-          <img src="../images/logo-monad.png" alt="MONAD" class="logo-img logo-dark">
-        </a>
+<body>
 
-        <!-- Desktop Navigation -->
-        <div class="nav-links">
-          <a href="./index.html" class="nav-link dark">Αρχική</a>
-          <a href="../about.html" class="nav-link dark">Σχετικά</a>
+  <div class="logo-wrap">
+    <a href="../index.html">
+      <img src="../images/logo-monad.png" alt="MONAD" class="logo-img">
+    </a>
+  </div>
 
-          <!-- Services Dropdown -->
-          <div class="dropdown">
-            <button class="nav-link dropdown-trigger dark">
-              <span class="orange-dot"></span>
-              Υπηρεσίες
-              <i data-lucide="chevron-down" class="dropdown-icon"></i>
-            </button>
-            <div class="dropdown-menu dropdown-menu-light">
-              <a href="../services/companies.html" class="dropdown-item">Για Εταιρείες</a>
-              <a href="../services/individuals.html" class="dropdown-item">Για Ιδιώτες</a>
-              <a href="../services/real-estate.html" class="dropdown-item">Ακίνητα</a>
-              <a href="../services/technology.html" class="dropdown-item">Τεχνολογία & Καινοτομία</a>
-              <div class="dropdown-divider"></div>
-              <a href="./medlex.html" class="dropdown-item medlex-link">MEDLEX</a>
-            </div>
-          </div>
+  <div class="wip-icon">⚒</div>
+  <p class="wip-label">Υπό Κατασκευή</p>
 
-          <a href="../team.html" class="nav-link dark"><span class="orange-dot"></span>Ομάδα</a>
-          <a href="../knowledge.html" class="nav-link dark">Αρθρογραφία</a>
-          <a href="../contact.html" class="nav-link dark">Επικοινωνία</a>
+  <h1 class="wip-title">
+    Η ελληνική έκδοση<br>έρχεται σύντομα.
+  </h1>
 
-          <!-- Language Switcher -->
-          <div class="lang-switcher lang-switcher-dark">
-            <div class="dropdown">
-              <button class="nav-link dropdown-trigger dark lang-trigger">
-                <i data-lucide="globe" class="globe-icon"></i>
-                EL
-              </button>
-              <div class="dropdown-menu lang-menu dropdown-menu-light">
-                <a href="../index.html" class="dropdown-item">English</a>
-                <a href="./index.html" class="dropdown-item">Ελληνικά</a>
-              </div>
-            </div>
-          </div>
-        </div>
+  <p class="wip-subtitle">
+    Εργαζόμαστε για να σας προσφέρουμε μια πλήρη ελληνική εμπειρία. Εν τω μεταξύ, επισκεφθείτε την αγγλική έκδοση της ιστοσελίδας μας.
+  </p>
 
-        <!-- Mobile Menu Button -->
-        <button class="mobile-menu-btn mobile-menu-btn-dark" id="mobileMenuBtn">
-          <i data-lucide="menu" id="menuIcon"></i>
-        </button>
-      </div>
+  <a href="../index.html" class="btn-en">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    Αγγλική Έκδοση
+  </a>
 
-      <!-- Mobile Navigation -->
-      <div class="mobile-nav mobile-nav-light" id="mobileNav">
-        <a href="./index.html" class="mobile-nav-link dark">Αρχική</a>
-        <a href="../about.html" class="mobile-nav-link dark">Σχετικά</a>
-        <div class="mobile-divider"></div>
-        <a href="../services/companies.html" class="mobile-nav-link sub dark">Για Εταιρείες</a>
-        <a href="../services/individuals.html" class="mobile-nav-link sub dark">Για Ιδιώτες</a>
-        <a href="../services/real-estate.html" class="mobile-nav-link sub dark">Ακίνητα</a>
-        <a href="../services/technology.html" class="mobile-nav-link sub dark">Τεχνολογία & Καινοτομία</a>
-        <a href="./medlex.html" class="mobile-nav-link medlex">MEDLEX</a>
-        <div class="mobile-divider"></div>
-        <a href="../team.html" class="mobile-nav-link dark">Ομάδα</a>
-        <a href="../knowledge.html" class="mobile-nav-link dark">Αρθρογραφία</a>
-        <a href="../contact.html" class="mobile-nav-link dark">Επικοινωνία</a>
-        <div class="mobile-divider"></div>
-        <div class="mobile-lang">
-          <a href="../index.html" class="lang-option">EN</a>
-          <a href="./index.html" class="lang-option active">EL</a>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <div class="divider" style="margin-top: 3rem;"></div>
 
-  <!-- Hero Section - Light -->
-  <section class="hero hero-light">
-    <div class="hero-content container">
-      <h1 class="hero-title dark">
-        Καθαρή σκέψη.<br>
-        <span class="orange">Αποφασιστική εκτέλεση.</span>
-      </h1>
-      <p class="hero-subtitle dark">
-        Νομικές λύσεις υψηλής ποιότητας για επιχειρήσεις και ιδιώτες που αντιμετωπίζουν σύνθετες προκλήσεις.
-      </p>
-      <div class="hero-buttons">
-        <a href="../contact.html" class="btn btn-primary">
-          Επικοινωνήστε μαζί μας
-          <i data-lucide="arrow-right" class="btn-icon"></i>
-        </a>
-        <a href="../about.html" class="btn btn-outline-dark">
-          Μάθετε περισσότερα
-          <i data-lucide="arrow-right" class="btn-icon"></i>
-        </a>
-      </div>
-    </div>
-  </section>
+  <p class="footer-note">&copy; 2024 MONAD Law Firm</p>
 
-  <!-- Statement Section - Light -->
-  <section class="statement statement-light">
-    <div class="container">
-      <p class="statement-text dark">
-        Συμβουλεύουμε σε υποθέσεις όπου το
-        <span class="orange"> αποτέλεσμα καθορίζει</span> τι ακολουθεί.
-      </p>
-    </div>
-  </section>
-
-  <!-- Practice Areas - Light Theme -->
-  <section class="practice-areas practice-areas-light">
-    <div class="practice-grid">
-      <!-- Επίλυση Διαφορών -->
-      <a href="../services/companies.html" class="practice-card">
-        <div class="practice-image">
-          <img src="../images/shutterstock_2249889569.jpg" alt="Επίλυση Διαφορών">
-        </div>
-        <div class="practice-overlay"></div>
-        <div class="practice-content">
-          <h3 class="practice-title">Επίλυση Διαφορών</h3>
-          <p class="practice-desc">Διαθέτουμε το εύρος ικανοτήτων - με δημιουργικότητα και επιμονή - για την επίλυση κάθε διαφοράς, όσο περίπλοκη κι αν είναι.</p>
-          <span class="practice-link">
-            Περισσότερα
-            <i data-lucide="arrow-right" class="practice-arrow"></i>
-          </span>
-        </div>
-      </a>
-
-      <!-- Καινοτομία & Τεχνολογία -->
-      <a href="../services/technology.html" class="practice-card">
-        <div class="practice-image">
-          <img src="../images/startups.jpg" alt="Καινοτομία & Τεχνολογία">
-        </div>
-        <div class="practice-overlay"></div>
-        <div class="practice-content">
-          <h3 class="practice-title">Καινοτομία & Τεχνολογία</h3>
-          <p class="practice-desc">Υποστηρίζουμε τους ανθρώπους και τους οργανισμούς που οδηγούν την οικονομία της καινοτομίας.</p>
-          <span class="practice-link">
-            Περισσότερα
-            <i data-lucide="arrow-right" class="practice-arrow"></i>
-          </span>
-        </div>
-      </a>
-
-      <!-- Ιδιωτικός Πλούτος -->
-      <a href="../services/individuals.html" class="practice-card">
-        <div class="practice-image">
-          <img src="../images/private-equity.jpg" alt="Ιδιωτικός Πλούτος">
-        </div>
-        <div class="practice-overlay"></div>
-        <div class="practice-content">
-          <h3 class="practice-title">Ιδιωτικός Πλούτος</h3>
-          <p class="practice-desc">Κατανοούμε πώς να εξυπηρετούμε ιδιώτες και οικογένειες σε έναν σύγχρονο κόσμο.</p>
-          <span class="practice-link">
-            Περισσότερα
-            <i data-lucide="arrow-right" class="practice-arrow"></i>
-          </span>
-        </div>
-      </a>
-
-      <!-- Ακίνητα -->
-      <a href="../services/real-estate.html" class="practice-card">
-        <div class="practice-image">
-          <img src="../images/regulatory.jpg" alt="Ακίνητα">
-        </div>
-        <div class="practice-overlay"></div>
-        <div class="practice-content">
-          <h3 class="practice-title">Ακίνητα</h3>
-          <p class="practice-desc">Προσφέρουμε κορυφαίες δεξιότητες που καλύπτουν όλο τον κύκλο ζωής των ακινήτων.</p>
-          <span class="practice-link">
-            Περισσότερα
-            <i data-lucide="arrow-right" class="practice-arrow"></i>
-          </span>
-        </div>
-      </a>
-    </div>
-  </section>
-
-  <!-- MEDLEX Section -->
-  <section class="medlex-section">
-    <div class="medlex-grid">
-      <!-- Left - Black with MEDLEX info -->
-      <div class="medlex-left">
-        <span class="medlex-label">MEDLEX</span>
-        <h3 class="medlex-title">
-          Νομική Υποστήριξη<br>
-          <span class="medlex-subtitle">στον Τομέα Υγείας</span>
-        </h3>
-        <p class="medlex-desc">
-          Εξειδικευμένες νομικές υπηρεσίες για επαγγελματίες υγείας, νοσοκομεία, κλινικές και φαρμακευτικές εταιρείες.
-        </p>
-        <ul class="medlex-list">
-          <li><span class="orange-dot"></span> Ιατρική ευθύνη & αμέλεια</li>
-          <li><span class="orange-dot"></span> Φαρμακευτικό δίκαιο</li>
-          <li><span class="orange-dot"></span> Συμμόρφωση υγειονομικών μονάδων</li>
-          <li><span class="orange-dot"></span> Προστασία ιατρικών δεδομένων</li>
-        </ul>
-        <a href="./medlex.html" class="btn btn-outline-light">
-          Μάθετε περισσότερα
-          <i data-lucide="arrow-right" class="btn-icon"></i>
-        </a>
-      </div>
-
-      <!-- Right - White -->
-      <div class="medlex-right">
-        <blockquote class="medlex-quote">
-          "Προστατεύουμε τους επαγγελματίες υγείας και τους ασθενείς με εξειδικευμένη νομική υποστήριξη."
-        </blockquote>
-        <p class="medlex-right-desc">
-          Η ομάδα MEDLEX διαθέτει βαθιά γνώση του ιατρικού και φαρμακευτικού κλάδου, προσφέροντας ολοκληρωμένη νομική κάλυψη.
-        </p>
-        <a href="https://medlex.gr" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          Επισκεφθείτε το MEDLEX
-          <i data-lucide="arrow-right" class="btn-icon"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section - Light -->
-  <section class="contact-section contact-section-light">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h2 class="contact-title dark">Επικοινωνία</h2>
-          <p class="contact-subtitle dark">Στείλτε μας μήνυμα. Θα απαντήσουμε εντός μίας εργάσιμης ημέρας.</p>
-
-          <div class="contact-details">
-            <div class="contact-item">
-              <h4 class="contact-label">Email</h4>
-              <a href="mailto:contact@monad.law" class="contact-value dark">contact@monad.law</a>
-            </div>
-            <div class="contact-item">
-              <h4 class="contact-label">Τοποθεσία</h4>
-              <p class="contact-value dark">Αθήνα, Ελλάδα</p>
-            </div>
-            <div class="contact-item">
-              <h4 class="contact-label">Ώρες Λειτουργίας</h4>
-              <p class="contact-value dark">Δευτέρα – Παρασκευή, 9:00 – 18:00</p>
-            </div>
-          </div>
-
-          <p class="contact-disclaimer dark">Η επικοινωνία δεν δημιουργεί σχέση πελάτη-δικηγόρου.</p>
-        </div>
-
-        <div class="contact-form-wrap contact-form-wrap-light">
-          <form class="contact-form" id="contactForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="firstName">Όνομα *</label>
-                <input type="text" id="firstName" name="firstName" required>
-              </div>
-              <div class="form-group">
-                <label for="lastName">Επώνυμο *</label>
-                <input type="text" id="lastName" name="lastName" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-              <label for="phone">Τηλέφωνο</label>
-              <input type="tel" id="phone" name="phone">
-            </div>
-            <div class="form-group">
-              <label for="message">Μήνυμα *</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">
-              Αποστολή
-              <i data-lucide="arrow-right" class="btn-icon"></i>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer footer-light">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="../images/logo-monad.png" alt="MONAD" class="footer-logo footer-logo-dark">
-          <p class="footer-tagline dark">Καθαρή σκέψη. Αποφασιστική εκτέλεση.</p>
-        </div>
-        <div class="footer-links footer-links-dark">
-          <h4 class="footer-heading">Υπηρεσίες</h4>
-          <a href="../services/companies.html">Για Εταιρείες</a>
-          <a href="../services/individuals.html">Για Ιδιώτες</a>
-          <a href="../services/real-estate.html">Ακίνητα</a>
-          <a href="../services/technology.html">Τεχνολογία</a>
-        </div>
-        <div class="footer-links footer-links-dark">
-          <h4 class="footer-heading">Εταιρεία</h4>
-          <a href="../about.html">Σχετικά</a>
-          <a href="../team.html">Ομάδα</a>
-          <a href="../knowledge.html">Αρθρογραφία</a>
-          <a href="../contact.html">Επικοινωνία</a>
-        </div>
-        <div class="footer-links footer-links-dark">
-          <h4 class="footer-heading">Νομικά</h4>
-          <a href="#">Πολιτική Απορρήτου</a>
-          <a href="#">Όροι Χρήσης</a>
-          <a href="#">Cookies</a>
-        </div>
-      </div>
-      <div class="footer-bottom footer-bottom-dark">
-        <p>&copy; 2024 MONAD. Με επιφύλαξη παντός δικαιώματος.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Initialize Lucide icons
-    lucide.createIcons();
-
-    // Mobile menu toggle
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileNav = document.getElementById('mobileNav');
-    const menuIcon = document.getElementById('menuIcon');
-    let isMenuOpen = false;
-
-    mobileMenuBtn.addEventListener('click', () => {
-      isMenuOpen = !isMenuOpen;
-      mobileNav.classList.toggle('active', isMenuOpen);
-      menuIcon.setAttribute('data-lucide', isMenuOpen ? 'x' : 'menu');
-      lucide.createIcons();
-    });
-
-    // Navbar scroll effect
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
-
-    // Dropdown hover handling
-    const dropdowns = document.querySelectorAll('.dropdown');
-    dropdowns.forEach(dropdown => {
-      let timeout;
-      dropdown.addEventListener('mouseenter', () => {
-        clearTimeout(timeout);
-        dropdown.classList.add('active');
-      });
-      dropdown.addEventListener('mouseleave', () => {
-        timeout = setTimeout(() => {
-          dropdown.classList.remove('active');
-        }, 150);
-      });
-    });
-
-    // Form submission
-    const contactForm = document.getElementById('contactForm');
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Ευχαριστούμε για το μήνυμά σας. Θα επικοινωνήσουμε σύντομα μαζί σας.');
-      contactForm.reset();
-    });
-  </script>
 </body>
 </html>
